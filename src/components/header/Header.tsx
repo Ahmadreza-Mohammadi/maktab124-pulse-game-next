@@ -1,6 +1,14 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import { pages } from "../constants/Pages";
 
 function Header() {
+  const router = useRouter();
+
+  const handleNavigation = (path: string) => {
+    router.push(path);
+  };
   return (
     <div className="flex flex-col">
       {/* Top Bar */}
@@ -58,10 +66,9 @@ function Header() {
               <div
                 className="flex items-center gap-2 group cursor-pointer hover:text-gray-800 transition duration-300 relative"
                 key={page.name}
+                onClick={()=>handleNavigation(page.path)}
               >
-                <li className="py-4">
-                  {page.name}
-                </li>
+                <li className="py-4">{page.name}</li>
                 <img
                   className="h-7 transform group-hover:scale-110 group-hover:rotate-6 transition duration-300"
                   src={page.img}
