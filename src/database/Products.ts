@@ -17,6 +17,7 @@ export const products = [
     rating: 4.5,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "action",
   },
   {
     title: "EA Sports FC 25",
@@ -35,6 +36,7 @@ export const products = [
     rating: 4.2,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2024,
+    gameCategory: "sports",
   },
   {
     title: "Suicide Squad: Kill the Justice League",
@@ -52,6 +54,7 @@ export const products = [
     rating: 4,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "action",
   },
   {
     title: "Silent Hill 2 Remake",
@@ -70,6 +73,7 @@ export const products = [
     rating: 4.8,
     platforms: ["PS5", "PC"],
     releaseYear: 2024,
+    gameCategory: "adventure",
   },
   {
     title: "Dragon Age: The Veilguard",
@@ -88,6 +92,7 @@ export const products = [
     rating: 4.6,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "rpg",
   },
   {
     title: "Senua's Saga: Hellblade II",
@@ -106,6 +111,7 @@ export const products = [
     rating: 4.7,
     platforms: ["Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "actionAdventure",
   },
   {
     title: "Avatar: Frontiers of Pandora",
@@ -123,7 +129,8 @@ export const products = [
     discount: 12,
     rating: 4.3,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
-    releaseYear: 2023, // این یه استثناست، چون اواخر 2023 اومد
+    releaseYear: 2023,
+    gameCategory: "actionAdventure",
   },
   {
     title: "Star Wars Outlaws",
@@ -142,6 +149,7 @@ export const products = [
     rating: 4.4,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "actionAdventure",
   },
   {
     title: "The Day Before",
@@ -159,8 +167,10 @@ export const products = [
     discount: 20,
     rating: 3,
     platforms: ["PC"],
-    releaseYear: 2023, // اواخر 2023 اومد
+    releaseYear: 2023,
+    gameCategory: "action",
   },
+
   {
     title: "Alan Wake 2",
     description:
@@ -177,9 +187,9 @@ export const products = [
     discount: 10,
     rating: 4.9,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
-    releaseYear: 2023, // اواخر 2023
+    releaseYear: 2023,
+    gameCategory: "adventure", // Adventure with psychological horror
   },
-  // ادامه تا 60 با توضیحات دو جمله‌ای و سال تولید
   {
     title: "Metal Gear Solid Delta: Snake Eater",
     description:
@@ -197,6 +207,7 @@ export const products = [
     rating: 4.8,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "action", // Action with stealth elements
   },
   {
     title: "Kingdom Come: Deliverance 2",
@@ -215,6 +226,7 @@ export const products = [
     rating: 4.6,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "rpg", // Historical role-playing game
   },
   {
     title: "Assassin's Creed Shadows",
@@ -234,6 +246,7 @@ export const products = [
     rating: 4.7,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "actionAdventure", // Action-Adventure with stealth elements
   },
   {
     title: "Indiana Jones and the Great Circle",
@@ -252,6 +265,7 @@ export const products = [
     rating: 4.5,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "adventure", // Action-adventure exploration
   },
   {
     title: "Fable",
@@ -270,6 +284,7 @@ export const products = [
     rating: 4.4,
     platforms: ["Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "rpg", // Fantasy RPG
   },
   {
     title: "South of Midnight",
@@ -288,6 +303,7 @@ export const products = [
     rating: 4.3,
     platforms: ["Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "adventure", // Magical adventure
   },
   {
     title: "Forza Horizon 5 (PS5 Edition)",
@@ -306,6 +322,7 @@ export const products = [
     rating: 4.6,
     platforms: ["PS5"],
     releaseYear: 2024,
+    gameCategory: "simulator", // Racing simulator
   },
   {
     title: "Clair Obscur: Expedition 33",
@@ -324,6 +341,7 @@ export const products = [
     rating: 4.5,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "strategy", // Tactical RPG
   },
   {
     title: "The Last of Us Part II Remastered (PC)",
@@ -342,6 +360,7 @@ export const products = [
     rating: 4.8,
     platforms: ["PC"],
     releaseYear: 2024,
+    gameCategory: "actionAdventure", // Action-Adventure
   },
   {
     title: "Tales of the Shire",
@@ -360,8 +379,8 @@ export const products = [
     rating: 4.2,
     platforms: ["PS5", "Xbox Series X|S", "PC", "Nintendo Switch"],
     releaseYear: 2025,
+    gameCategory: "adventure", // Light adventure
   },
-  // ادامه تا 60 با توضیحات دو جمله‌ای
   {
     title: "WWE 2K25",
     description:
@@ -380,6 +399,7 @@ export const products = [
     rating: 4.1,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2025,
+    gameCategory: "sports", // Sports/Wrestling
   },
   {
     title: "Split Fiction",
@@ -398,6 +418,7 @@ export const products = [
     rating: 4.4,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "actionAdventure", // Cooperative Action-Adventure
   },
   {
     title: "Two Point Museum",
@@ -416,6 +437,7 @@ export const products = [
     rating: 4.3,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "simulator", // Light Simulation
   },
   {
     title: "Xenoblade Chronicles X Definitive",
@@ -434,6 +456,7 @@ export const products = [
     rating: 4.6,
     platforms: ["Nintendo Switch"],
     releaseYear: 2025,
+    gameCategory: "rpg", // JRPG
   },
   {
     title: "MLB The Show 25",
@@ -452,6 +475,7 @@ export const products = [
     rating: 4.2,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2025,
+    gameCategory: "sports",
   },
   {
     title: "Suikoden I & II HD Remaster",
@@ -470,6 +494,7 @@ export const products = [
     rating: 4.5,
     platforms: ["PS5", "Xbox Series X|S", "PC", "Nintendo Switch"],
     releaseYear: 2025,
+    gameCategory: "rpg",
   },
   {
     title: "Atomfall",
@@ -488,6 +513,7 @@ export const products = [
     rating: 4.3,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "actionAdventure",
   },
   {
     title: "The Talos Principle: Reawakened",
@@ -506,6 +532,7 @@ export const products = [
     rating: 4.4,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "strategy",
   },
   {
     title: "Lunar Remastered Collection",
@@ -524,6 +551,7 @@ export const products = [
     rating: 4.1,
     platforms: ["PS5", "PC", "Nintendo Switch"],
     releaseYear: 2025,
+    gameCategory: "rpg",
   },
   {
     title: "Days Gone (Remastered)",
@@ -543,6 +571,7 @@ export const products = [
     rating: 4.2,
     platforms: ["PS5"],
     releaseYear: 2024,
+    gameCategory: "actionAdventure",
   },
   {
     title: "Rise of the Ronin",
@@ -561,6 +590,7 @@ export const products = [
     rating: 4.6,
     platforms: ["PS5"],
     releaseYear: 2024,
+    gameCategory: "actionAdventure",
   },
   {
     title: "Bleach: Rebirth of Souls",
@@ -579,6 +609,7 @@ export const products = [
     rating: 4.3,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "action",
   },
   {
     title: "Atelier Yumia",
@@ -597,6 +628,7 @@ export const products = [
     rating: 4.2,
     platforms: ["PS5", "PC", "Nintendo Switch"],
     releaseYear: 2025,
+    gameCategory: "rpg",
   },
   {
     title: "The First Berserker: Khazan",
@@ -615,6 +647,7 @@ export const products = [
     rating: 4.4,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "action",
   },
   {
     title: "AI Limit",
@@ -633,6 +666,7 @@ export const products = [
     rating: 4.3,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "actionAdventure",
   },
   {
     title: "Commandos: Origins",
@@ -651,15 +685,17 @@ export const products = [
     rating: 4.1,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "strategy",
   },
   {
     title: "Fatal Fury: City of the Wolves",
     description:
       "فایتینگ کلاسیک که با گرافیک جدید و مبارزای سریع برگشته. برای طرفدارای بازیای مبارزه‌ای یه تجربه ناب و پرهیجانه!",
-      img: [
-        "https://ts1.mm.bing.net/th?id=OIP.l8cZzAIFCLLj-2QaRF5_TwHaLH&pid=15.1",
-        "https://ts2.mm.bing.net/th?id=OIP.9asnLqy6jDn35VUzrneh0gHaEK&pid=15.1",
-      ],    quantity: 10,
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.l8cZzAIFCLLj-2QaRF5_TwHaLH&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.9asnLqy6jDn35VUzrneh0gHaEK&pid=15.1",
+    ],
+    quantity: 10,
     price: 1150000,
     category: "game",
     creator: "SNK",
@@ -668,15 +704,17 @@ export const products = [
     rating: 4.5,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "action",
   },
   {
     title: "Monster Hunter Wilds",
     description:
       "شکار هیولاها تو دنیای عظیم که با گرافیک نسل بعدی و گیم‌پلی خفن اومده. برای گیمرایی که عاشق چالش و اکشنن، یه شاهکاره!",
-      img: [
-        "https://ts1.mm.bing.net/th?id=OIP.TAt-uR8HRFSMBJoCsAbEswHaLH&pid=15.1",
-        "https://ts1.mm.bing.net/th?id=OIP.TUMRQmSjovhLf8wOemQeYAHaDt&pid=15.1",
-      ],     quantity: 15,
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.TAt-uR8HRFSMBJoCsAbEswHaLH&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.TUMRQmSjovhLf8wOemQeYAHaDt&pid=15.1",
+    ],
+    quantity: 15,
     price: 1500000,
     category: "game",
     creator: "Capcom",
@@ -685,6 +723,7 @@ export const products = [
     rating: 4.9,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "actionAdventure",
   },
   {
     title: "Civilization VII",
@@ -700,6 +739,7 @@ export const products = [
     rating: 4.7,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "strategy",
   },
   {
     title: "Like a Dragon: Pirate Yakuza",
@@ -715,6 +755,7 @@ export const products = [
     rating: 4.4,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "actionAdventure",
   },
   {
     title: "Path of Exile 2",
@@ -730,6 +771,7 @@ export const products = [
     rating: 4.8,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "rpg",
   },
   {
     title: "Vampire: The Masquerade – Bloodlines 2",
@@ -745,6 +787,7 @@ export const products = [
     rating: 4.6,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "rpg",
   },
   {
     title: "Eiyuden Chronicle: Hundred Heroes",
@@ -760,6 +803,7 @@ export const products = [
     rating: 4.3,
     platforms: ["PS5", "Xbox Series X|S", "PC", "Nintendo Switch"],
     releaseYear: 2024,
+    gameCategory: "rpg",
   },
   {
     title: "Slay the Spire 2",
@@ -775,6 +819,7 @@ export const products = [
     rating: 4.5,
     platforms: ["PC", "Nintendo Switch"],
     releaseYear: 2025,
+    gameCategory: "strategy",
   },
   {
     title: "Frostpunk 2",
@@ -790,6 +835,7 @@ export const products = [
     rating: 4.7,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "strategy",
   },
   {
     title: "Hollow Knight: Silksong",
@@ -805,6 +851,7 @@ export const products = [
     rating: 4.9,
     platforms: ["PS5", "Xbox Series X|S", "PC", "Nintendo Switch"],
     releaseYear: 2025,
+    gameCategory: "adventure",
   },
   {
     title: "The Plucky Squire",
@@ -820,6 +867,7 @@ export const products = [
     rating: 4.2,
     platforms: ["PS5", "Xbox Series X|S", "PC", "Nintendo Switch"],
     releaseYear: 2024,
+    gameCategory: "adventure",
   },
   {
     title: "Little Nightmares III",
@@ -835,6 +883,7 @@ export const products = [
     rating: 4.4,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2025,
+    gameCategory: "adventure", // Adventure with puzzles and horror
   },
   {
     title: "Phantom Blade Zero",
@@ -850,6 +899,7 @@ export const products = [
     rating: 4.6,
     platforms: ["PS5", "PC"],
     releaseYear: 2025,
+    gameCategory: "action", // High-paced action
   },
   {
     title: "DokeV",
@@ -865,6 +915,7 @@ export const products = [
     rating: 4.3,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2025,
+    gameCategory: "adventure", // Colorful open-world adventure
   },
   {
     title: "Sniper Elite: Resistance",
@@ -880,6 +931,7 @@ export const products = [
     rating: 4.4,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2025,
+    gameCategory: "actionAdventure", // Tactical action with stealth
   },
   {
     title: "Blue Protocol",
@@ -895,6 +947,7 @@ export const products = [
     rating: 4.2,
     platforms: ["PS5", "Xbox Series X|S", "PC"],
     releaseYear: 2024,
+    gameCategory: "rpg", // MMORPG
   },
   {
     title: "Project Mugen",
@@ -910,6 +963,7 @@ export const products = [
     rating: 4.5,
     platforms: ["PS5", "PC"],
     releaseYear: 2025,
+    gameCategory: "actionAdventure", // Anime-styled open-world
   },
   {
     title: "Where Winds Meet",
@@ -925,6 +979,7 @@ export const products = [
     rating: 4.3,
     platforms: ["PS5", "PC"],
     releaseYear: 2025,
+    gameCategory: "actionAdventure", // Martial arts in an open world
   },
   {
     title: "Deathloop",
@@ -940,6 +995,7 @@ export const products = [
     rating: 4.6,
     platforms: ["PS5", "PC", "Xbox Series X|S"],
     releaseYear: 2021,
+    gameCategory: "action", // Tactical action with a time-loop mechanic
   },
   {
     title: "Elden Ring",
@@ -955,6 +1011,7 @@ export const products = [
     rating: 4.9,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2022,
+    gameCategory: "rpg", // Soulslike RPG
   },
   {
     title: "Red Dead Redemption 2",
@@ -970,6 +1027,7 @@ export const products = [
     rating: 4.8,
     platforms: ["PS4", "Xbox One", "PC"],
     releaseYear: 2018,
+    gameCategory: "actionAdventure", // Open-world action
   },
   {
     title: "Rainbow Six Siege",
@@ -985,6 +1043,7 @@ export const products = [
     rating: 4.4,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2015,
+    gameCategory: "action", // Tactical shooter
   },
   {
     title: "Grand Theft Auto V",
@@ -1000,6 +1059,7 @@ export const products = [
     rating: 4.7,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2013,
+    gameCategory: "actionAdventure", // Open-world crime and action-adventure
   },
   {
     title: "Control",
@@ -1015,6 +1075,7 @@ export const products = [
     rating: 4.5,
     platforms: ["PS5", "PS4", "Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2019,
+    gameCategory: "actionAdventure", // Supernatural action-adventure
   },
   {
     title: "Ghost of Tsushima",
@@ -1030,6 +1091,7 @@ export const products = [
     rating: 4.8,
     platforms: ["PS5", "PS4", "PC"],
     releaseYear: 2020,
+    gameCategory: "actionAdventure", // Open-world action-adventure with samurai combat
   },
   {
     title: "Forza Horizon 5",
@@ -1045,6 +1107,7 @@ export const products = [
     rating: 4.7,
     platforms: ["Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2021,
+    gameCategory: "simulator", // Racing simulation with open-world exploration
   },
   {
     title: "Quantum Break",
@@ -1060,6 +1123,7 @@ export const products = [
     rating: 4.2,
     platforms: ["Xbox One", "PC"],
     releaseYear: 2016,
+    gameCategory: "actionAdventure", // Sci-fi action-adventure with time manipulation
   },
   {
     title: "Gears 5",
@@ -1075,6 +1139,7 @@ export const products = [
     rating: 4.4,
     platforms: ["Xbox Series X|S", "Xbox One", "PC"],
     releaseYear: 2019,
+    gameCategory: "action", // Third-person shooter with cooperative gameplay
   },
   {
     title: "Halo 5: Guardians",
@@ -1090,6 +1155,7 @@ export const products = [
     rating: 4.3,
     platforms: ["Xbox One"],
     releaseYear: 2015,
+    gameCategory: "action", // Sci-fi shooter
   },
   {
     title: "The Last of Us Part I",
@@ -1105,6 +1171,7 @@ export const products = [
     rating: 4.9,
     platforms: ["PS5", "PC"],
     releaseYear: 2022,
+    gameCategory: "actionAdventure", // Emotional action-adventure
   },
   {
     title: "Razer Iskur V2",
