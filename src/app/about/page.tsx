@@ -1,8 +1,9 @@
+import HomeSwiper from "@/components/swiper/HomeSwiper";
 
 function About() {
-  return (
-    <>About</>
-  )
+  return <>about
+  <HomeSwiper />
+    </>;
 }
 
-export default About
+export default About;

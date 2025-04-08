@@ -1,7 +1,10 @@
+import HomeSwiper from "@/components/swiper/HomeSwiper"
 
 function Home() {
   return (
-    <>Home</>
+    <>
+    <HomeSwiper />
+    </>
   )
 }
 

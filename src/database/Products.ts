@@ -3,7 +3,11 @@ export const products = [
     title: "Call of Duty: Black Ops 6",
     description:
       "جدیدترین نسخه Call of Duty که تو دوران جنگ خلیج جریان داره و زامبی‌ها رو با قدرت برگردونده. کمپینش پر از اکشنه و گیم‌پلی آنلاینش حسابی گیمرا رو به وجد آورده!",
-    img: "https://example.com/blackops6.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.nYFavwrE-3kYmI4_pJrAlgHaEK&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.i_HC3N1zwYUlrNLDX0CFHgHaDt&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.cL6gFiELYXYcY27Xz7Z1wAHaEK&pid=15.1",
+    ],
     quantity: 15,
     price: 1200000,
     category: "game",
@@ -18,7 +22,10 @@ export const products = [
     title: "EA Sports FC 25",
     description:
       "فیفای جدید که حالا با اسم FC 25 اومده و گیم‌پلیش خیلی بهتر شده. گرافیک خفنش و تیم‌های به‌روز، یه تجربه ناب برای عاشقای فوتباله!",
-    img: "https://example.com/fc25.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.H4M6LOBB0dKrfg719gLkVQHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.ofj01kMLB2ssHf0ZJjQaBwHaEK&pid=15.1",
+    ],
     quantity: 12,
     price: 1100000,
     category: "game",
@@ -33,7 +40,9 @@ export const products = [
     title: "Suicide Squad: Kill the Justice League",
     description:
       "یه بازی اکشن کوآپ که توش جوکر و تیمش با قهرمانای Justice League می‌جنگن. پر از هرج و مرجه و طنزش گیمرا رو حسابی سرگرم می‌کنه!",
-    img: "https://example.com/suicidesquad.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.WAV8GJ4E-lSQ8-EIjiM78wHaEK&pid=15.1",
+    ],
     quantity: 10,
     price: 1300000,
     category: "game",
@@ -48,7 +57,10 @@ export const products = [
     title: "Silent Hill 2 Remake",
     description:
       "ریمستر شاهکار Silent Hill 2 که با گرافیک مدرن و اتمسفر ترسناکش برگشته. حس تنهایی و وحشتش برای گیمرای نسل جدید یه تجربه بی‌نظیره!",
-    img: "https://example.com/silenthill2.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP._N1sOeA6q77EBu_eejOGhQHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.qbbjYdX4esrzZIBaftIl3QHaEK&pid=15.1",
+    ],
     quantity: 8,
     price: 950000,
     category: "game",
@@ -63,7 +75,10 @@ export const products = [
     title: "Dragon Age: The Veilguard",
     description:
       "جدیدترین نسخه Dragon Age با داستانی عمیق و انتخابای سخت که RPGبازا رو دیوونه کرده. دنیای فانتزیش پر از جادو و ماجراجوییه و گرافیکشم خیره‌کننده‌ست!",
-    img: "https://example.com/dragonage.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.ziwovjihzYDroIJWpDXx1wHaDt&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.RJKctH3JO4nBva2xbPsimgHaEK&pid=15.1",
+    ],
     quantity: 14,
     price: 1400000,
     category: "game",
@@ -78,7 +93,10 @@ export const products = [
     title: "Senua's Saga: Hellblade II",
     description:
       "ادامه سفر سنوآ که با گرافیک نسل بعدی و حس دیوونگی عمیقش می‌ترکونه. داستان احساسی و صداهاش یه تجربه خاص برای گیمراست!",
-    img: "https://example.com/hellblade2.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.utKkvudHpvzYYvcj0qn03AHaLH&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.K_SVroKU98fIqFiYlXkRGAHaEK&pid=15.1",
+    ],
     quantity: 9,
     price: 1150000,
     category: "game",
@@ -93,7 +111,10 @@ export const products = [
     title: "Avatar: Frontiers of Pandora",
     description:
       "جهان پاندورا تو این بازی اکشن ماجراجویی زنده شده و گرافیک دیوانه‌وارش چشماتو می‌بره. پرواز با اژدها و جنگ با دشمنا حسابی جذابه!",
-    img: "https://example.com/avatar.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.t9v8w_jjhWISLKO31THwcAHaLH&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.fN3Ytb89mGdJX5nT0p42NwHaEK&pid=15.1",
+    ],
     quantity: 11,
     price: 1250000,
     category: "game",
@@ -108,7 +129,10 @@ export const products = [
     title: "Star Wars Outlaws",
     description:
       "یه بازی جهان‌باز تو دنیای استار وارز که توش دزدی و اکشن حرف اول رو می‌زنه. ماجراجویی تو کهکشان با شخصیتای باحال منتظرته!",
-    img: "https://example.com/starwarsoutlaws.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.bjuGnpI0yV5wFYzHPkSiewHaEK&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.TkedHuvT99kolGa0qpl4LQHaEK&pid=15.1",
+    ],
     quantity: 13,
     price: 1350000,
     category: "game",
@@ -123,7 +147,10 @@ export const products = [
     title: "The Day Before",
     description:
       "یه بازی زامبی آخرالزمانی که قول یه دنیای عظیم رو داد، ولی با باگاش حسابی گند زد. هنوزم می‌تونی برای تجربه بقا تستش کنی!",
-    img: "https://example.com/thedaybefore.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.ZOZpsWlom6gmWhVwwv-P7QHaDt&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.eDJYXEIFCGKwukmpu30x3QHaEK&pid=15.1",
+    ],
     quantity: 7,
     price: 800000,
     category: "game",
@@ -138,7 +165,10 @@ export const products = [
     title: "Alan Wake 2",
     description:
       "ادامه داستان الن ویک که با معماهاش و حس ترسش گیمرا رو میخکوب کرده. نور و تاریکی تو این بازی یه تجربه بصری و احساسی خفنه!",
-    img: "https://example.com/alanwake2.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.eroIC7A-x7CHq1JaY01lOwAAAA&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.ilD--LoeWLe1eQHrinU4YwHaEK&pid=15.1",
+    ],
     quantity: 10,
     price: 1050000,
     category: "game",
@@ -154,7 +184,10 @@ export const products = [
     title: "Metal Gear Solid Delta: Snake Eater",
     description:
       "ریمک Metal Gear Solid 3 که با گرافیک نسل نهم برگشته و مخفی‌کاری رو به اوج می‌رسونه. جنگل و ماموریتای اسنیک حسابی تو رو تو حال و هوای قدیم غرق می‌کنه!",
-    img: "https://example.com/mgsdelta.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.yEOEBPzwYbFsve5VzPvB-QHaEL&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.MTQ9-qkxQwfzuHr26DSp7QHaHa&pid=15.1",
+    ],
     quantity: 12,
     price: 1300000,
     category: "game",
@@ -169,7 +202,10 @@ export const products = [
     title: "Kingdom Come: Deliverance 2",
     description:
       "ادامه RPG تاریخی که تو قرون وسطی جریان داره و جنگاش نفس‌گیره. داستان عمیق و دنیای واقعیش برای عاشقای تاریخ و گیم یه گنجه!",
-    img: "https://example.com/kingdomcome2.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.D0-p3xP7_3S31a4Ahar6qgHaEK&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.jqDfdVf9jM42L3EI8_zDYQHaDt&pid=15.1",
+    ],
     quantity: 11,
     price: 1450000,
     category: "game",
@@ -184,7 +220,11 @@ export const products = [
     title: "Assassin's Creed Shadows",
     description:
       "آساسین تو ژاپن فئودال که نینجاها و سامورایی‌ها رو قاطی کرده. مخفی‌کاری و اکشنش تو محیطای شرقی حسابی می‌ترکونه و طرفدارا رو دیوونه کرده!",
-    img: "https://example.com/acshadows.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIF.WhY8DW3dL%2fXks6zqbzFMOQ&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIF.Nx%2fNdV2T5WpyqQjDH4HOUA&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIF.uPczHenMJSpv9WkmBe9DdQ&pid=15.1",
+    ],
     quantity: 15,
     price: 1500000,
     category: "game",
@@ -199,7 +239,10 @@ export const products = [
     title: "Indiana Jones and the Great Circle",
     description:
       "ماجراجویی جدید ایندیانا جونز با اکشن و معماهای خفن که تو رو تو نقش ایندی می‌بره. شلاقتو بردار و برو دنبال گنج تو این بازی باحال!",
-    img: "https://example.com/indiana.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.t1HBdu9oPsyeTtFcdUdknwHaDt&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.zC55X6B5d5xNFm7AH0fc-QHaEk&pid=15.1",
+    ],
     quantity: 10,
     price: 1400000,
     category: "game",
@@ -214,7 +257,10 @@ export const products = [
     title: "Fable",
     description:
       "بازگشت سری Fable با طنز باحالش و دنیای فانتزی رنگارنگش که گیمرا رو شگفت‌زده کرده. انتخابای عجیبت تو این بازی عواقب خنده‌داری داره و گیم‌پلیش جذابه!",
-    img: "https://example.com/fable.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.KJBLDI4dYFcIKFnc6fEzDgHaEK&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.ZmewyPQTbjg_eiYlYe3sKAHaEK&pid=15.1",
+    ],
     quantity: 9,
     price: 1350000,
     category: "game",
@@ -229,7 +275,10 @@ export const products = [
     title: "South of Midnight",
     description:
       "یه بازی جادویی تو جنوب آمریکا که پر از موجودات عجیبه و داستانی عمیق داره. گرافیک و حس و حالش تو رو به یه سفر رویاهامانند می‌بره!",
-    img: "https://example.com/southmidnight.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.c22hXA-M9POkOfbrJnffrQHaEO&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.ujj1dP_QTlsQ13sEsVclBwHaEc&pid=15.1",
+    ],
     quantity: 8,
     price: 1200000,
     category: "game",
@@ -244,7 +293,10 @@ export const products = [
     title: "Forza Horizon 5 (PS5 Edition)",
     description:
       "ماشین‌سواری خفن Forza Horizon 5 حالا برای PS5 اومده و جاده‌هاش نفس‌گیرن. سرعت و گرافیک نسل بعدی منتظرته تا بترکونی!",
-    img: "https://example.com/forza5.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.f5OAt-AwhR1O286cUcSa-AHaHa&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.P0aJ4XrUJr-KughGLIZaiwHaEK&pid=15.1",
+    ],
     quantity: 14,
     price: 1250000,
     category: "game",
@@ -259,7 +311,10 @@ export const products = [
     title: "Clair Obscur: Expedition 33",
     description:
       "RPG تاکتیکی با داستانی عمیق که توش با موجودات عجیب می‌جنگی و انتخابات سرنوشتت رو عوض می‌کنه. طراحی هنری و گیم‌پلیش گیمرای حرفه‌ای رو جذب کرده!",
-    img: "https://example.com/clairobs.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.RL2428rpKH46kiUSqgjXzAHaLH&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.e9Sgu4pLiR6J3unyOddIFwHaEK&pid=15.1",
+    ],
     quantity: 10,
     price: 1300000,
     category: "game",
@@ -274,7 +329,10 @@ export const products = [
     title: "The Last of Us Part II Remastered (PC)",
     description:
       "ریمستر شاهکار The Last of Us Part II برای PC با گرافیک بهتر و جزئیات بیشتر اومده. داستان احساسی و اکشنش هنوزم اشک و هیجان رو قاطی می‌کنه!",
-    img: "https://example.com/tlou2.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.JlnTykuhz-iK63fOhfAhzQHaKS&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.Ohv32Xvc2PjkqCJHOj4L9AHaEK&pid=15.1",
+    ],
     quantity: 12,
     price: 1450000,
     category: "game",
@@ -289,7 +347,10 @@ export const products = [
     title: "Tales of the Shire",
     description:
       "زندگی آروم و باحال تو دنیای هابیت‌ها که پر از خونه‌های کوچیک و غذای خوشمزه‌ست. برای گیمرایی که دنبال آرامشن و حال خوبن، یه انتخاب عالیه!",
-    img: "https://example.com/talesshire.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.juPTn6_7EPBS19VOTTcJMwHaEK&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.VSAGrFx37z__mqlB_GZkzgHaDt&pid=15.1",
+    ],
     quantity: 9,
     price: 950000,
     category: "game",
@@ -305,7 +366,11 @@ export const products = [
     title: "WWE 2K25",
     description:
       "جدیدترین نسخه کشتی WWE که با گرافیک بهتر و حرکات واقع‌گرایانه‌تر اومده. سوپراستاراتو انتخاب کن و رینگ رو با ضرباتت بترکون!",
-    img: "https://example.com/wwe2k25.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.HseOppdlGmpLWm7QLOmXPAHaDt&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.7XSMRye6Phr1Z7agFUSXGwHaEK&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.qDQPUC48SdMxMdysfm5J6wHaJQ&pid=15.1",
+    ],
     quantity: 11,
     price: 1100000,
     category: "game",
@@ -320,7 +385,10 @@ export const products = [
     title: "Split Fiction",
     description:
       "یه بازی اکشن کوآپ که دو دنیای مختلف رو قاطی کرده و با دوستات می‌تونی حسابی بترکونی. داستان و گیم‌پلی خلاقانه‌ش یه تجربه جدید و باحاله!",
-    img: "https://example.com/splitfiction.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.FnrklBiRf3gelkrh16b8DgHaDt&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP._mSApBWuGhTjwxbUbXJgzwHaDt&pid=15.1",
+    ],
     quantity: 10,
     price: 1350000,
     category: "game",
@@ -335,7 +403,10 @@ export const products = [
     title: "Two Point Museum",
     description:
       "مدیریت موزه بامزه که پر از دایناسور و آثار عجیبه و طنزش حالتو خوب می‌کنه. گیم‌پلی سبکش برای یه عصر آروم و خنده‌دار عالیه!",
-    img: "https://example.com/twopointmuseum.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.bG_FfutsvuPvcGCl7zJfjgHaEK&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.JKPXsc89oFfge9wyaCFpngHaEK&pid=15.1",
+    ],
     quantity: 8,
     price: 1000000,
     category: "game",
@@ -350,7 +421,10 @@ export const products = [
     title: "Xenoblade Chronicles X Definitive",
     description:
       "RPG ژاپنی با دنیای عظیم که ریمستر شده و گرافیک خفنش چشماتو می‌گیره. داستان حماسی و ماجراجوییش برای ساعت‌ها تو رو غرق خودش می‌کنه!",
-    img: "https://example.com/xenoblade.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.bG_FfutsvuPvcGCl7zJfjgHaEK&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.JKPXsc89oFfge9wyaCFpngHaEK&pid=15.1",
+    ],
     quantity: 13,
     price: 1200000,
     category: "game",
@@ -365,7 +439,10 @@ export const products = [
     title: "MLB The Show 25",
     description:
       "بیسبال واقعی‌تر از همیشه که با گیم‌پلی نرم و گرافیک نسل بعدی اومده. برای طرفدارای ورزش یه زمین بازی تمام‌عیاره که می‌تونی توش بدرخشی!",
-    img: "https://example.com/mlb25.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.bG_FfutsvuPvcGCl7zJfjgHaEK&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.JKPXsc89oFfge9wyaCFpngHaEK&pid=15.1",
+    ],
     quantity: 7,
     price: 1050000,
     category: "game",
@@ -380,7 +457,10 @@ export const products = [
     title: "Suikoden I & II HD Remaster",
     description:
       "دو تا کلاسیک JRPG که با کیفیت HD برگشتن و داستاناشون هنوزم دل می‌بره. برای عاشقای نقش‌آفرینی یه نوستالژی خفن و به‌روز شده‌ست!",
-    img: "https://example.com/suikoden.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.bG_FfutsvuPvcGCl7zJfjgHaEK&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.JKPXsc89oFfge9wyaCFpngHaEK&pid=15.1",
+    ],
     quantity: 9,
     price: 950000,
     category: "game",
@@ -395,7 +475,10 @@ export const products = [
     title: "Atomfall",
     description:
       "بقای آخرالزمانی تو بریتانیا که پر از رمز و راز و خطره. گیم‌پلی اکشن و اتمسفر سنگینش تو رو تو دنیای خودش غرق می‌کنه!",
-    img: "https://example.com/atomfall.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.GgF1Tzmr1pDmResgOqfBdgHaDt&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.GU9jBXZwuO-iqpu2g1DfFgHaEK&pid=15.1",
+    ],
     quantity: 10,
     price: 1150000,
     category: "game",
@@ -410,7 +493,10 @@ export const products = [
     title: "The Talos Principle: Reawakened",
     description:
       "پازلای فلسفی که با گرافیک جدید برگشتن و ذهنت رو به چالش می‌کشن. داستان عمیقش و گیم‌پلی اعتیادآورش برای فکر کردن و لذت بردن عالیه!",
-    img: "https://example.com/talos.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.s5eQbRXawQlkk_vuCE_RPQHaEK&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.-ejSb6lZW-akZE4gkl_NOwHaEK&pid=15.1",
+    ],
     quantity: 8,
     price: 900000,
     category: "game",
@@ -425,7 +511,10 @@ export const products = [
     title: "Lunar Remastered Collection",
     description:
       "JRPG کلاسیک Lunar که با کیفیت بهتر و گرافیک آپدیت‌شده برگشته. داستان عاشقانه و ماجراجوییش هنوزم قلب گیمرا رو می‌بره!",
-    img: "https://example.com/lunar.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.tlEtbFwTv-X0s_Mnfj9t1QHaHa&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.CphqawOoHgXpdu1OhbZXQAHaLH&pid=15.1",
+    ],
     quantity: 7,
     price: 850000,
     category: "game",
@@ -440,7 +529,11 @@ export const products = [
     title: "Days Gone (Remastered)",
     description:
       "زامبی‌سواری Days Gone با گرافیک نسل نهم برای PS5 ریمستر شده و حسابی جذابه. موتورسواری تو دنیای پر از زامبی و داستانش تو رو می‌بره تو مود بقا!",
-    img: "https://example.com/daysgone.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.IA5V0GuFZpUcmqFQ6XeqVwHaEK&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.TgzKMTmRz4vcDD9VBkwP2gHaEK&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.DF7hsm3AQGvK4VZmPtP5MwHaEK&pid=15.1",
+    ],
     quantity: 11,
     price: 1000000,
     category: "game",
@@ -455,7 +548,10 @@ export const products = [
     title: "Rise of the Ronin",
     description:
       "یه بازی سامورایی تو ژاپن قدیم که اکشن و مخفی‌کاری رو قاطی کرده و باحاله. دنیای باز و شمشیرزنیش برای گیمرا یه تجربه ناب و خفنه!",
-    img: "https://example.com/ronin.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP._Y6PExm4vVe8eoorMukVxwHaJ4&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.GYmMd3bEd1t7oX9IhKa-HgHaFj&pid=15.1",
+    ],
     quantity: 12,
     price: 1400000,
     category: "game",
@@ -470,7 +566,10 @@ export const products = [
     title: "Bleach: Rebirth of Souls",
     description:
       "بازی انیمه‌ای Bleach که پر از شمشیرزنی و مبارزه‌ست و طرفدارای سری رو دیوونه کرده. گرافیک خفن و اکشن سریعش حسابی تو رو تو نقش ایچیگو می‌بره!",
-    img: "https://example.com/bleach.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.j4YtbcsmGJUqLSnytm3vowHaEK&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.j4YtbcsmGJUqLSnytm3vowHaEK&pid=15.1",
+    ],
     quantity: 9,
     price: 1100000,
     category: "game",
@@ -485,7 +584,10 @@ export const products = [
     title: "Atelier Yumia",
     description:
       "ماجراجویی کیمیاگری جدید تو سری Atelier که گرافیک و داستانش جذابه و دل می‌بره. برای طرفدارای JRPG یه تجربه شیرین و رنگارنگه که ساعت‌ها سرگرمت می‌کنه!",
-    img: "https://example.com/yumia.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.msdfSQHbvFRdKUjxRVNxBgHaEK&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.xZhs7XXnQ734oPnkeUad_wHaEK&pid=15.1",
+    ],
     quantity: 8,
     price: 950000,
     category: "game",
@@ -500,7 +602,10 @@ export const products = [
     title: "The First Berserker: Khazan",
     description:
       "اکشن خشن و سریع که توش با دشمنای عظیم می‌جنگی و خون همه جا رو می‌گیره. گیم‌پلی نفس‌گیرش برای عاشقای هاردکور ساخته شده و حسابی می‌ترکونه!",
-    img: "https://example.com/khazan.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.4AU-yAXD3P9WmphXXoSY9QHaEK&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.lkK_gHNTxq1YYrVbR0XHzgHaEK&pid=15.1",
+    ],
     quantity: 10,
     price: 1200000,
     category: "game",
@@ -515,7 +620,10 @@ export const products = [
     title: "AI Limit",
     description:
       "جهان‌باز علمی-تخیلی که پر از ربات و ماجراجوییه و تو رو تو آینده غرق می‌کنه. اکشن و داستانش برای گیمرایی که دنبال چیزای جدیدن عالیه!",
-    img: "https://example.com/ailimit.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.L1hHnaZuiLLotrkB8ypRbwHaEo&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.gj1hmARQfJK00tycEs_ktQHaNK&pid=15.1",
+    ],
     quantity: 9,
     price: 1300000,
     category: "game",
@@ -530,7 +638,10 @@ export const products = [
     title: "Commandos: Origins",
     description:
       "استراتژی جنگ جهانی که با ماموریتای تاکتیکی برگشته و ذهنت رو به کار می‌گیره. گیم‌پلی کلاسیکش برای عاشقای استراتژی یه نوستالژی خفنه!",
-    img: "https://example.com/commandos.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.MGNC-0z9rS5_W8-mHngOdAHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.JBXRAck_U40FJlxFceO6wgHaEK&pid=15.1",
+    ],
     quantity: 7,
     price: 1000000,
     category: "game",
@@ -545,8 +656,10 @@ export const products = [
     title: "Fatal Fury: City of the Wolves",
     description:
       "فایتینگ کلاسیک که با گرافیک جدید و مبارزای سریع برگشته. برای طرفدارای بازیای مبارزه‌ای یه تجربه ناب و پرهیجانه!",
-    img: "https://example.com/fatalfury.jpg",
-    quantity: 10,
+      img: [
+        "https://ts1.mm.bing.net/th?id=OIP.l8cZzAIFCLLj-2QaRF5_TwHaLH&pid=15.1",
+        "https://ts2.mm.bing.net/th?id=OIP.9asnLqy6jDn35VUzrneh0gHaEK&pid=15.1",
+      ],    quantity: 10,
     price: 1150000,
     category: "game",
     creator: "SNK",
@@ -560,8 +673,10 @@ export const products = [
     title: "Monster Hunter Wilds",
     description:
       "شکار هیولاها تو دنیای عظیم که با گرافیک نسل بعدی و گیم‌پلی خفن اومده. برای گیمرایی که عاشق چالش و اکشنن، یه شاهکاره!",
-    img: "https://example.com/monsterhunter.jpg",
-    quantity: 15,
+      img: [
+        "https://ts1.mm.bing.net/th?id=OIP.TAt-uR8HRFSMBJoCsAbEswHaLH&pid=15.1",
+        "https://ts1.mm.bing.net/th?id=OIP.TUMRQmSjovhLf8wOemQeYAHaDt&pid=15.1",
+      ],     quantity: 15,
     price: 1500000,
     category: "game",
     creator: "Capcom",
@@ -3526,4 +3641,3 @@ export const products = [
     releaseYear: 2021,
   },
 ];
-
