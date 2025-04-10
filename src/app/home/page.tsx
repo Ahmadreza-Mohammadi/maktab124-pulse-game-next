@@ -1,15 +1,17 @@
 import Categories from "@/components/categories/Categories";
-import HomeSwiper from "@/components/swiper/HomeSwiper"
+import Offers from "@/components/offers/Offers";
+import HomeSwiper from "@/components/swiper/HomeSwiper";
 import { products } from "@/database/Products";
 
 function Home() {
   console.log(products);
   return (
     <>
-    <HomeSwiper />
-    <Categories />
+      <HomeSwiper />
+      <Categories />
+      <Offers />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

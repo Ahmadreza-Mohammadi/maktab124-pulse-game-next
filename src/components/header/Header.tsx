@@ -1,7 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { pages } from "../constants/Pages";
+import { pages } from "../constants/Constants";
+
 
 function Header() {
   const router = useRouter();
@@ -10,9 +11,9 @@ function Header() {
     router.push(path);
   };
   return (
-    <div className="flex flex-col">
+    <div className="fixed top-0 left-0 right-0 z-50">
       {/* Top Bar */}
-      <div className="px-5 py-12 bg-gray-900 flex items-center justify-between shadow-lg">
+      <div className="px-5 py-8 bg-gray-900 flex items-center justify-between shadow-lg">
         {/* Logo Section */}
         <div className="flex gap-4 items-center relative">
           <img

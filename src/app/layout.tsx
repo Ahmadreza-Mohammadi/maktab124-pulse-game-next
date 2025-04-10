@@ -10,7 +10,7 @@ export default function RootLayout({
     <html lang="fa" dir="rtl">
       <body>
         <Header />
-        {children}
+        <div className="mt-64">{children}</div>
       </body>
     </html>
   );

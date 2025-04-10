@@ -729,7 +729,10 @@ export const products = [
     title: "Civilization VII",
     description:
       "استراتژی ساخت تمدن که با ویژگیای جدید و گرافیک بهتر از همیشه اومده. تاریخ رو خودت بساز و ساعت‌ها تو این بازی غرق شو!",
-    img: "https://example.com/civ7.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.b5k33BES8GGtDMfJUUKxEwHaEK&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.cod8WhIZ-XoVcl0OCU1TewHaEK&pid=15.1",
+    ],
     quantity: 12,
     price: 1400000,
     category: "game",
@@ -745,7 +748,10 @@ export const products = [
     title: "Like a Dragon: Pirate Yakuza",
     description:
       "یاکوزا حالا دزد دریایی شده و تو دریاها ماجراجویی می‌کنه. اکشن و طنزش یه تجربه باحال و متفاوت برای طرفدارای سریه!",
-    img: "https://example.com/pirateyakuza.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.b5k33BES8GGtDMfJUUKxEwHaEK&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.cod8WhIZ-XoVcl0OCU1TewHaEK&pid=15.1",
+    ],
     quantity: 9,
     price: 1200000,
     category: "game",
@@ -761,7 +767,7 @@ export const products = [
     title: "Path of Exile 2",
     description:
       "RPG تاریک و عمیق که برای گیمرای هاردکور ساخته شده و پر از چالش و لوطه. دنیای وسیع و گیم‌پلی پیچیدش تو رو ساعت‌ها نگه می‌داره!",
-    img: "https://example.com/pathofexile2.jpg",
+    img: "https://tse4.mm.bing.net/th?id=OIG4.0W_rzHvUVUrWpUPMebUg&pid=ImgGn",
     quantity: 11,
     price: 1300000,
     category: "game",
@@ -777,7 +783,7 @@ export const products = [
     title: "Vampire: The Masquerade – Bloodlines 2",
     description:
       "خون‌آشام‌ها تو شب زنده شدن و داستان پر از خیانت و قدرت داره. گیم‌پلی RPG و اتمسفر تاریکش برای عاشقای ژانر یه گنجه!",
-    img: "https://example.com/bloodlines2.jpg",
+    img: "https://tse4.mm.bing.net/th?id=OIG4.0W_rzHvUVUrWpUPMebUg&pid=ImgGn",
     quantity: 10,
     price: 1350000,
     category: "game",
@@ -793,7 +799,7 @@ export const products = [
     title: "Eiyuden Chronicle: Hundred Heroes",
     description:
       "JRPG با ۱۰۰ قهرمان متنوع که داستانی حماسی رو روایت می‌کنه. گرافیک کلاسیک و گیم‌پلی عمیقش برای طرفدارای ژانر یه تجربه ناب و جذابه!",
-    img: "https://example.com/eiyuden.jpg",
+    img: "https://tse4.mm.bing.net/th?id=OIG4.0W_rzHvUVUrWpUPMebUg&pid=ImgGn",
     quantity: 8,
     price: 950000,
     category: "game",
@@ -809,7 +815,7 @@ export const products = [
     title: "Slay the Spire 2",
     description:
       "کارت‌بازی روگ‌لایک که با ویژگیای جدید و گیم‌پلی خفن‌تر برگشته. برای گیمرایی که عاشق چالش و استراتژی‌ان، یه شاهکار اعتیادآوره!",
-    img: "https://example.com/slaythespire2.jpg",
+    img: "https://tse4.mm.bing.net/th?id=OIG4.0W_rzHvUVUrWpUPMebUg&pid=ImgGn",
     quantity: 7,
     price: 900000,
     category: "game",
@@ -825,7 +831,10 @@ export const products = [
     title: "Frostpunk 2",
     description:
       "بقا تو سرمای آخرالزمان که با مدیریت شهر و انتخابای سخت همراهه. گیم‌پلی استراتژیک و اتمسفر سنگینش تو رو تو خودش غرق می‌کنه!",
-    img: "https://example.com/frostpunk2.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.5TlPcCfctHABhT5V75y-CgHaEQ&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.50GMR3o5mxkXSdxOMvbd_QAAAA&pid=15.1",
+    ],
     quantity: 12,
     price: 1250000,
     category: "game",
@@ -841,7 +850,10 @@ export const products = [
     title: "Hollow Knight: Silksong",
     description:
       "ادامه شاهکار Hollow Knight که با گیم‌پلی متroidvania و دنیای عمیقش برگشته. گرافیک دست‌ساز و چالشاش برای گیمرا یه تجربه بی‌نظیره!",
-    img: "https://example.com/silksong.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.FmabA6Y7fag6N9OBo6ZbYAHaG4&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.Q6pRsf0SnyVnu4_lWqfMmAHaKe&pid=15.1",
+    ],
     quantity: 14,
     price: 1100000,
     category: "game",
@@ -857,7 +869,11 @@ export const products = [
     title: "The Plucky Squire",
     description:
       "ماجراجویی بامزه تو کتاب قصه که پر از خلاقیت و طنزه. گیم‌پلی دو بعدی و سه بعدیش برای گیمرای همه سنی جذابه!",
-    img: "https://example.com/pluckysquire.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.FVBZfmmxMc1Ph_EIhA7LUAHaLH&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.AQYA51PSzTRtj_zFpREKpQHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.0UM7z_9AnX7rmBanUq6cfAAAAA&pid=15.1",
+    ],
     quantity: 9,
     price: 850000,
     category: "game",
@@ -873,7 +889,10 @@ export const products = [
     title: "Little Nightmares III",
     description:
       "ترس و معما تو دنیای کابوس‌ها که با گرافیک و اتمسفر خفنش برگشته. گیم‌پلی کوآپ و داستان ترسناکش تو رو تو خودش می‌کشه!",
-    img: "https://example.com/littlenightmares3.jpg",
+    img: [
+      "data:image/jpeg;base64,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",
+      "data:image/jpeg;base64,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",
+    ],
     quantity: 10,
     price: 1050000,
     category: "game",
@@ -889,7 +908,10 @@ export const products = [
     title: "Phantom Blade Zero",
     description:
       "اکشن سریع با حال و هوای شرقی که مبارزاتش نفس‌گیره. گرافیک و داستانش تو رو تو نقش یه جنگجوی خفن می‌بره!",
-    img: "https://example.com/phantomblade.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.T-eXXty-afw9_mrrqBq48gHaIo&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.VBfHUd5VkbjggFPzrxR4EAAAAA&pid=15.1",
+    ],
     quantity: 11,
     price: 1300000,
     category: "game",
@@ -905,7 +927,10 @@ export const products = [
     title: "DokeV",
     description:
       "جهان‌باز رنگارنگ که پر از هیولاها و ماجراجوییه و حسابی جذابه. گیم‌پلی شاد و گرافیک انیمه‌ایش برای گیمرای جوون عالیه!",
-    img: "https://example.com/dokev.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.umvvthua-owijvPfU09dfAHaEK&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.9OVseprvvhrZohPKpIOX3AHaIO&pid=15.1",
+    ],
     quantity: 8,
     price: 1150000,
     category: "game",
@@ -921,7 +946,10 @@ export const products = [
     title: "Sniper Elite: Resistance",
     description:
       "تک‌تیراندازی تو جنگ جهانی دوم که با گیم‌پلی دقیق و گرافیک خفن اومده. ماموریتای مخفی‌کاری و شلیکای نفس‌گیرش تو رو تو نقش یه اسنایپر می‌بره!",
-    img: "https://example.com/sniperelite.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.BtxC11WHElYzNq2uRu4XVQHaEP&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.2t4rv9H2F9oyzSoygXIbHgAAAA&pid=15.1",
+    ],
     quantity: 9,
     price: 1200000,
     category: "game",
@@ -937,7 +965,10 @@ export const products = [
     title: "Blue Protocol",
     description:
       "MMORPG انیمه‌ای که با گرافیک خفن و دنیای عظیمش گیمرا رو جذب کرده. ماجراجویی آنلاین و گروهی تو این بازی حسابی حال می‌ده!",
-    img: "https://example.com/blueprotocol.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.BtxC11WHElYzNq2uRu4XVQHaEP&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.2t4rv9H2F9oyzSoygXIbHgAAAA&pid=15.1",
+    ],
     quantity: 10,
     price: 1000000,
     category: "game",
@@ -953,7 +984,10 @@ export const products = [
     title: "Project Mugen",
     description:
       "جهان‌باز انیمه‌ای پر از اکشن که توش با دشمنای عجیب می‌جنگی. گرافیک رنگارنگ و گیم‌پلی سریعش برای عاشقای انیمه و گیم یه گنجه!",
-    img: "https://example.com/projectmugen.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.BtxC11WHElYzNq2uRu4XVQHaEP&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.2t4rv9H2F9oyzSoygXIbHgAAAA&pid=15.1",
+    ],
     quantity: 11,
     price: 1250000,
     category: "game",
@@ -969,7 +1003,7 @@ export const products = [
     title: "Where Winds Meet",
     description:
       "جهان‌باز رزمی تو چین باستان که مبارزاتش نفس‌گیر و دنیاش خیره‌کننده‌ست. برای گیمرایی که عاشق فرهنگ شرقی و اکشنن، یه تجربه ناب و باحاله!",
-    img: "https://example.com/wherewindsmeet.jpg",
+    img: "https://tse4.mm.bing.net/th?id=OIG4.0W_rzHvUVUrWpUPMebUg&pid=ImgGn",
     quantity: 8,
     price: 1300000,
     category: "game",
@@ -985,7 +1019,10 @@ export const products = [
     title: "Deathloop",
     description:
       "یه بازی اکشن خفن که توش تو یه حلقه زمانی گیر افتادی و باید ۸ تا هدف رو قبل از ریست شدن روز بکشی. مخفی‌کاری و گان‌پلیش با حس طنز عجیبش گیمرا رو ساعت‌ها نگه می‌داره!",
-    img: "https://example.com/deathloop.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.6DOSgav38YhDOmSjaqpdRgAAAA&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.tminQiTWJo6N5NzojifdigHaKc&pid=15.1",
+    ],
     quantity: 10,
     price: 900000,
     category: "game",
@@ -1001,7 +1038,10 @@ export const products = [
     title: "Elden Ring",
     description:
       "جهان‌باز Soulslike که با همکاری جرج آر. آر. مارتین ساخته شده و پر از باس‌فایتای نفس‌گیره. گیم‌پلی سخت و دنیای عمیقش برای گیمرای هاردکور یه شاهکاره!",
-    img: "https://example.com/eldenring.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.CMNMEFng2mYz6xJt2vtPsAHaHa&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.WVt142DpvY_RYJj-AxcGBgHaLH&pid=15.1",
+    ],
     quantity: 12,
     price: 1100000,
     category: "game",
@@ -1017,7 +1057,10 @@ export const products = [
     title: "Red Dead Redemption 2",
     description:
       "داستان آرتور مورگان تو غرب وحشی که پر از جزئیات و احساسه و گیم‌پلیش دیوونه‌کننده‌ست. دنیای بازش و ماموریتاش هنوزم استاندارد گیمای جهان‌بازه!",
-    img: "https://example.com/reddead2.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.CMNMEFng2mYz6xJt2vtPsAHaHa&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.WVt142DpvY_RYJj-AxcGBgHaLH&pid=15.1",
+    ],
     quantity: 15,
     price: 1000000,
     category: "game",
@@ -1033,7 +1076,10 @@ export const products = [
     title: "Rainbow Six Siege",
     description:
       "یه شوتر تاکتیکی آنلاین که هر لحظه‌ش پر از تنش و استراتژیه. آپدیتای مداوم و اپراتورای جدیدش هنوزم گیمرا رو پای بازی نگه داشته!",
-    img: "https://example.com/rainbow6siege.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.Vn5CJOlLC-WAAR-pqUNW2QHaHa&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.LcSgpOldjzqA5lNp6BVPyAHaLH&pid=15.1",
+    ],
     quantity: 14,
     price: 800000,
     category: "game",
@@ -1049,7 +1095,10 @@ export const products = [
     title: "Grand Theft Auto V",
     description:
       "شاهکار راکستار که تو لوس سانتوس پر از جرم و جنایت و ماجراجوییه. حالت آنلاینش هنوزم با آپدیتای خفن گیمرا رو سرگرم می‌کنه!",
-    img: "https://example.com/gtav.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.Vn5CJOlLC-WAAR-pqUNW2QHaHa&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.LcSgpOldjzqA5lNp6BVPyAHaLH&pid=15.1",
+    ],
     quantity: 20,
     price: 950000,
     category: "game",
@@ -1065,7 +1114,10 @@ export const products = [
     title: "Control",
     description:
       "یه بازی اکشن ماورایی که توش با قدرتای عجیب تو یه ساختمون مرموز می‌جنگی. داستان پیچیده و گیم‌پلی روانش برای گیمرای خاص‌پسند یه گنجه!",
-    img: "https://example.com/control.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.CkA_oDscqXBicFdYtg9uwwHaHa&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.Qi_dEqBj3AX2YPF_ejO01QAAAA&pid=15.1",
+    ],
     quantity: 9,
     price: 850000,
     category: "game",
@@ -1081,7 +1133,10 @@ export const products = [
     title: "Ghost of Tsushima",
     description:
       "سفر جین ساکای تو ژاپن سامورایی‌ها که با گرافیک خیره‌کننده و مبارزات شمشیرزنی می‌ترکونه. دنیای باز و داستان حماسیش گیمرا رو عاشق خودش کرده!",
-    img: "https://example.com/ghostoftsushima.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.m8Mwinx3qXR7YPXBpySO9AHaJS&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.L50HOqszLKSb2XRQM8GKUQHaHa&pid=15.1",
+    ],
     quantity: 13,
     price: 1050000,
     category: "game",
@@ -1097,7 +1152,7 @@ export const products = [
     title: "Forza Horizon 5",
     description:
       "ماشین‌سواری تو مکزیک با گرافیک نسل بعدی و جاده‌های متنوع که قلب گیمرای عاشق سرعت رو می‌بره. دنیای بازش و ماشینای خفنش ساعت‌ها سرگرمت می‌کنه!",
-    img: "https://example.com/forza5.jpg",
+    img: "https://tse4.mm.bing.net/th?id=OIG4.0W_rzHvUVUrWpUPMebUg&pid=ImgGn",
     quantity: 14,
     price: 1200000,
     category: "game",
@@ -1113,7 +1168,10 @@ export const products = [
     title: "Quantum Break",
     description:
       "اکشن علمی-تخیلی که توش زمان رو دستکاری می‌کنی و با دشمنا می‌جنگی. داستانش با یه سریال قاطی شده و برای گیمرای خاص یه تجربه ناب و عجیبه!",
-    img: "https://example.com/quantumbreak.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.ymkEo4INw6U1oCIyJKAbaAAAAA&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.IEZMFWoq_pYp-D3TYUnWAwHaKF&pid=15.1",
+    ],
     quantity: 0,
     price: 750000,
     category: "game",
@@ -1129,7 +1187,10 @@ export const products = [
     title: "Gears 5",
     description:
       "شوتر خشن و پرهیجان که توش با لانسرت دشمنا رو تکه‌پاره می‌کنی و داستانش عمیقه. گیم‌پلی کوآپ و گرافیک خفنش برای طرفدارای سری یه گنجه!",
-    img: "https://example.com/gears5.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.O7I3FzNZMREPb-VZMolSawHaLH&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.UjuSY_qqBHTpaB9DtkXaCgHaLH&pid=15.1",
+    ],
     quantity: 11,
     price: 950000,
     category: "game",
@@ -1145,7 +1206,7 @@ export const products = [
     title: "Halo 5: Guardians",
     description:
       "ماجراجویی مستر چیف تو فضا با گان‌پلی سریع و آنلاین خفن که طرفدارای هیلو رو دیوونه کرده. داستانش و گرافیکشم هنوزم جذابه!",
-    img: "https://example.com/halo5.jpg",
+    img: "https://tse4.mm.bing.net/th?id=OIG4.0W_rzHvUVUrWpUPMebUg&pid=ImgGn",
     quantity: 10,
     price: 800000,
     category: "game",
@@ -1161,7 +1222,10 @@ export const products = [
     title: "The Last of Us Part I",
     description:
       "ریمک شاهکار TLOU که با گرافیک نسل نهم و گیم‌پلی بهتر برگشته و داستان جوئل و الی هنوزم اشکتو درمیاره. برای گیمرای احساسی و اکشن‌باز یه تجربه ناب و بی‌نظیره!",
-    img: "https://example.com/tlou1remake.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.lllunOzfTCMxJTL49oJGBwHaEW&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.xh2xAvAnJTvndLu8ilaKnAHaJK&pid=15.1",
+    ],
     quantity: 12,
     price: 1300000,
     category: "game",
@@ -1191,7 +1255,10 @@ export const products = [
     title: "DXRacer Master",
     description:
       "صندلی ریسینگ از DXRacer که برای گیمرای حرفه‌ای ساخته شده و کمرتو تو بهترین حالت نگه می‌داره. فوم سردش شکل بدنتو می‌گیره و پایه آلومینیومش استحکام بالایی داره. چرم PU باکیفیتش برای ساعت‌ها گیم زدن حرف نداره!",
-    img: "https://example.com/dxracermaster.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.d0DjxjoOAAT7LaFm5nAnhQHaHa&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.tB76LY8yAqL5bhHku4qmRwHaNu&pid=15.1",
+    ],
     quantity: 15,
     price: 4500000,
     category: "chair",
@@ -1205,7 +1272,7 @@ export const products = [
     title: "Secretlab Titan Evo",
     description:
       "غول گیمینگ از Secretlab که با فوم متراکمش راحتی رو بهت هدیه می‌ده و کمر درد رو نابود می‌کنه. بالشتک مغناطیسیش گردنتو تو گیمای طولانی نگه می‌داره و چرمش حس لوکس بودن می‌ده. طراحی شیکش برای هر گیمری یه رویاست!",
-    img: "https://example.com/secretlabtitan.jpg",
+    img: "https://ts2.mm.bing.net/th?id=OIP.SKNbUgdnXd5VETaXW4H9QAHaHE&pid=15.1",
     quantity: 18,
     price: 5200000,
     category: "chair",
@@ -1219,7 +1286,7 @@ export const products = [
     title: "Herman Miller Aeron",
     description:
       "صندلی ارگونومیک افسانه‌ای از Herman Miller که برای کار و گیم طراحی شده و کمرت رو مثل یه تاج نگه می‌داره. جنس مش‌بکش عرق رو کم می‌کنه و تنظیمات دقیقش برای هر بدنی عالیه. با این قیمت، یه سرمایه‌گذاری برای سلامتیته!",
-    img: "https://example.com/hermanaeron.jpg",
+    img: "https://ts2.mm.bing.net/th?id=OIP.QW6ntH7aqyVjPDM9bGhDYQHaHa&pid=15.1",
     quantity: 12,
     price: 6500000,
     category: "chair",
@@ -1233,7 +1300,10 @@ export const products = [
     title: "Noblechairs Hero",
     description:
       "صندلی گیمینگ باکلاس از Noblechairs که با چرم واقعیش حس لوکس بودن می‌ده و راحتیش دیوونته می‌کنه. پشتیبانی کمرش برای گیمای طولانی عالیه و پایه فلزیش استحکام بالایی داره. برای گیمرای شیک‌پسند یه انتخاب خفنه!",
-    img: "https://example.com/noblehero.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.kj4NuZSD2-VbqYeda_aQMgHaHa&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.tu6jlJRK1d2UxEMm5k2RxAHaHa&pid=15.1",
+    ],
     quantity: 25,
     price: 4900000,
     category: "chair",
@@ -1247,7 +1317,10 @@ export const products = [
     title: "Corsair T3 Rush",
     description:
       "صندلی گیمینگ از Corsair با پارچه تنفس‌پذیر که تو گرما عرق نمی‌کنی و برای گیمای طولانی راحته. بالشتکای نرمش کمر و گردنتو نگه می‌دارن و طراحی مینیمالش به هر دکوری می‌خوره. برای گیمرای اقتصادی یه گزینه باحاله!",
-    img: "https://example.com/corsairt3.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.xMb1q33KIWRLogf2aV_gGQHaDV&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.UD3ybK4F7xw8yDUpsuULigHaJO&pid=15.1",
+    ],
     quantity: 17,
     price: 4200000,
     category: "chair",
@@ -1261,7 +1334,10 @@ export const products = [
     title: "Razer Enki Pro",
     description:
       "صندلی لوکس از Razer که با فوم متراکمش کمرت رو تو گیمای شبانه نگه می‌داره و خستگی رو نابود می‌کنه. چرم آلکانتراش حس ماشین اسپرت می‌ده و تنظیماتش برای هر پوزیشن گیم زدن عالیه. RGBش هم اتاقتو به یه دنیای گیم تبدیل می‌کنه!",
-    img: "https://example.com/razerenkipro.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.quLsn5RrBjsRD7dEDMR0UAHaD4&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.2X3WwJSMKAa36c5ei-VB-wHaHa&pid=15.1",
+    ],
     quantity: 14,
     price: 5800000,
     category: "chair",
@@ -1275,7 +1351,10 @@ export const products = [
     title: "Secretlab Omega",
     description:
       "صندلی جمع‌وجور از Secretlab که برای گیمرای قدکوتاه یا فضاهای کوچک طراحی شده و راحته. فوم سردش شکل بدنتو می‌گیره و چرم PUش حس لوکس بودن می‌ده. برای گیم زدن تو خونه‌های نقلی یه انتخاب باحاله!",
-    img: "https://example.com/secretlabomega.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.uFfY682unkxmtZggbrdzfAHaJ4&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.WjjC_5DT_DMegEYRJos4OwAAAA&pid=15.1",
+    ],
     quantity: 19,
     price: 4600000,
     category: "chair",
@@ -1289,7 +1368,10 @@ export const products = [
     title: "DXRacer Drifting",
     description:
       "صندلی ریسینگ از DXRacer که تا ۱۸۰ کیلو رو تحمل می‌کنه و برای گیمرای سنگین‌وزن عالیه. پشتی قابل تنظیمش کمرت رو تو گیمای طولانی نگه می‌داره و چرمش حس اسپرت بودن می‌ده. استحکام و راحتیش برای هر گیمری یه گنجه!",
-    img: "https://example.com/dxracerdrifting.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.E16NGUauwIipJuNCqP7r6QHaHa&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.foko5pOxHIvfSB3lWn4MNgHaHa&pid=15.1",
+    ],
     quantity: 10,
     price: 4700000,
     category: "chair",
@@ -1303,7 +1385,7 @@ export const products = [
     title: "AKRacing Core",
     description:
       "صندلی گیمینگ از AKRacing که با پارچه تنفس‌پذیرش تو تابستون خنکه و برای گیمای طولانی عالیه. فوم متراکمش راحتی رو تضمین می‌کنه و پایه فلزیش محکمه. طراحی ساده و شیکش برای هر گیمری جذابه!",
-    img: "https://example.com/akracingcore.jpg",
+    img: "https://ts2.mm.bing.net/th?id=OIP.p2D5mTZ0klH3WoV_KduD1QHaHa&pid=15.1",
     quantity: 16,
     price: 4300000,
     category: "chair",
@@ -1317,7 +1399,10 @@ export const products = [
     title: "Herman Miller Embody",
     description:
       "صندلی ارگونومیک از Herman Miller که با تکنولوژی خفنش کمرت رو تو هر حالتی نگه می‌داره و سلامتیتو تضمین می‌کنه. جنس مش‌بکش برای نشستنای طولانی عالیه و تنظیماتش برای هر بدنی مناسبه. گرونه، ولی ارزششو داره!",
-    img: "https://example.com/hermanembody.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.ROaki9Uf1L55dhn37Ej7cgAAAA&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.tauO9HAK3iLlZlsZofQrzAHaJx&pid=15.1",
+    ],
     quantity: 11,
     price: 7200000,
     category: "chair",
@@ -1331,7 +1416,10 @@ export const products = [
     title: "Noblechairs Epic",
     description:
       "صندلی گیمینگ با چرم واقعی از Noblechairs که حس لوکس بودن می‌ده و برای گیمرای باکلاس ساخته شده. فوم سردش کمرت رو تو گیمای طولانی نگه می‌داره و دوخت دقیقش طراحی‌ش رو خفن‌تر می‌کنه. یه انتخاب شیک و راحته!",
-    img: "https://example.com/noblechairs.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.HJCtmAj4x_6Q1NwS-BavBAHaHa&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.T1WwIVV2PS7noi7eV2iZoQHaHa&pid=15.1",
+    ],
     quantity: 13,
     price: 5100000,
     category: "chair",
@@ -1345,7 +1433,10 @@ export const products = [
     title: "Razer Fujin",
     description:
       "صندلی مش‌بک از Razer که عرق رو کم می‌کنه و برای گیمای طولانی تو گرما عالیه. پشتیبانی کمرش تطبیقیه و کمرت رو تو بهترین حالت نگه می‌داره. طراحی مینیمال و سبکش برای هر گیمری جذابه!",
-    img: "https://example.com/razerfujin.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.EFsJfBZ1PND6D1SNakc8nQHaD4&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.hsG2LdRqR8d66OxaVY8-IwAAAA&pid=15.1",
+    ],
     quantity: 18,
     price: 4900000,
     category: "chair",
@@ -1359,7 +1450,10 @@ export const products = [
     title: "Secretlab Neue",
     description:
       "صندلی ارگونومیک از Secretlab که با طراحی شیکش هم برای کار خوبه هم برای گیم زدن. فوم متراکمش راحتی رو تضمین می‌کنه و چرم PUش حس لوکس بودن می‌ده. برای گیمرای چندکاره یه انتخاب خفنه!",
-    img: "https://example.com/secretlabneue.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.cduwusgHJYyMx5na3BsDPgHaE8&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.LsWD2Itiu2lOaoQtopxcRQHaLG&pid=15.1",
+    ],
     quantity: 20,
     price: 4700000,
     category: "chair",
@@ -1373,7 +1467,10 @@ export const products = [
     title: "DXRacer Blade",
     description:
       "صندلی ریسینگ از DXRacer که با طراحی اسپرتش حس سرعت بهت می‌ده و برای گیمای مسابقه‌ای عالیه. چرم مقاومش برای سال‌ها مثل روز اول می‌مونه و فومش کمرت رو نگه می‌داره. برای گیمرای جوون‌پسند یه گزینه توپه!",
-    img: "https://example.com/dxracerblade.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.5SCEIlX6G5EC4_KGr9pU9gHaHa&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.8zNaM0ObLXR9jxsU7vnk2QHaNf&pid=15.1",
+    ],
     quantity: 15,
     price: 4600000,
     category: "chair",
@@ -1387,7 +1484,10 @@ export const products = [
     title: "Corsair TC70 Remix",
     description:
       "صندلی گیمینگ از Corsair با پارچه نرم که برای گیمای طولانی راحته و عرق رو کم می‌کنه. پشتی قابل تنظیمش کمرت رو تو بهترین حالت نگه می‌داره و طراحی ساده‌ش به هر دکوری می‌خوره. برای گیمرای اقتصادی یه انتخاب باحاله!",
-    img: "https://example.com/corsairtc70.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.L5R29bDvwr4xP9ThPXrv7gHaHa&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.alRxWlNyjmeImmVeCiqlNQHaHa&pid=15.1",
+    ],
     quantity: 17,
     price: 4100000,
     category: "chair",
@@ -1401,7 +1501,10 @@ export const products = [
     title: "AKRacing Max",
     description:
       "صندلی گیمینگ از AKRacing که برای گیمرای سنگین‌وزن تا ۲۰۰ کیلو طراحی شده و استحکامش حرف نداره. فوم متراکمش راحتی رو تضمین می‌کنه و چرمش حس لوکس بودن می‌ده. برای گیمرای غول‌پیکر یه گنجه!",
-    img: "https://example.com/akracingmax.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.U7fm-omTSsKr4rjuwRlu9QHaHa&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.9qV24jac8yB3ohIVqFsAoAHaJ4&pid=15.1",
+    ],
     quantity: 14,
     price: 5000000,
     category: "chair",
@@ -1415,7 +1518,10 @@ export const products = [
     title: "Noblechairs Icon",
     description:
       "صندلی باکلاس از Noblechairs که با چرم واقعیش حس لوکس بودن می‌ده و برای گیمرای شیک‌پسند عالیه. فوم سردش کمرت رو تو گیمای طولانی نگه می‌داره و پایه فلزیش استحکام بالایی داره. طراحی‌ش اتاقتو به یه استودیو گیم تبدیل می‌کنه!",
-    img: "https://example.com/nobleicon.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.YAY42Sw42vGnlXt06CF1UAHaHa&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.3RWNkQHFsh9M9F6HjJ9r4AHaL2&pid=15.1",
+    ],
     quantity: 11,
     price: 5300000,
     category: "chair",
@@ -1429,7 +1535,10 @@ export const products = [
     title: "Razer Tarok Ultimate",
     description:
       "صندلی گیمینگ از Razer که با بالشتکای نرمش کمر و گردنتو تو گیمای طولانی نگه می‌داره و خستگی رو نابود می‌کنه. چرم PUش حس اسپرت بودن می‌ده و RGBش برای گیمرای شب‌زنده‌دار عالیه. یه انتخاب خفن برای حرفه‌ای‌هاست!",
-    img: "https://example.com/razertarok.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.j7mjuJC33-G629j38E20EQHaHa&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.OkVlEAKZcIaPeGOJVlKnqwHaHa&pid=15.1",
+    ],
     quantity: 16,
     price: 5500000,
     category: "chair",
@@ -1443,7 +1552,10 @@ export const products = [
     title: "Secretlab 2025 Pro",
     description:
       "صندلی جدید از Secretlab که با فوم بهبودیافته‌ش راحتی رو به سطح بعدی برده و کمرت رو نگه می‌داره. چرم PUش حس لوکس بودن می‌ده و تنظیمات دقیقش برای هر بدنی عالیه. برای گیمرای آینده‌نگر یه انتخاب باحاله!",
-    img: "https://example.com/secretlab2025.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.yuxONfaomj7DlPEXluFspwHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.tPPTS_eNcR783MfL1B5stwHaHW&pid=15.1",
+    ],
     quantity: 13,
     price: 5100000,
     category: "chair",
@@ -1457,7 +1569,10 @@ export const products = [
     title: "DXRacer Craft",
     description:
       "صندلی گیمینگ از DXRacer که با طراحی مینیمالش برای هر فضایی مناسبه و کمرت رو تو گیم نگه می‌داره. چرم مقاومش برای سال‌ها دوام میاره و فومش راحتی رو تضمین می‌کنه. برای گیمرای ساده‌پسند یه گزینه خفنه!",
-    img: "https://example.com/dxracercraft.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.yuxONfaomj7DlPEXluFspwHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.tPPTS_eNcR783MfL1B5stwHaHW&pid=15.1",
+    ],
     quantity: 19,
     price: 4700000,
     category: "chair",
@@ -1471,7 +1586,10 @@ export const products = [
     title: "Herman Miller Sayl",
     description:
       "صندلی ارگونومیک از Herman Miller که با طراحی معلقش حس سبکی بهت می‌ده و کمرت رو عالی نگه می‌داره. جنس مش‌بکش برای نشستنای طولانی راحته و تنظیماتش برای هر قد و قواره‌ای مناسبه. یه انتخاب شیک برای گیم و کاره!",
-    img: "https://example.com/hermansayl.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.EFsJfBZ1PND6D1SNakc8nQHaD4&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.hsG2LdRqR8d66OxaVY8-IwAAAA&pid=15.1",
+    ],
     quantity: 15,
     price: 6800000,
     category: "chair",
@@ -1485,7 +1603,10 @@ export const products = [
     title: "Corsair T1 Race",
     description:
       "صندلی ریسینگ از Corsair که با طراحی اسپرتش حس سرعت بهت می‌ده و برای گیمای مسابقه‌ای عالیه. چرم PUش مقاومه و فومش کمرت رو تو بهترین حالت نگه می‌داره. برای گیمرای جوون‌پسند یه انتخاب باحاله!",
-    img: "https://example.com/corsairt1.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.EFsJfBZ1PND6D1SNakc8nQHaD4&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.hsG2LdRqR8d66OxaVY8-IwAAAA&pid=15.1",
+    ],
     quantity: 17,
     price: 4500000,
     category: "chair",
@@ -1499,7 +1620,10 @@ export const products = [
     title: "AKRacing Nitro",
     description:
       "صندلی گیمینگ از AKRacing که با فوم متراکمش راحتی رو تضمین می‌کنه و برای گیمای طولانی عالیه. چرمش حس لوکس بودن می‌ده و پایه فلزیش استحکام بالایی داره. طراحی اسپرتش برای گیمرای پرهیجان حرف نداره!",
-    img: "https://example.com/akracingnitro.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.EFsJfBZ1PND6D1SNakc8nQHaD4&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.hsG2LdRqR8d66OxaVY8-IwAAAA&pid=15.1",
+    ],
     quantity: 14,
     price: 4800000,
     category: "chair",
@@ -1513,7 +1637,10 @@ export const products = [
     title: "Noblechairs Legend",
     description:
       "صندلی لوکس از Noblechairs که با چرم واقعیش حس قدرت و کلاس بهت می‌ده و برای گیمرای حرفه‌ای عالیه. فوم سردش کمرت رو تو گیمای طولانی نگه می‌داره و دوخت دقیقش طراحی‌ش رو خفن‌تر می‌کنه. یه انتخاب شیک و راحته!",
-    img: "https://example.com/noblelegend.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.yuxONfaomj7DlPEXluFspwHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.tPPTS_eNcR783MfL1B5stwHaHW&pid=15.1",
+    ],
     quantity: 20,
     price: 5400000,
     category: "chair",
@@ -1527,7 +1654,10 @@ export const products = [
     title: "Razer Enki X",
     description:
       "صندلی اقتصادی از Razer که با فوم نرمش کمرت رو تو گیمای طولانی نگه می‌داره و خستگی رو کم می‌کنه. چرم PUش حس اسپرت بودن می‌ده و طراحی ساده‌ش برای هر گیمری مناسبه. برای گیمرای باهوش یه گزینه باحاله!",
-    img: "https://example.com/razerenkix.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.yuxONfaomj7DlPEXluFspwHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.tPPTS_eNcR783MfL1B5stwHaHW&pid=15.1",
+    ],
     quantity: 16,
     price: 4200000,
     category: "chair",
@@ -1541,7 +1671,10 @@ export const products = [
     title: "Secretlab Titan Stealth",
     description:
       "صندلی مشکی از Secretlab که با طراحی مینیمالش برای گیمرای حرفه‌ای ساخته شده و کمرت رو نگه می‌داره. فوم متراکمش راحتی رو تضمین می‌کنه و چرم PUش حس لوکس بودن می‌ده. برای گیم زدن تو شب یه انتخاب خفنه!",
-    img: "https://example.com/secretlabstealth.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.EFsJfBZ1PND6D1SNakc8nQHaD4&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.hsG2LdRqR8d66OxaVY8-IwAAAA&pid=15.1",
+    ],
     quantity: 13,
     price: 5000000,
     category: "chair",
@@ -1555,7 +1688,10 @@ export const products = [
     title: "DXRacer Formula",
     description:
       "صندلی ریسینگ از DXRacer که با طراحی اسپرتش حس سرعت بهت می‌ده و برای گیمای مسابقه‌ای عالیه. فومش کمرت رو تو بهترین حالت نگه می‌داره و چرمش برای سال‌ها مقاومه. برای گیمرای جوون یه انتخاب باحاله!",
-    img: "https://example.com/dxracerformula.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.EFsJfBZ1PND6D1SNakc8nQHaD4&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.hsG2LdRqR8d66OxaVY8-IwAAAA&pid=15.1",
+    ],
     quantity: 18,
     price: 4400000,
     category: "chair",
@@ -1569,7 +1705,10 @@ export const products = [
     title: "Herman Miller Cosm",
     description:
       "صندلی ارگونومیک از Herman Miller که با طراحی معلقش حس سبکی بهت می‌ده و کمرت رو تو گیم و کار نگه می‌داره. جنس مش‌بکش برای نشستنای طولانی راحته و رنگای خنثی‌ش به هر دکوری می‌خوره. یه انتخاب لوکس و شیکه!",
-    img: "https://example.com/hermancosm.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.EFsJfBZ1PND6D1SNakc8nQHaD4&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.hsG2LdRqR8d66OxaVY8-IwAAAA&pid=15.1",
+    ],
     quantity: 15,
     price: 6900000,
     category: "chair",
@@ -1583,7 +1722,10 @@ export const products = [
     title: "Corsair T2 Road Warrior",
     description:
       "صندلی گیمینگ از Corsair که با چرم PUش حس اسپرت بودن می‌ده و برای گیمای طولانی راحته. فوم متراکمش کمرت رو نگه می‌داره و چرخای نرمی داره که رو هر سطحی بی‌صدا می‌ره. برای گیمرای پرتحرک یه گزینه خفنه!",
-    img: "https://example.com/corsairt2.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.yuxONfaomj7DlPEXluFspwHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.tPPTS_eNcR783MfL1B5stwHaHW&pid=15.1",
+    ],
     quantity: 21,
     price: 4600000,
     category: "chair",
@@ -1639,7 +1781,10 @@ export const products = [
     title: "HyperX Cloud Alpha Wireless",
     description:
       "هدست وایرلس HyperX با باتری ۳۰۰ ساعته که گیمرای تنبل رو عاشق خودش می‌کنه. صدای باس‌دارش اکشن گیما رو جذاب‌تر می‌کنه و میکروفونش برای چت تیمی عالیه. طراحی سبکش برای گیمای طولانی حرف نداره!",
-    img: "https://example.com/cloudalpha.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.yuxONfaomj7DlPEXluFspwHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.tPPTS_eNcR783MfL1B5stwHaHW&pid=15.1",
+    ],
     quantity: 22,
     price: 4900000,
     category: "headset",
@@ -1653,7 +1798,10 @@ export const products = [
     title: "Corsair Virtuoso Max",
     description:
       "هدست پریمیوم Corsair که با صدای Dolby Atmos تو رو تو دنیای گیم غرق می‌کنه. چرم لوکس و فوم مموریش راحتیش رو به اوج می‌رسونه و میکروفونش برای استریم حرف نداره. RGB خفنش هم اتاقتو قشنگ‌تر می‌کنه!",
-    img: "https://example.com/virtuosomax.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.yuxONfaomj7DlPEXluFspwHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.tPPTS_eNcR783MfL1B5stwHaHW&pid=15.1",
+    ],
     quantity: 14,
     price: 6200000,
     category: "headset",
@@ -3361,7 +3509,10 @@ export const products = [
     title: "MSI Optix G274QPF",
     description:
       "مانیتور 27 اینچی MSI با رزولوشن QHD که رفرش‌ریت 170Hzش گیماتو نرم‌تر از ابریشم می‌کنه. پنل IPSش زاویه دید خفنی داره و قیمت مناسبش برای گیمرای اقتصادی عالیه. برای گیمای روزمره یه انتخاب باحاله!",
-    img: "https://example.com/g274qpf.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.Hu73T5kbFUCqnVOm1O-xAgHaF7&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.gTMtmC35m_zYGoQbhW-5IgHaF7&pid=15.1",
+    ],
     quantity: 21,
     price: 18500000,
     category: "monitor",
@@ -3375,7 +3526,10 @@ export const products = [
     title: "BenQ Mobiuz EX3210R",
     description:
       "مانیتور 32 اینچی BenQ با انحنای 1000R که گیماتو فراگیر می‌کنه و چشاتو می‌گیره. رزولوشن QHD و رفرش‌ریت 165Hzش برای گیمای سنگین کافیه. اسپیکرای داخلیش برای گیمرای چندکاره یه انتخاب شیکه!",
-    img: "https://example.com/ex3210r.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.qKUvHPkN4EVugEUE3R37tQHaHa&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.IoIBz5U9OFcgz6A_PgEfKgHaHa&pid=15.1",
+    ],
     quantity: 17,
     price: 24500000,
     category: "monitor",
@@ -3389,7 +3543,10 @@ export const products = [
     title: "Dell S3222DGM",
     description:
       "مانیتور 32 اینچی Dell با انحنای 1800R که گیماتو غرق‌کننده می‌کنه و چشاتو نوازش می‌ده. رزولوشن QHD و رفرش‌ریت 165Hzش برای گیمای سریع عالیه. برای گیمرای اقتصادی که دنبال کیفیتن، یه انتخاب توپه!",
-    img: "https://example.com/s3222dgm.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.s44j5yNTWrgATMbA6nGz-gHaG2&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.h5JjzUMUmeJ5ujzsnH2lJwHaE_&pid=15.1",
+    ],
     quantity: 19,
     price: 21500000,
     category: "monitor",
@@ -3403,7 +3560,10 @@ export const products = [
     title: "ASUS TUF VG32AQL1A",
     description:
       "مانیتور 32 اینچی ASUS با رزولوشن QHD که رفرش‌ریت 170Hzش گیماتو نرم‌تر از کره می‌کنه. پنل IPSش رنگا رو دقیق نشون می‌ده و HDR10ش چشاتو می‌گیره. برای گیمرای باکلاس که کیفیت می‌خوان، یه گنجه!",
-    img: "https://example.com/vg32aql1a.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.7t2CdFUgEuBOpbPKIcZ_VwHaFj&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.3by0VE3cv145-JD3KlEGiAHaHa&pid=15.1",
+    ],
     quantity: 15,
     price: 25500000,
     category: "monitor",
@@ -3417,7 +3577,10 @@ export const products = [
     title: "Acer Nitro XZ342CU",
     description:
       "مانیتور 34 اینچی Acer با رزولوشن UWQHD که انحنای 1500Rش گیماتو فراگیر می‌کنه. رفرش‌ریت 165Hz و FreeSyncش لگ رو نابود می‌کنه و پنل VAش کنتراست بالایی داره. برای گیمرای اقتصادی یه انتخاب باحاله!",
-    img: "https://example.com/xz342cu.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.Y4LI9pJREMa-KDLijaQdKgHaDt&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.JGsnF4fihqH3j42vccx5mQHaGz&pid=15.1",
+    ],
     quantity: 20,
     price: 22500000,
     category: "monitor",
@@ -3431,7 +3594,10 @@ export const products = [
     title: "LG UltraGear 24GN650",
     description:
       "مانیتور 24 اینچی LG با رفرش‌ریت 144Hz که گیمای سریع رو نرم‌تر از ابریشم می‌کنه. پنل IPSش رنگا رو زنده نشون می‌ده و قیمت مناسبش برای گیمرای اقتصادی عالیه. برای گیمای روزمره یه انتخاب شیکه!",
-    img: "https://example.com/24gn650.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.Jq_6V8VzcTLF4ycV2urcoQHaFj&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.2WMxSsr96htPKszEW-9dQAHaE6&pid=15.1",
+    ],
     quantity: 22,
     price: 17500000,
     category: "monitor",
@@ -3445,7 +3611,11 @@ export const products = [
     title: "Samsung Odyssey G9 Neo",
     description:
       "مانیتور 49 اینچی Samsung با رزولوشن DQHD که مثل یه پرده سینما گیماتو نشون می‌ده. رفرش‌ریت 240Hz و Mini-LEDش روشنایی و رنگا رو به اوج می‌رسونه. برای گیمرای لوکس که دنبال غولن، یه انتخاب خفنه!",
-    img: "https://example.com/odysseyg9neo.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.z2eNen6xQJiEV-MYa_6-eQHaEK&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.AIiWgEC1RrwbfEzYapL4VwHaE8&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.ObeyPBOxF_Gpt_q7ImT2kAHaFj&pid=15.1",
+    ],
     quantity: 12,
     price: 48500000,
     category: "monitor",
@@ -3459,7 +3629,10 @@ export const products = [
     title: "MSI Optix MAG272CQR",
     description:
       "مانیتور 27 اینچی MSI با انحنای 1500R که گیماتو فراگیر می‌کنه و چشاتو می‌گیره. رزولوشن QHD و رفرش‌ریت 165Hzش برای گیمای سنگین کافیه. برای گیمرای اقتصادی که دنبال استایلن، یه گنجه!",
-    img: "https://example.com/mag272cqr.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.Zl8V5XDHFYmI0VgQe3AxNgHaHa&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.2reQLFVny5bNnyDJ-e21EAHaHa&pid=15.1",
+    ],
     quantity: 18,
     price: 19500000,
     category: "monitor",
@@ -3473,7 +3646,10 @@ export const products = [
     title: "BenQ Zowie XL2546X",
     description:
       "مانیتور 24.5 اینچی BenQ با رفرش‌ریت 240Hz که برای گیمرای esports مثل رعد و برق عمل می‌کنه. پنل TNش زمان پاسخگویی 0.5ms داره و دقتش دشمناتو نابود می‌کنه. برای تورنمنت‌بازای حرفه‌ای یه انتخاب باحاله!",
-    img: "https://example.com/xl2546x.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.Qew0fxEHZJLRZjViRgr9mwAAAA&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.6c0h1Z-ml2PrUaYLLLP3sQHaHa&pid=15.1",
+    ],
     quantity: 16,
     price: 22500000,
     category: "monitor",
@@ -3487,7 +3663,10 @@ export const products = [
     title: "Dell Alienware AW5525QF",
     description:
       "مانیتور 55 اینچی Dell با پنل QD-OLED که رنگای مشکی عمیق و زنده‌ای بهت می‌ده. رزولوشن 4K و رفرش‌ریت 240Hz گیماتو به اوج می‌بره. برای گیمرای پریمیوم که دنبال غولن، یه انتخاب خفنه!",
-    img: "https://example.com/aw5525qf.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.Kp3K2j2Ao6YDSenriFv8ZwHaER&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.pqp-WTwsZeFsWXFezjsO5QHaD4&pid=15.1",
+    ],
     quantity: 10,
     price: 59500000,
     category: "monitor",
@@ -3501,7 +3680,10 @@ export const products = [
     title: "Sony PlayStation 5 Pro",
     description:
       "کنسول PS5 Pro با سخت‌افزار خفنش گیمای 4K رو با 60 فریم روان‌تر از ابریشم می‌کنه. تکنولوژی PSSR و GPU 16.7 ترافلاپش گرافیک رو به اوج می‌بره و چشاتو می‌گیره. برای گیمرای حرفه‌ای که دنبال بهترین تجربه‌ن، یه انتخاب توپه!",
-    img: "https://example.com/ps5pro.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.Bd0zUZivnoJaSx6f3TZEBQHaEK&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.XCjlXd_6583d8zK6HkmCuAHaEK&pid=15.1",
+    ],
     quantity: 10,
     price: 32500000,
     category: "console",
@@ -3515,7 +3697,10 @@ export const products = [
     title: "Microsoft Xbox Series X Elite",
     description:
       "کنسول Xbox Series X Elite با SSD سریعش لودینگ رو نابود می‌کنه و گیماتو می‌ترکونه. قدرت 12 ترافلاپ و Quick Resumeش برای گیمرای چندکاره عالیه. Game Pass هم که دیگه بهشت گیمرای اقتصادیه!",
-    img: "https://example.com/xboxseriesxelite.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.Sl_FgoX_24uy81UTP89esQAAAA&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.eiUuNS_sr2NY-7k3g7KADAHaFK&pid=15.1",
+    ],
     quantity: 12,
     price: 29500000,
     category: "console",
@@ -3529,7 +3714,10 @@ export const products = [
     title: "Nintendo Switch 2",
     description:
       "کنسول Nintendo Switch 2 با جوی‌کانای مغناطیسی و بک‌وارد کم‌پتیبیلیتی گیماتو به نسل بعد می‌بره. صفحه OLED بزرگ‌ترش چشاتو نوازش می‌ده و Mario Kart 9 رو باید باهاش امتحان کنی! برای گیمرای پرتابل و نینتندوفن‌ها یه گنجه!",
-    img: "https://example.com/switch2.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIF.7YGmKcAedlvBnPidfergIg&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIF.bMjcRknF02i%2bq40VM6Gozw&pid=15.1",
+    ],
     quantity: 15,
     price: 24500000,
     category: "console",
@@ -3543,7 +3731,10 @@ export const products = [
     title: "Sony PlayStation 5 Slim",
     description:
       "کنسول PS5 Slim با طراحی جمع‌وجورش جا کم می‌گیره ولی گیمای سنگین رو مثل شیر می‌کشه. حافظه 1 ترابایتیش برای جمع کردن کلکسیون بازیت عالیه. برای گیمرای مینیمال که دنبال قدرت تو سایز کوچیک هستن، یه انتخاب خفنه!",
-    img: "https://example.com/ps5slim.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.jPmr35vXOpqBc7jwlYHGrgHaDb&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.fiWjGlPQAX_JhpzRII93tAHaIW&pid=15.1",
+    ],
     quantity: 18,
     price: 28500000,
     category: "console",
@@ -3557,7 +3748,10 @@ export const products = [
     title: "Microsoft Xbox Series S Next",
     description:
       "کنسول Xbox Series S Next با حجم کمش گیمای 1440p رو با فریم‌ریت بالا می‌بره و چشاتو می‌گیره. حافظه ارتقا یافته‌ش برای گیمرای دیجیتال عالیه و قیمتش جیب‌تو خالی نمی‌کنه. برای گیمرای اقتصادی که دنبال عملکردن، یه انتخاب باحاله!",
-    img: "https://example.com/xboxseriesnext.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.PZINrWohH6g9AZJ9FuoVmgHaE-&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.tRT_OKrUqKue9gP506OVOgAAAA&pid=15.1",
+    ],
     quantity: 20,
     price: 19500000,
     category: "console",
@@ -3571,7 +3765,10 @@ export const products = [
     title: "Nintendo Switch OLED",
     description:
       "کنسول Switch OLED با صفحه 7 اینچی زنده‌ش رنگای گیماتو مثل نقاشی نشون می‌ده. باتری بهترش برای گیم زدن تو سفر عالیه و داک جدیدش اتصال رو راحت‌تر می‌کنه. برای نینتندوبازای کلاسیک یه گنجه!",
-    img: "https://example.com/switcholed.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIF.pseFvqrYK93d%2fcmCoW04pw&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIF.aZbkTQrYwy74JY5HIXhNkg&pid=15.1",
+    ],
     quantity: 14,
     price: 18500000,
     category: "console",
@@ -3585,7 +3782,10 @@ export const products = [
     title: "Sony PlayStation 4 Pro Neo",
     description:
       "کنسول PS4 Pro Neo با قدرت 4K و HDR گیمای قدیمی رو دوباره زنده می‌کنه و چشاتو می‌گیره. آپدیت 2023ش عملکرد رو بهتر کرده و هنوزم برای گیمرای اقتصادی می‌درخشه. برای طرفدارای سونی که دنبال نوستالژین، یه انتخاب خفنه!",
-    img: "https://example.com/ps4proneo.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.QdvoIV9xG16FGtpGkf6yGAHaHa&pid=15.1",
+      "https://ts2.mm.bing.net/th?id=OIP.gJlwf32QD_WRxUuTz28OGgHaHa&pid=15.1",
+    ],
     quantity: 16,
     price: 16500000,
     category: "console",
@@ -3599,7 +3799,10 @@ export const products = [
     title: "Microsoft Xbox Series X Halo Edition",
     description:
       "کنسول Xbox Series X Halo Edition با طراحی خفنش برای فنای هیلو یه رویاست و گیماتو می‌ترکونه. قدرت 12 ترافلاپش گیمای سنگین رو مثل آب خوردن می‌بره. باندل اختصاصیش برای کلکسیونرها یه گنجه!",
-    img: "https://example.com/xboxhalo.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.MZyscpb_-iUW6lyZe289awHaHa&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.KA2KdaiaJiMBxS79HMJBYQHaHa&pid=15.1",
+    ],
     quantity: 11,
     price: 31500000,
     category: "console",
@@ -3613,7 +3816,10 @@ export const products = [
     title: "Nintendo Switch Lite Pro",
     description:
       "کنسول Switch Lite Pro با سخت‌افزار ارتقا یافته گیمای پرتابل رو با کیفیت بهتر نشون می‌ده. وزن سبکش برای گیم زدن تو هر جایی عالیه و رنگای جدیدش چشاتو می‌گیره. برای گیمرای جوون و مسافر یه انتخاب باحاله!",
-    img: "https://example.com/switchlitepro.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.eY74EcHeXB0e03mmp6ETAgHaDt&pid=15.1",
+      "https://ts1.mm.bing.net/th?id=OIP.pPviYT-TyDXImXtLGSBalwHaEK&pid=15.1",
+    ],
     quantity: 19,
     price: 15500000,
     category: "console",
@@ -3627,7 +3833,10 @@ export const products = [
     title: "Sony PlayStation 5 Digital Edition",
     description:
       "کنسول PS5 Digital Edition با حذف درایو دیسک قیمت رو پایین نگه می‌داره ولی گیماتو می‌ترکونه. حافظه SSDش لودینگ رو نابود می‌کنه و DualSenseش حس گیم رو به دستات می‌بره. برای گیمرای دیجیتال‌پسند یه انتخاب شیکه!",
-    img: "https://example.com/ps5digital.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIP.f8w27Uyc5-G5MTQjRZ6i9QHaG2&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.fiWjGlPQAX_JhpzRII93tAHaIW&pid=15.1",
+    ],
     quantity: 13,
     price: 27500000,
     category: "console",
@@ -3641,7 +3850,10 @@ export const products = [
     title: "Microsoft Xbox Series X Slim",
     description:
       "کنسول Xbox Series X Slim با طراحی باریکش جا کم می‌گیره ولی قدرت 12 ترافلاپش گیماتو به اوج می‌بره. SSD سریعش لودینگ رو غیبش می‌زنه و Game Passش کلکسیون بازیتو پر می‌کنه. برای گیمرای حرفه‌ای که دنبال جمع‌وجورین، یه انتخاب خفنه!",
-    img: "https://example.com/xboxseriesxslim.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.Blv65rqx3c-XWXSp7pxEuwHaEk&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIP.xdDxVtikwxvByq9WtwqlGwHaE8&pid=15.1",
+    ],
     quantity: 17,
     price: 30500000,
     category: "console",
@@ -3655,7 +3867,10 @@ export const products = [
     title: "Nintendo Switch Pro",
     description:
       "کنسول Switch Pro با سخت‌افزار قوی‌تر گیمای سنگین‌تر رو تو حالت دستی می‌کشه و چشاتو می‌گیره. داک 4Kش برای تلوزیون معرکه‌ست و باتریش برای گیمای طولانی کافیه. برای نینتندوفن‌های هاردکور یه گنجه!",
-    img: "https://example.com/switchpro.jpg",
+    img: [
+      "https://ts3.mm.bing.net/th?id=OIP.8x-NlaAmgUsV8DZV2aDNqAHaEK&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.2DuhJz7UfUer9Yz2grBUqgHaJ4&pid=15.1",
+    ],
     quantity: 15,
     price: 22500000,
     category: "console",
@@ -3669,7 +3884,10 @@ export const products = [
     title: "Sony PlayStation Vita Neo",
     description:
       "کنسول Vita Neo با صفحه OLED خفنش گیمای پرتابل رو زنده‌تر از همیشه نشون می‌ده. آپدیت 2024ش قدرت رو بالا برده و برای نوستالژی‌بازا عالیه. برای گیمرای قدیمی که دنبال دستی‌ن، یه انتخاب باحاله!",
-    img: "https://example.com/vitaneo.jpg",
+    img: [
+      "https://ts4.mm.bing.net/th?id=OIP.GW3v09w4ep8ShpcNL4dvmwHaH1&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.Fq_twsSgI9kBb51KE1YXjAHaIV&pid=15.1",
+    ],
     quantity: 14,
     price: 14500000,
     category: "console",
@@ -3683,7 +3901,10 @@ export const products = [
     title: "Microsoft Xbox One X Revive",
     description:
       "کنسول Xbox One X Revive با آپدیت 2023 گیمای 4K رو هنوزم می‌تونست بکشه و چشاتو نوازش بده. قیمت مناسبش برای گیمرای اقتصادی عالیه و Game Passش همچنان می‌درخشه. برای طرفدارای ایکس‌باکس که دنبال نوستالژین، یه انتخاب شیکه!",
-    img: "https://example.com/xboxonexrevive.jpg",
+    img: [
+      "https://ts2.mm.bing.net/th?id=OIP.9-FG7K8LtZacGRK1OM8RBgHaFp&pid=15.1",
+      "https://ts4.mm.bing.net/th?id=OIP.TM6kAee4k0uPV3cZzVMflgHaG0&pid=15.1",
+    ],
     quantity: 16,
     price: 13500000,
     category: "console",
@@ -3697,7 +3918,10 @@ export const products = [
     title: "Nintendo Switch OLED Zelda Edition",
     description:
       "کنسول Switch OLED Zelda Edition با طراحی زلدایی خفنش برای فنای لینک یه رویاست و گیماتو می‌ترکونه. صفحه 7 اینچیش رنگا رو زنده نشون می‌ده و باندل اختصاصیش کلکسیونت رو کامل می‌کنه. برای گیمرای نینتندو که دنبال استایلن، یه انتخاب خفنه!",
-    img: "https://example.com/switchzelda.jpg",
+    img: [
+      "https://ts1.mm.bing.net/th?id=OIF.pseFvqrYK93d%2fcmCoW04pw&pid=15.1",
+      "https://ts3.mm.bing.net/th?id=OIF.0u9Q573bKSOSJIiBUObEFQ&pid=15.1",
+    ],
     quantity: 13,
     price: 19500000,
     category: "console",
