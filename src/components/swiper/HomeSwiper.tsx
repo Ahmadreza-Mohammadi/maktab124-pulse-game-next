@@ -17,7 +17,7 @@ export default function HomeSwiper() {
         navigation={true}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 2000, // 2 seconds delay
+          delay: 6000, // 2 seconds delay
           disableOnInteraction: false, // Keeps autoplay running even after user interaction
         }}
         modules={[EffectFade, Navigation, Pagination, Autoplay]} // Added Autoplay to modules
@@ -32,7 +32,7 @@ export default function HomeSwiper() {
               alt="Slide 1"
             />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 overlay">
-              <button className="text-white text-lg font-bold bg-gradient-to-r from-gray-800 to-gray-600 px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl">
+              <button className="text-white text-lg font-bold bg-gradient-to-r from-gray-800 to-gray-600 cursor-pointer px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl">
                 مشاهده محصولات
               </button>
             </div>
@@ -48,8 +48,8 @@ export default function HomeSwiper() {
               alt="Slide 2"
             />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 overlay">
-              <button className="text-white text-lg font-bold bg-gradient-to-r from-gray-800 to-gray-600 px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl">
-                مشاهده
+              <button className="text-white text-lg font-bold bg-gradient-to-r from-gray-800 to-gray-600 cursor-pointer px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl">
+              کیبورد
               </button>
             </div>
           </div>
@@ -64,8 +64,8 @@ export default function HomeSwiper() {
               alt="Slide 3"
             />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 overlay">
-              <button className="text-white text-lg font-bold bg-gradient-to-r from-gray-800 to-gray-600 px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl">
-                صندلی های گیمینگ
+              <button className="text-white text-lg font-bold bg-gradient-to-r from-gray-800 to-gray-600 cursor-pointer px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl">
+                صندلی گیمینگ
               </button>
             </div>
           </div>
@@ -80,8 +80,8 @@ export default function HomeSwiper() {
               alt="Slide 4"
             />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 overlay">
-              <button className="swiper-btn text-white text-lg font-bold bg-gradient-to-r from-gray-800 to-gray-600 px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl">
-                مشاهده بازی ها
+              <button className="swiper-btn text-white text-lg font-bold bg-gradient-to-r from-gray-800 to-gray-600 cursor-pointer px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-xl">
+               بازی ها
               </button>
             </div>
           </div>

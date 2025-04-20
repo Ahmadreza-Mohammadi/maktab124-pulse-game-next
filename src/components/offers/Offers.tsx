@@ -10,9 +10,9 @@ function Offers() {
   return (
     <div className="mt-8 flex flex-col items-center">
       <h1>تخفیف های باورنکردنی پالس گیم</h1>
-      <div>
+      <div className="flex flex-wrap gap-10 justify-center">
         {topDiscounts.map((product) => (
-          <div key={product.title}>
+          <div className="bg-red-400 p-2 w-[320px] h-64" key={product.title}>
             {product.title} - تخفیف: {digitsEnToFa(product.discount)}٪
           </div>
         ))}
