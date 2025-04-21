@@ -11,7 +11,7 @@ function Categories() {
           {gameCategories.map((category) => (
             <div
               key={category.name}
-              className="flex flex-col items-center gap-4 cursor-pointer group transform transition-all duration-300 hover:scale-105 hover:shadow-xl bg-white rounded-lg w-40 h-56 p-6 shadow-md"
+              className="flex flex-col items-center gap-6 cursor-pointer group transform transition-all duration-300 hover:scale-105 hover:shadow-xl bg-white rounded-lg w-40 h-56 p-6 shadow-md"
             >
               <img
                 src={category.img}
@@ -27,7 +27,6 @@ function Categories() {
                   (category.name === "simulator" && "شبیه ساز") ||
                   (category.name === "actionAdventure" && "اکشن ماجراجویی")}
               </span>
-              <div className="w-0 h-1 bg-blue-600 group-hover:w-full transition-all duration-500 ease-in-out rounded-full"></div>
             </div>
           ))}
         </div>
