@@ -10,7 +10,7 @@ import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules"; /
 
 export default function HomeSwiper() {
   return (
-    <div className="w-full h-[480px] p-4 swiper-container">
+    <div className="w-full h-[480px] p-4 swiper-container bg-gray-900">
       <Swiper
         spaceBetween={30}
         effect={"fade"}

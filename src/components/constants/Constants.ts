@@ -57,3 +57,54 @@ export const gameCategories = [
   },
 ];
 
+export const categories = [
+  {name:"game", img:"https://ts1.mm.bing.net/th?id=OIP.6AinckB-MnmfgeMufrDrSgHaEK&pid=15.1"},
+  {name:"keyboard", img:"https://ts3.mm.bing.net/th?id=OIP.ZYYL_Ueah5uwbIY5yMoq3gHaHa&pid=15.1"},
+  {name:"headset", img:"https://ts4.mm.bing.net/th?id=OIP.6DC4y1TNRFJg7fqKXpx1iAHaHa&pid=15.1"},
+  {name:"monitor", img:"https://ts1.mm.bing.net/th?id=OIP.xCby3g0KbOhJsl2HxtvFGgHaHa&pid=15.1"},
+  {name:"console", img:"https://ts3.mm.bing.net/th?id=OIP.fiWjGlPQAX_JhpzRII93tAHaIW&pid=15.1"},
+  {name:"mouse", img:"https://ts3.mm.bing.net/th?id=OIP.peSJwTo7YYQtOtvkHaSQyAHaHa&pid=15.1"},
+];
+
+export const creators = [
+  {
+    name: "rockstar",
+    img: "https://ts4.mm.bing.net/th?id=OIP.NiIFLh_smEzgd2RTz9f0iwHaFj&pid=15.1",
+  },
+  {
+    name: "activision",
+    img: "https://ts2.mm.bing.net/th?id=OIP.bwWZP-EullX0OeXr0LIpdAHaEK&pid=15.1",
+  },
+  {
+    name: "eaSports",
+    img: "https://ts3.mm.bing.net/th?id=OIP.pGnhxYpsnYUMy9VP-J9uiAHaEK&pid=15.1",
+  },
+  {
+    name: "ea",
+    img: "https://ts2.mm.bing.net/th?id=OIP.IIWn1WBxSiWyEDHT4mVUlgHaHZ&pid=15.1",
+  },
+  {
+    name: "ubisoft",
+    img: "https://ts2.mm.bing.net/th?id=OIP.8Ty2RnWUMGQxchDQi0HuLAHaFY&pid=15.1",
+  },
+  {
+    name: "naughtyDog",
+    img: "https://ts2.mm.bing.net/th?id=OIP.uFJRew8OoCUdYJTKp3YrhwHaE8&pid=15.1",
+  },
+  {
+    name: "razer",
+    img: "https://ts2.mm.bing.net/th?id=OIP.0jZWoMZJVYWk0KRrYzEVcAHaEK&pid=15.1",
+  },
+  {
+    name: "logitech",
+    img: "https://ts4.mm.bing.net/th?id=OIP.q64N02wakLZAMXN6l1VpHQHaEK&pid=15.1",
+  },
+  {
+    name: "asus",
+    img: "https://ts3.mm.bing.net/th?id=OIP.jo5IbrDN_V02hDGLLRyjygHaEK&pid=15.1",
+  },
+  {
+    name: "hyperx",
+    img: "https://ts4.mm.bing.net/th?id=OIP.9aPfpNOWNcPgm8vevkx4wAHaEK&pid=15.1",
+  },
+];

@@ -5,15 +5,14 @@ import { digitsEnToFa } from "@/utils/helper";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-// این تابع در صورتی که طول متن از maxLength بیشتر باشد، فقط بخشی از شروع متن را به همراه "..." نشان می‌دهد.
+// متن‌ها با محدودیت تعداد کاراکتر نمایش داده می‌شوند
 function truncateEnd(text: string, maxLength: number): string {
-  if (text.length <= maxLength) return text;
-  return text.slice(0, maxLength) + '...';
+  return text.length <= maxLength ? text : text.slice(0, maxLength) + "...";
 }
 
 function Offers() {
   const [products, setProducts] = useState<any[]>([]);
-  const maxTitleLength = 20; // حداکثر تعداد کاراکتر قابل نمایش قبل از افزودن "..."
+  const maxTitleLength = 18; // حداکثر تعداد کاراکتر قابل نمایش
 
   useEffect(() => {
     async function getProducts() {
@@ -32,33 +31,25 @@ function Offers() {
     getProducts();
   }, []);
 
-  // مرتب‌سازی محصولات: ابتدا بر اساس تخفیف (کاهشی) و سپس بر اساس طول عنوان (افزایشی)
-  const topDiscounts = products
-    .sort((a: any, b: any) => {
-      if (b.discount !== a.discount) {
-        return b.discount - a.discount;
-      }
-      return a.title.length - b.title.length;
-    })
-    .slice(0, 8);
+  // مرتب‌سازی محصولات بر اساس تخفیف (کاهشی) و سپس طول عنوان (افزایشی)
+  const sortedProducts = products.sort((a: any, b: any) => {
+    return b.discount !== a.discount ? b.discount - a.discount : a.title.length - b.title.length;
+  });
 
   return (
-    <div className="mt-16 flex flex-col items-center">
-      <h1 className="text-3xl font-bold text-gray-800 animate-fade-in">
+    <div className="mt-12 flex flex-col items-center bg-gray-900 ">
+      <h1 className="text-3xl font-bold text-gray-100 mb-6">
         جشنواره تخفیف پالس گیم
       </h1>
-      {/* کانتینر اسلایدر افقی */}
-      <div className="w-full overflow-x-auto">
-        <div className="flex gap-8 p-8 snap-x">
+      <div className="w-full overflow-x-auto hide-scrollbar">
+        <div className="flex justify-center gap-8 p-8 snap-x">
           {products.length === 0 && (
-            <span className="text-gray-500 text-lg animate-pulse">
-              در حال بارگذاری...
-            </span>
+            <span className="text-gray-400 text-lg">در حال بارگذاری...</span>
           )}
-          {topDiscounts.map((product: any, index: number) => (
+          {sortedProducts.map((product: any, index: number) => (
             <div
               key={product.title}
-              className="snap-center flex-none p-4 w-64 h-112 bg-white shadow-lg rounded-xl flex flex-col justify-between transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-slide-up"
+              className="snap-center flex-none p-4 w-64 h-112 bg-gray-800 shadow-lg rounded-xl flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <img
@@ -67,17 +58,12 @@ function Offers() {
                 alt={product.title}
               />
               <div className="flex flex-col gap-4 items-center mt-4">
-                <div className="flex flex-col items-center gap-1">
-                  <span
-                    className="font-bold text-xl text-gray-800 text-center w-full"
-                    title={product.title} // عنوان کامل را در صورت hover نمایش می‌دهد
-                  >
-                    {truncateEnd(product.title, maxTitleLength)}
-                  </span>
-                  <span className="text-red-500 font-semibold">
-                    {digitsEnToFa(product.discount)}٪ تخفیف
-                  </span>
-                </div>
+                <span className="font-bold text-xl text-gray-100 text-center">
+                  {truncateEnd(product.title, maxTitleLength)}
+                </span>
+                <span className="text-red-400 font-semibold">
+                  {digitsEnToFa(product.discount)}٪ تخفیف
+                </span>
                 <button className="bg-blue-500 text-white w-1/2 p-2 rounded-lg font-semibold cursor-pointer hover:bg-blue-600 transition-colors duration-200">
                   مشاهده محصول
                 </button>
