@@ -1,9 +1,10 @@
 "use client";
 
-import { ACCESS_TOKEN, API_KEY, BASE_URL } from "@/api/API";
+import { API_KEY, BASE_URL } from "@/api/API";
 import { digitsEnToFa, truncateEnd } from "@/utils/helper";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Loading from "../loading/Loading";
 
 
 function Offers() {
@@ -40,7 +41,11 @@ function Offers() {
       <div className="w-full overflow-x-auto hide-scrollbar">
         <div className="flex justify-center gap-8 p-8 snap-x mr-61">
           {products.length === 0 && (
-            <span className="text-gray-400 text-lg">در حال بارگذاری...</span>
+          
+             <div className="py-16">
+              <Loading />
+             </div>
+          
           )}
           {sortedProducts.map((product: any, index: number) => (
             <div

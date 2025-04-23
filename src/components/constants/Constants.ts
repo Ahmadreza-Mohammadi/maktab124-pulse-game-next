@@ -116,4 +116,5 @@ export const categoryTranslations: { [key: string]: string } = {
   mouse: "ماوس",
   headset: "هدست",
   monitor: "مانیتور",
+  chair: "صندلی",
 };

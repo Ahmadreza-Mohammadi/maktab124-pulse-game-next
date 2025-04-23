@@ -1,18 +1,17 @@
 "use client";
 
-import { ACCESS_TOKEN, API_KEY, BASE_URL } from "@/api/API";
-import { formatPrice, truncateEnd } from "@/utils/helper";
+import { API_KEY, BASE_URL } from "@/api/API";
+import { digitsEnToFa, formatPrice, truncateEnd } from "@/utils/helper";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { categoryTranslations } from "../constants/Constants";
+import Loading from "../loading/Loading";
 
 function ProductsSection() {
   const [products, setProducts] = useState([]);
   const [randomProducts, setRandomProducts] = useState([]);
 
   const maxTitleLength = 24;
-  
-
   useEffect(() => {
     async function getProducts() {
       try {
@@ -40,10 +39,8 @@ function ProductsSection() {
       </h1>
       <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {randomProducts.length === 0 && (
-          <div className="col-span-full text-center">
-            <span className="text-gray-400 text-lg animate-pulse">
-              در حال بارگذاری...
-            </span>
+          <div className="py-16 mr-134">
+            <Loading />
           </div>
         )}
         {randomProducts.map((product: any, index: number) => (
@@ -62,13 +59,13 @@ function ProductsSection() {
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
               {/* Category Label */}
-              <span className="absolute bottom-3 left-3 bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+              <span className="absolute bottom-3 left-3  bg-blue-600 text-white text-s font-semibold px-2.5 py-1 rounded-full">
                 {categoryTranslations[product.category] || "نامشخص"}
               </span>
             </div>
 
             {/* Content Section */}
-            <div className="p-5 flex flex-col gap-4 flex-grow bg-gray-900">
+            <div className="p-5 flex flex-col gap-4 flex-grow bg-gray-800 cursor-pointer font-semibold">
               <h1
                 className="text-lg font-bold text-white text-center truncate"
                 title={product.title}
@@ -77,7 +74,7 @@ function ProductsSection() {
               </h1>
 
               {/* Info Section */}
-              <div className="flex flex-col gap-2 text-sm text-gray-300">
+              <div className="flex flex-col gap-2 text-[16px] text-gray-300">
                 <div className="flex justify-between items-center">
                   <span>
                     امتیاز:{" "}
@@ -100,7 +97,9 @@ function ProductsSection() {
                   <span>قیمت: {formatPrice(product.price)}</span>
                   <span>
                     تخفیف:{" "}
-                    {product.discount ? `${product.discount}%` : "بدون تخفیف"}
+                    {product.discount
+                      ? `${digitsEnToFa(product.discount)}%`
+                      : "بدون تخفیف"}
                   </span>
                 </div>
                 {product.category === "game" && (
@@ -121,7 +120,7 @@ function ProductsSection() {
 
               {/* Button */}
               <button
-                className="mt-auto bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300"
+                className="mt-auto bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-lg  font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300"
                 aria-label={`افزودن ${product.title} به سبد خرید`}
               >
                 افزودن به سبد خرید
