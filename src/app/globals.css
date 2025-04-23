@@ -52,3 +52,77 @@ body {
   }
 }
 
+/* globals.css */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes border-gradient {
+  0% {
+    border-color: rgba(253, 186, 116, 0.7);
+  }
+  50% {
+    border-color: rgba(249, 115, 22, 0.7);
+  }
+  100% {
+    border-color: rgba(253, 186, 116, 0.7);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out forwards;
+}
+
+.border-gradient:hover {
+  animation: border-gradient 2s linear infinite;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.card-tilt:hover {
+  transform: translateY(-8px) rotate(2deg);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

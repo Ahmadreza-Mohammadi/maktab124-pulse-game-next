@@ -35,7 +35,7 @@ function GameCategories() {
                   alt={categoryTranslations[category.name] || category.name}
                 />
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
               </div>
 
               {/* Content Section */}

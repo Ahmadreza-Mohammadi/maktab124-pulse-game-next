@@ -38,7 +38,7 @@ function Offers() {
         جشنواره تخفیف پالس گیم
       </h1>
       <div className="w-full overflow-x-auto hide-scrollbar">
-        <div className="flex justify-center gap-8 p-8 snap-x">
+        <div className="flex justify-center gap-8 p-8 snap-x mr-61">
           {products.length === 0 && (
             <span className="text-gray-400 text-lg">در حال بارگذاری...</span>
           )}
