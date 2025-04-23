@@ -19,7 +19,6 @@ function ProductsSection() {
         const res = await axios.get(`${BASE_URL}/api/records/products`, {
           headers: {
             api_key: API_KEY,
-            Authorization: `Bearer ${ACCESS_TOKEN}`,
           },
         });
         setProducts(res.data.records);
@@ -35,7 +34,7 @@ function ProductsSection() {
   }, []);
 
   return (
-    <div className="mt-12 bg-gray-950 py-12">
+    <div className="bg-gray-900 py-12">
       <h1 className="text-4xl font-extrabold text-center text-white mb-8 animate-fade-in">
         محصولات
       </h1>

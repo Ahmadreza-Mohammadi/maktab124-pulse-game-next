@@ -10,7 +10,7 @@ export default function RootLayout({
     <html lang="fa" dir="rtl">
       <body>
         <Header />
-        <div className="mt-64 bg-gray-900">{children}</div>
+        <div className="mt-24 bg-gray-900">{children}</div>
       </body>
     </html>
   );

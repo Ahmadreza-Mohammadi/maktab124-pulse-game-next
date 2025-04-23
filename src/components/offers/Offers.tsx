@@ -16,7 +16,6 @@ function Offers() {
         const res = await axios.get(`${BASE_URL}/api/records/products`, {
           headers: {
             api_key: API_KEY,
-            Authorization: `Bearer ${ACCESS_TOKEN}`,
           },
         });
         setProducts(res.data.records);
@@ -27,7 +26,6 @@ function Offers() {
     getProducts();
   }, []);
 
-  // مرتب‌سازی محصولات بر اساس تخفیف (کاهشی) و سپس طول عنوان (افزایشی)
   const sortedProducts = products.sort((a: any, b: any) => {
     return b.discount !== a.discount
       ? b.discount - a.discount
