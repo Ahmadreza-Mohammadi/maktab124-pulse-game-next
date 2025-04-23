@@ -3,6 +3,7 @@ import Offers from "@/components/offers/Offers";
 import HomeSwiper from "@/components/swiper/HomeSwiper";
 import GameCategories from "@/components/game-categories/GameCategories";
 import Categories from "@/components/categories/Categories";
+import ProductsSection from "@/components/products-section/ProductsSection";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Offers />
       {/* <Creators /> */}
       <Categories />
+      <ProductsSection />
     </>
   );
 }

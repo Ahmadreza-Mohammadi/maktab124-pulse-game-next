@@ -21,3 +21,7 @@ export function digitsEnToFa(input: number | string): string {
         monitor: "مانیتور",
         console: "کنسول",
       };
+
+      export function truncateEnd(text: string, maxLength: number): string {
+        return text.length <= maxLength ? text : text.slice(0, maxLength) + "...";
+      }

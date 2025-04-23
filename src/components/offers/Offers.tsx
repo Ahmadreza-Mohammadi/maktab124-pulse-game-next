@@ -1,14 +1,10 @@
 "use client";
 
 import { ACCESS_TOKEN, API_KEY, BASE_URL } from "@/api/API";
-import { digitsEnToFa } from "@/utils/helper";
+import { digitsEnToFa, truncateEnd } from "@/utils/helper";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-// متن‌ها با محدودیت تعداد کاراکتر نمایش داده می‌شوند
-function truncateEnd(text: string, maxLength: number): string {
-  return text.length <= maxLength ? text : text.slice(0, maxLength) + "...";
-}
 
 function Offers() {
   const [products, setProducts] = useState<any[]>([]);
@@ -33,7 +29,9 @@ function Offers() {
 
   // مرتب‌سازی محصولات بر اساس تخفیف (کاهشی) و سپس طول عنوان (افزایشی)
   const sortedProducts = products.sort((a: any, b: any) => {
-    return b.discount !== a.discount ? b.discount - a.discount : a.title.length - b.title.length;
+    return b.discount !== a.discount
+      ? b.discount - a.discount
+      : a.title.length - b.title.length;
   });
 
   return (
@@ -58,9 +56,20 @@ function Offers() {
                 alt={product.title}
               />
               <div className="flex flex-col gap-4 items-center mt-4">
-                <span className="font-bold text-xl text-gray-100 text-center">
-                  {truncateEnd(product.title, maxTitleLength)}
-                </span>
+                <div className="flex flex-col ">
+                  <span className="font-bold text-xl text-gray-100 text-center">
+                    {product.category === "game" && "بازی"}
+                    {product.category === "console" && "کنسول"}
+                    {product.category === "keyboard" && "کیبورد"}
+                    {product.category === "mouse" && "ماوس"}
+                    {product.category === "monitor" && "مانیتور"}
+                    {product.category === "headset" && "هدست"}
+                    {product.category === "chair" && "صندلی"}
+                  </span>
+                  <span className="font-bold text-lg text-gray-100 text-center">
+                    {truncateEnd(product.title, maxTitleLength)}
+                  </span>
+                </div>
                 <span className="text-red-400 font-semibold">
                   {digitsEnToFa(product.discount)}٪ تخفیف
                 </span>

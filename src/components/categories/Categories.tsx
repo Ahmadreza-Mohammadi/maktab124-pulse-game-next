@@ -17,7 +17,7 @@ function Categories() {
                 src={category.img} 
                 alt={category.name} 
               />
-              <span className="font-semibold text-xl text-gray-300">
+              <span className="font-semibold text-2xl text-gray-300">
                 {category.name === "game" && "بازی"}
                 {category.name === "mouse" && "ماوس"}
                 {category.name === "keyboard" && "کیبورد"}
