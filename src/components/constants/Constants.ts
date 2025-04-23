@@ -108,3 +108,12 @@ export const creators = [
     img: "https://ts4.mm.bing.net/th?id=OIP.9aPfpNOWNcPgm8vevkx4wAHaEK&pid=15.1",
   },
 ];
+
+export const categoryTranslations: { [key: string]: string } = {
+  game: "بازی",
+  keyboard: "کیبورد",
+  console: "کنسول",
+  mouse: "ماوس",
+  headset: "هدست",
+  monitor: "مانیتور",
+};

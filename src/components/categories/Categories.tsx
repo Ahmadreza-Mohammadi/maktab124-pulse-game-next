@@ -1,36 +1,47 @@
-import { categories } from "../constants/Constants";
+"use client";
+
+import { categories, categoryTranslations } from "../constants/Constants";
 
 function Categories() {
-    return (
-      <div className="flex flex-col items-center gap-6 mt-6 bg-gray-700 py-12">
-        <h1 className="text-4xl font-extrabold text-center text-gray-100">
-          دسته بندی محصولات
-        </h1>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-4 md:px-8 w-full">
-          {categories.map((category) => (
-            <div 
-              key={category.name} 
-              className="shadow-lg rounded-lg p-6 flex flex-col items-center gap-4 cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-xl bg-gray-800"
-            >
-              <img 
-                className="h-36 w-36 rounded-md transition-transform duration-300 hover:scale-110" 
-                src={category.img} 
-                alt={category.name} 
+
+
+  return (
+    <div className="mt-12 bg-gray-950 py-12">
+      <h1 className="text-4xl font-extrabold text-center text-white mb-8 animate-fade-in">
+        دسته‌بندی محصولات
+      </h1>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 px-4 md:px-8 max-w-7xl mx-auto">
+        {categories.map((category, index) => (
+          <div
+            key={category.name}
+            className="relative bg-gray-900 rounded-3xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up cursor-pointer"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            {/* Image Section */}
+            <div className="relative h-40 w-full overflow-hidden">
+              <img
+                className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
+                src={category.img}
+                alt={categoryTranslations[category.name] || category.name}
               />
-              <span className="font-semibold text-2xl text-gray-300">
-                {category.name === "game" && "بازی"}
-                {category.name === "mouse" && "ماوس"}
-                {category.name === "keyboard" && "کیبورد"}
-                {category.name === "headset" && "هدست"}
-                {category.name === "console" && "کنسول"}
-                {category.name === "monitor" && "مانیتور"}
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+            </div>
+
+            {/* Content Section */}
+            <div className="p-4 flex flex-col items-center gap-2">
+              <span
+                className="text-lg font-semibold text-white text-center truncate w-full"
+                title={categoryTranslations[category.name] || category.name}
+              >
+                {categoryTranslations[category.name] || category.name}
               </span>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    );
-  }
-  
-  export default Categories;
-  
+    </div>
+  );
+}
+
+export default Categories;

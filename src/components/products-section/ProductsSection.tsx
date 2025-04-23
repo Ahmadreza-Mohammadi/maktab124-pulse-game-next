@@ -4,22 +4,14 @@ import { ACCESS_TOKEN, API_KEY, BASE_URL } from "@/api/API";
 import { formatPrice, truncateEnd } from "@/utils/helper";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { categoryTranslations } from "../constants/Constants";
 
 function ProductsSection() {
   const [products, setProducts] = useState([]);
   const [randomProducts, setRandomProducts] = useState([]);
 
   const maxTitleLength = 24;
-
-  // Category translations
-  const categoryTranslations: { [key: string]: string } = {
-    game: "بازی",
-    keyboard: "کیبورد",
-    console: "کنسول",
-    mouse: "ماوس",
-    headset: "هدست",
-    monitor: "مانیتور",
-  };
+  
 
   useEffect(() => {
     async function getProducts() {
