@@ -15,7 +15,10 @@ function GameCategories() {
   };
 
   return (
-    <section className="py-12 bg-gradient-to-b from-blue-950 to-blue-800" dir="rtl">
+    <section
+      className="py-12 bg-gradient-to-b from-blue-950 to-blue-800"
+      dir="rtl"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-extrabold text-center text-gray-100 mb-8 animate-fade-in">
           دسته‌بندی بازی‌ها
