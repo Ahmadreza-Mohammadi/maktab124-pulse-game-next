@@ -6,10 +6,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { categoryTranslations } from "../constants/Constants";
 import Loading from "../loading/Loading";
+import { useParams, useRouter } from "next/navigation";
 
 function ProductsSection() {
   const [products, setProducts] = useState([]);
   const [randomProducts, setRandomProducts] = useState([]);
+  const params = useParams();
+  const router = useRouter();
 
   const maxTitleLength = 24;
   useEffect(() => {
@@ -32,6 +35,10 @@ function ProductsSection() {
     getProducts();
   }, []);
 
+  function getSingleProduct(id: number) {
+    router.push(`/single-product/${id}`);
+  }
+
   return (
     <div className="bg-gray-900 py-12">
       <h1 className="text-4xl font-extrabold text-center text-white mb-8 animate-fade-in">
@@ -45,8 +52,9 @@ function ProductsSection() {
         )}
         {randomProducts.map((product: any, index: number) => (
           <div
+            onClick={() => getSingleProduct(product.id)}
             key={product.id}
-            className="relative bg-gray-900 rounded-3xl overflow-hidden flex flex-col border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up"
+            className="relative cursor-pointer bg-gray-900 rounded-3xl overflow-hidden flex flex-col border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             {/* Image Section */}
