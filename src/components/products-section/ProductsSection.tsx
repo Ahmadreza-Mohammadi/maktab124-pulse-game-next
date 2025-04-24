@@ -11,7 +11,6 @@ import { useParams, useRouter } from "next/navigation";
 function ProductsSection() {
   const [products, setProducts] = useState([]);
   const [randomProducts, setRandomProducts] = useState([]);
-  const params = useParams();
   const router = useRouter();
 
   const maxTitleLength = 24;
