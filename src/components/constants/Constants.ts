@@ -1,30 +1,30 @@
-export const pages = [
-  {
-    name: "خانه",
-    img: "https://www.svgrepo.com/show/508090/home-alt.svg",
-    path: "/home",
-  },
-  {
-    name: "محصولات",
-    img: "https://www.svgrepo.com/show/507917/archive.svg",
-    path: "/products",
-  },
-  {
-    name: "سبدخرید",
-    img: "https://www.svgrepo.com/show/528110/cart-large-4.svg",
-    path: "/cart",
-  },
-  {
-    name: "درباره",
-    img: "https://www.svgrepo.com/show/507903/alert-circle.svg",
-    path: "/about",
-  },
-  {
-    name: "تماس",
-    img: "https://www.svgrepo.com/show/326178/contact-support.svg",
-    path: "/contact",
-  },
-];
+// export const pages = [
+//   {
+//     name: "خانه",
+//     img: "https://www.svgrepo.com/show/508090/home-alt.svg",
+//     path: "/home",
+//   },
+//   {
+//     name: "محصولات",
+//     img: "https://www.svgrepo.com/show/507917/archive.svg",
+//     path: "/products",
+//   },
+//   {
+//     name: "سبدخرید",
+//     img: "https://www.svgrepo.com/show/528110/cart-large-4.svg",
+//     path: "/cart",
+//   },
+//   {
+//     name: "درباره",
+//     img: "https://www.svgrepo.com/show/507903/alert-circle.svg",
+//     path: "/about",
+//   },
+//   {
+//     name: "تماس",
+//     img: "https://www.svgrepo.com/show/326178/contact-support.svg",
+//     path: "/contact",
+//   },
+// ];
 
 export const gameCategories = [
   {

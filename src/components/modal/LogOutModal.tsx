@@ -8,6 +8,7 @@ function LogOutModal() {
   const { setShowLogoutModal } = useModal();
 
   const logOutHandler = () => {
+    setShowLogoutModal(false);
     localStorage.removeItem("accessToken");
     router.push("/login");
   };
