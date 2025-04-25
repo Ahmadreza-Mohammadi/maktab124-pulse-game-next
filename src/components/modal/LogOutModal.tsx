@@ -9,7 +9,7 @@ function LogOutModal() {
 
   const logOutHandler = () => {
     localStorage.removeItem("accessToken");
-    router.push("login");
+    router.push("/login");
   };
 
   return (

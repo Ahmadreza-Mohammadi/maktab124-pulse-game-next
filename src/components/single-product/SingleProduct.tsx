@@ -67,6 +67,7 @@ function SingleProduct({ id }: SingleProductProps) {
 
   // Create an array of images - if there's only one image, use it, otherwise use the images array
   const images = Array.isArray(product.img) ? product.img : [product.img];
+  const hasPlatforms = product.category === "game" && product.platforms;
 
   return (
     <div className="min-h-screen bg-gray-900 py-12">
@@ -156,7 +157,7 @@ function SingleProduct({ id }: SingleProductProps) {
                 </div>
               </div>
 
-              {product.category === "game" && product.platforms && (
+              {hasPlatforms && (
                 <div className="bg-gray-700/50 p-4 rounded-xl">
                   <p className="text-gray-400 mb-3">پلتفرم</p>
                   <div className="flex flex-wrap gap-2">
@@ -205,10 +206,18 @@ function SingleProduct({ id }: SingleProductProps) {
                   </p>
                 </div>
               </div>
-
-              <button className="mt-auto bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
-                افزودن به سبد خرید
-              </button>
+              {/* Add to Cart Button - Moved up when no platforms */}
+              {!hasPlatforms && (
+                <button className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
+                  افزودن به سبد خرید
+                </button>
+              )}
+              {/* Add to Cart Button - Only shown when there are platforms */}
+              {hasPlatforms && (
+                <button className="mt-auto bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
+                  افزودن به سبد خرید
+                </button>
+              )}
             </div>
           </div>
         </div>
