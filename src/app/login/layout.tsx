@@ -1,10 +1,7 @@
-"use client";
-
-import "../app/globals.css";
+import "../globals.css";
 import ScrollToTop from "@/components/scroll-to-top/ScrollToTop";
-import HeaderWrapper from "@/components/header/HeaderWrapper";
 
-export default function RootLayout({
+export default function LoginLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -13,9 +10,8 @@ export default function RootLayout({
     <html lang="fa" dir="rtl">
       <body>
         <ScrollToTop />
-        <HeaderWrapper />
         <div className="bg-gray-900">{children}</div>
       </body>
     </html>
   );
-}
+} 
