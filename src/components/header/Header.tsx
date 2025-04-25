@@ -3,16 +3,12 @@
 import { useRouter } from "next/navigation";
 import { pages } from "../constants/Constants";
 import { useState } from "react";
-import { log } from "console";
+import { useModal } from "@/context/ModalContext";
 
 function Header() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const logOutHandler = () => {
-    localStorage.removeItem("accessToken");
-    router.push("login")
-  };
+  const { setShowLogoutModal } = useModal();
 
   const handleNavigation = (path: string) => {
     router.push(path);
@@ -77,9 +73,10 @@ function Header() {
             <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
           </div>
 
+          {/* Logout Button */}
           <div
             className="relative group cursor-pointer"
-            onClick={logOutHandler}
+            onClick={() => setShowLogoutModal(true)}
           >
             <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
               خروج
@@ -131,16 +128,6 @@ function Header() {
 
             <div
               className="relative group cursor-pointer"
-              onClick={() => handleNavigation("/support")}
-            >
-              <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
-                پشتیبانی
-              </span>
-              <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
-            </div>
-
-            <div
-              className="relative group cursor-pointer"
               onClick={() => handleNavigation("/cart")}
             >
               <div className="flex items-center gap-2">
@@ -160,6 +147,16 @@ function Header() {
             >
               <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
                 پروفایل
+              </span>
+              <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+            </div>
+
+            <div
+              className="relative group cursor-pointer"
+              onClick={() => setShowLogoutModal(true)}
+            >
+              <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+                خروج
               </span>
               <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
             </div>
