@@ -37,6 +37,7 @@ function Header() {
           <span className="text-2xl font-extrabold text-white group-hover:text-blue-400 transition-colors duration-300">
             پالس گیم
           </span>
+          <img className="h-12" src="https://www.svgrepo.com/show/337754/game.svg" alt="" />
         </div>
 
         {/* Navigation Section */}
