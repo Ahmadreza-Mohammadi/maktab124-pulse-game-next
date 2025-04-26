@@ -9,10 +9,10 @@ function Creators() {
       dir="rtl"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-extrabold text-center text-gray-100 mb-8 animate-fade-in">
+        <h2 className="text-4xl font-extrabold text-center text-blue-200 mb-8 animate-fade-in">
           سازندگان محبوب
         </h2>
-        <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-400 text-center mb-12 max-w-3xl mx-auto">
           با بهترین سازندگان بازی‌های ویدیویی آشنا شوید و از آخرین محصولات آنها
           مطلع باشید
         </p>
@@ -21,11 +21,11 @@ function Creators() {
           {creators.map((creator, index) => (
             <div
               key={index}
-              className="relative bg-blue-900 rounded-3xl overflow-hidden border border-blue-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:-translate-y-2 animate-slide-up cursor-pointer w-full max-w-44"
+              className="relative bg-blue-900 rounded-3xl overflow-hidden border border-blue-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:-translate-y-2 animate-slide-up cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image Section */}
-              <div className="relative h-40 w-full overflow-hidden">
+              <div className="relative h-48 w-full overflow-hidden">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3"
                   src={creator.img}
@@ -36,16 +36,18 @@ function Creators() {
               </div>
 
               {/* Content Section */}
-              <div className="p-4 flex flex-col items-center">
-                <h3 className="text-lg font-semibold text-blue-200 text-center truncate w-full transition-colors duration-300 hover:text-blue-400 mb-2">
-                  {creator.name}
-                </h3>
-                <p className="text-sm text-gray-400 text-center line-clamp-2 mb-4">
-                  {creator.description}
-                </p>
+              <div className="p-6 flex flex-col gap-4">
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-xl font-bold text-blue-200 text-center">
+                    {creator.name}
+                  </h3>
+                  <p className="text-sm text-gray-400 text-center line-clamp-2">
+                    {creator.description}
+                  </p>
+                </div>
 
                 {/* Social Links */}
-                <div className="flex gap-3">
+                <div className="flex justify-center gap-4">
                   {creator.socialLinks?.twitter && (
                     <a
                       href={creator.socialLinks.twitter}
@@ -54,7 +56,7 @@ function Creators() {
                       rel="noopener noreferrer"
                     >
                       <svg
-                        className="w-5 h-5"
+                        className="w-6 h-6"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -70,7 +72,7 @@ function Creators() {
                       rel="noopener noreferrer"
                     >
                       <svg
-                        className="w-5 h-5"
+                        className="w-6 h-6"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >

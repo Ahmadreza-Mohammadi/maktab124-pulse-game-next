@@ -70,7 +70,7 @@ function SingleProduct({ id }: SingleProductProps) {
   const hasPlatforms = product.category === "game" && product.platforms;
 
   return (
-    <div className="min-h-screen bg-gray-900 py-12">
+    <div className="min-h-screen bg-gray-900 py-36">
       <div className="max-w-7xl mx-auto px-4">
         <div className="bg-gray-800 rounded-3xl overflow-hidden border border-gray-700/50">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
