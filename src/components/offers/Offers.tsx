@@ -5,10 +5,16 @@ import { digitsEnToFa, truncateEnd, formatPrice } from "@/utils/helper";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Loading from "../loading/Loading";
+import { useRouter } from "next/navigation";
 
 function Offers() {
+  const router = useRouter();
   const [products, setProducts] = useState<any[]>([]);
   const maxTitleLength = 18;
+
+  function getSingleProduct(id: number) {
+    router.push(`/single-product/${id}`);
+  }
 
   useEffect(() => {
     async function getProducts() {
@@ -94,7 +100,10 @@ function Offers() {
                       )}
                     </span>
                   </div>
-                  <button className="mt-4 bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-200">
+                  <button
+                    onClick={() => getSingleProduct(product.id)}
+                    className="mt-4 bg-blue-500 text-white py-2 rounded-lg font-semibold cursor-pointer hover:bg-blue-600 transition-colors duration-200"
+                  >
                     مشاهده محصول
                   </button>
                 </div>

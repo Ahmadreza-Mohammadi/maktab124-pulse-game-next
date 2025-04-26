@@ -1,8 +1,5 @@
 import "../app/globals.css";
-import ScrollToTop from "@/components/scroll-to-top/ScrollToTop";
-import HeaderWrapper from "@/components/header/HeaderWrapper";
 import { ModalProvider } from "@/context/ModalContext";
-import LogOutModal from "@/components/modal/LogOutModal";
 import ClientLayout from "./ClientLayout";
 
 export default function RootLayout({
