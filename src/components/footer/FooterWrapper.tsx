@@ -1,9 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Header from "./Header";
+import Footer from "./Footer";
 
-export default function HeaderWrapper() {
+export default function FooterWrapper() {
   const pathname = usePathname();
   const isLoginPage = pathname === "/login";
 
@@ -11,9 +11,5 @@ export default function HeaderWrapper() {
     return null;
   }
 
-  return (
-    <>
-      <Header />
-    </>
-  );
+  return <Footer />;
 }
