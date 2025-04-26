@@ -168,3 +168,56 @@ export const categoryTranslations: { [key: string]: string } = {
   monitor: "مانیتور",
   chair: "صندلی",
 };
+
+import { Comment } from "../interfaces/interface";
+
+export const comments: Comment[] = [
+  {
+    id: 1,
+    user: {
+      name: "علی محمدی",
+      avatar:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsIlzGp1laQheiAAjrbJJ3pasHLjMBnIUEZg&s",
+      socialMedia: {
+        platform: "instagram",
+        link: "https://instagram.com/ali_mohammadi",
+      },
+    },
+    content:
+      "پالس گیم یکی از بهترین پلتفرم‌های بازی ایرانیه! تنوع بازی‌ها و کیفیت اجرا عالیه 👌",
+    timestamp: "2 ساعت پیش",
+    likes: 124,
+  },
+  {
+    id: 2,
+    user: {
+      name: "سارا احمدی",
+      avatar:
+        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAugMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAFBgMEAAECBwj/xAA6EAACAQMCAwQIBgEEAwEBAAABAgMABBEFIRIxQRNRYXEGIjKBkaGxwRQjQtHh8FIzYnLxFSRDwgf/xAAaAQADAQEBAQAAAAAAAAAAAAACAwQBAAUG/8QAIREAAwADAAMBAAMBAAAAAAAAAAECAxEhEjFBBBMiUTL/2gAMAwEAAhEDEQA/APM61W6zFCPOa3t1NZisxmtMMIGNjmsAyRU9rZzXLhYl95Hwpm07R7WxIlvOKWUH/SQ4I8z+kfPypkY3Qu8ikHaP6P3F/KfyyEX2ieQ8+7y50/6TolppsalUDSgbMR7P/H9+dVbe6u2iWK1jtbeJdhGu5A+QqyLu5jH5yDh/yUZH7fA16GLHMrZBlyVXAoGPQmtgAHJ3PQd1VobkOoJIC9/95VaTJHCOR34qp2TaZnUFh5AdK7O/t7eHfWKB+n41sDBwo4j3nkK47RrmP8V7jzrpQSMLsvf+1dhf8jnwrQbf1Vye7oKw42FUDB5nqa4kUTo8QXjVhwtnlXYjJOWbI7uVd89lUDxrH05c6I2o2stjebL+dGeJQeUi+B8flVPU9MS4iW5tR6rji5U/3tjDdw9lcDi7jyK+VA/wH4JWhJYqSWHF491R5MZXGXZ5xLAyNuCDUJVlPEhI76btZ0niYyRe8UsywlSQRg1JUlU1vod9HtUBYROwyOWetEfSXRE1yx/EWwH42Aeof8x1U/aktWa3kWRe/wCHjTr6PaotwojZ8EfOoMsOK8kW4qVz4s87uI/xEYfhIuI9mBGC381S4hT76aaKY2/81Yqfa/8AYQcv+X70odnYv67IwLbkBtqqxZFa2T3jcvR1WYPSuwtFtH9H7zU2BjjZUz7Z5UyYb9GVaXsERoztworMc49UZpk0P0Uub0iSUcER/UeX8+6m/SfRay09QZVWeXqD7IP3qXW9ch06NsK80vIRxjPCPHuFVz+eZXlZLX6Kp6gFXkMGk2rR2ICnZWkIHE57h3DYb0uG8ggy1zI8jEf6cf6j493v3qpqOs3M8nayMwLscxkbL3fQUJ7GZ3LkHDHNJyZZ3qRkYnrodj1gvIWVo1XbBL8WPjRWw1whuFpVx0IJz8MfvSZJbz59RCW6bZqszyRSFeMgjmBtSpyV8Y1450epwX8LuDkRueuPUfz8fhRy1m/RIDvuufofga8n0fUpICFlJ4AcFCd8GnjT79o+zj48x/pz9j/eVU4/06eqJ8n5trcjfz51vixsN/Cq1pOLqIMrbDmBzq0AFU4HqnqdvnVqpNbRC5a4zQUn29vKu1GBhRkUPutXtbbm3at3LyoFe+k05P5RSJO5Rv8AGhrJKCnFTG4jI33ArscQGAMCka29LLmGQF37QZ5MPuKdrSeK9to7iN8o4yAB8q5Wq9GXDn2SKANkBPeegri5tkniwx5cutTjixgZA8a2g2yAT41r9Ap6Fi5gKsVdSCOlLer6WGzLAu5O4r0O+tFuIjwkCUez+1Lk0J3Uj1h0qTLBXjs88nhZGIZcVHZzvZXAZScZz/FM+p6cH4mHOly5tiAUbbuqO52iuK+j5pV7HeQYbDKwwUPUdRQKb0CtXldo764jRmJVMD1R3cqFaHqBtZxG+SCd96ck1BCo36V59TUP+rL4qaXSLRfQu3t/zdQbtpP8B7IpmSOOILFGiqgHsqMYqVh0O3gP3rk7c9vDnX1Ewp9Hzl3VewD6RalLbQmOBlViBk43JPICkTUNVl7MQSFmce1vTDrt2t1qzFFxHboQpxsW/j96X7bTpbyaBFIzOO0c8PsrkjG/ka879WXb0ej+bFzZmi6VJqDB5GwvUYpzi0e3RVCxg42OaLaVpMVrbpEigBRjz8aLRWiJvwivHyZm3w9aMKS6AIPRuCf2kC57lFCdb9ALcxO9vgyYzjFehwR4I5VJPGCvLOM70E5KT2FUy+Hz1dafPaXCQuCx4sAEcj3Zpl0lG/DJE/rHhyMjmtMvptpMaqt3Gg9oE+B55oPFEI3Rlb2GCHPQYH3Bqycnkukl4/F8J7W5lKPHb3DxM6FBIh9YfyKrSTNp8TQh5TxH1jI5Yv4k5qKNzDcurIdzvjz2+tXryAXtqR/9E3BHdToy1PBFY5fQJPeu9UnlzWSKVYqwII6GuQtMeRgKNGicjlTf6C6uYLk6fM47OUZjJ/S1KgSpYWMEiSqSCpBBFHjyaYGSPKdHsuF3JBY/Kswe/A7qp6LfLqWnxXA4ckYYZ5N1q+B5Vens85po1jwxnrQ7VLITAzwjMg9sf5DwooAOgz9qzGRgke6spbRs8YkTIHB4tyedBtRsAwLqN6btdsjby9tGuInO6joaDyAFTg7Go6nRZFCLeW7RNxL7YrEv3CKO0IwOWaOarbKDnGdqBNbKSdqRcdKIvh7IeWBy7hVHVJGitW7M4dttqIlceHlQnVfWDDoor1cleM7PLxT5UkKM0ZEc7sd8gLnrj+al9G4lLQyH9MZTywxP3rrUcRnsgPy1iJPz2qbTo+xdSOX9/wC68TM97PbwaTQ52xyAaIIMgUHt5wiLk0Qiu42AAYZ8K8/RfsIQgA5J5VBqOp2dmh7aUcXQVXuHdosxk460CltY2mMt1mQdFPKinQDTIdc1Fb2zkSNCwblS/Ce0Bc5KsCCPIk//AK+VGdS1fTFtzbwspl58EaZpds7kO0ijIKEju2/v0qjGJyGpVEhEhGCG4GAPX/r61esX4l4CfXHIf5Cq0S4kccWQ42yetW4kyiTRDIGOLwpgkHa3ZgOJEG2PjQsJTZcxiSPGOJDnbv65HzpbuIOwfh6E+qe+jTBaIQtdBc7c6ilnjjzxMKqS6iVOFXA76NbFs9B//nt4RNcWTMMY4lB8KeAMbivHfR3Vb2xmbULOCOdl9Vo3/WvXHjyr1LQ9astctO3tHPEuBJE59eM9xFX46/qQ5J6EcZ5/Kt4PLbyrGZUXLMFHeTiqU2s6fDkPdrkdF3o3QtSye7gWe2eJgPWG2T1pPuIuDjHUUQuPTayhZuwglcgc9hmlHVfSKe5mkkjiEQck4U5+eKTWmOhNFTWbtVJTIyDQU3O/KuLu7MnFIQSSerE0NN9Hk8UJz19b+KWN6e+ynhXJoJqDfkNvk/8Af3qzqOsWkK8JftGB3C8vjSnqeuG4iKAiJCCAR0wcjf41TnteOhH58b3s1fSBiW24ZCMeVajuitsgLDiVFHvwN6DW9529nHE/tqOZ6dPhvXdrM0iEsPUkyo79sE/WvLo9KeBARa3fzkxXIWEHGS2BRNbXU9OQTNLxqOe9Bhfz2jqkTD81gue4jmB9aP6RZGV5jczvOsmMZYnh99T1z2Ux30OGlzLd6ZHJ/moNUtT0uS6jCxHbOWGfaqb0d9XTI4/8SVHkCRRKPBfhOKn+lOuClN6PFi7m3RJSNnPTyAoIulGKVwm+Ng3716a0ascZ6bUDv7FYn4wPVcHiA8+dMm2B4J8EK4AXKtsD17u6uo7t7eXtP/lKuT3BuR91EtYsQilseqN846UBXjeGRcZ4H4h3DPMU+a2T5I8WH7aZGTEZyvDlM92dx7vp76Dek1rJ+HaWEnh/V4Z6/wB8ajV5tPCTpl4C2f8Aj4e4/I0YjuEuYRgjgcbdd+6iT0xb6eeR2t1Pk7RjvkO591FIdGhEiyFZJ8jPDnYU02ulQtPKxxzzy/v9NFYbG3jH+mD50x51Ir+FsWre0uceoywKOQVc/Lai+k2k1ldveWhlFxIOFpOW3kNvfzowiRqCFQAY7qkGMEb7MfrQv9NfAl+dfSs9rdXJLXFwWz1JJPwrJNJjMeHlYjwFXEbGdq6dvZ8WpTzW/o2cUJegM/o/bHI7WUfDH0qtL6MId4rkqf8Acmc0xkAVgArP5bR38c/4ed6roNxacXHHlOjryNL5s9z6lezSpH2J7TljfPKlWaPR+2kyM+sdwm31pkZ3oC8C2Cbi6LcZLZUDAoTdSnBD+waty7rVO4TIQb5G+O/fA+9PdNitFZCYXkjUkgIGOefl9KM2KlYlwP8AThJYeLt+1A7eL8TcSSk8IGd/74CmSxjMmjTXXBgzvlF/2BiFoKDRd0S3ttQmiebDDgyF8RtTzZ28UUaqgC7dBXk2iambKYcTbRykEnoMgfU16dpt4sqIynY1JmTLcDTRHb67b6dcSW0xCESNw55HJOKvxXWo3E/aQWsT2x5OJMEe7FBNS0y2W5F5ekGNWzw59qrp9JIYoOK34FVeSnp7qU1/g+JdDZDkgE86jukDZDCgdl6RPIq8dlMeLk0Y2Puo0Je1UEqVz0POsfDHDl9AWoWRKvHswI9XNJV3AbS8kgc/lyR5Xp1H716Tcxq6HvAJzXn/AKUSF5mW3IV1hySOm4pmJtsVla0DLCdUne2lJaOYjmOTfyKmW3WCWUQuVRx6y9zDkRQSK4MyiX2J4WKt5Z/fr5eNGXlDqvHleIAj37VW0Rlizv3SdFkBWQA5Qn2gOnn1pjgdJYkkRshhkeVJUkm6s+OMAHiXY0S0rVBb3Kxu3/rSnA/2Pjf3HPKl1IaY0DnW16jxrgHOPHurFY5OcZIB+VK0GdZwax2B4N/1fY1E7VEZPzIgeRkA+RrUjNhHPPzrOIKCSdhzqJ3CknO2/wBaGX10ZVKKcJjp150ajYNWka1e/wC2UwxEhOu/Ol8nffFWJ34s58qqcqdMJIRVtlZlDYHIVX1GPsHUZHEQMD4mrbKo9tifLaqV6qvGnFsDKq5zkj2j9qNrRyaZF2DW1oi4xIUDtvyyDime1CrplvEmwWFFA8gaXtQyZ4o8Z4UTiPlsauR3rixj3wyYyfjS2GL2pQNDdOEQmNg3u/uaO+ivpCYJBbTygg4ANdPbRanDxwN7QywA38cD7d1LOpabc6fOsrKSp3VlrmlS0zVTl8PUdYWe9skaJlEaniYnuqCxj05EEvqCTllzk0r+j3pW0KrbXjDfYE8sU+6Oum3IWaKKIsd/KprlovwZ9F7S5DKVZEPCNgcUaHLfpzNVxdxQrg8IAqhqOuwwxlIiGkOwUUkO6dPZrWdR/DoY4vWmfZFH1rz3UpZEW57RuMs2MjrnpTnZadJdcUtz/ryjbP6RS16U2XZgui7MCMeNMxNbJ8iehZccEgntypCYWXB2OTg4+vvFMxhhv9OUo2JYz8P796XdCBeR4mUHiUqfeP4Hwq3PNLbiQZ9ZEIbuO9VslRWWeS2n7O7jxwtw5xnK/etSKFWSS0k44RntEzkwkYI8877+IrqS+intHWRQzBgynrih/GIJhdRy8JBC5br3D61y6Y2Ofo3rK3MAglOZI+XeQaPcYBU7EEHcHPWvOre6gjuhKCYpB/i2c5/vKmKDXrNI1Es8Y6kkjl7udA46EqGF2GKp3UojMLdBKv1qJNTtp0zFPG4G+xyfhQ+9ujKykbKHBA94rZjp13wL3Nz2o4V2WqUmeA+VdneuX3U5p6lIlp7BznnUNdudz5mos1gWyN261Wmj47eVFPrYDKfEdKnNaXAbJ2ypWsb2Elo60vs7q5maTG8a8J8T+5FV7VnhkkQEg5xnJA51xZzCzvuzcfkuCh8Oo+dYJ+FpcYK8e2G+1A0NSJ3hu4mDwEIrHbkOfIfEVNdyt+HeOcGUfriccvFa7V0kgZFcnbhK8JbhBOfqB86hvmaYI/ATxDhORjB/u1YjWhSu4EV8wZ4T0PQ/3+9al07VtR0wgWtwygHZG3WptTiaOU8QxxtvjoagSLtEVQu7ez474o+NdA216GO09ItVvxwPKgXrwLg05ei2m/iHFzOC6qdid8mkf0dsme6WIKQzY59/fXrOnxrBBHEnJRioszS4i7E20XYkGH2ApW9L4lNmzdVbNNWeFCaSPTG9XhMEaklslm+uKVj35BW1oV/RxczkruQ3ER8v3qee2jub94ixAl49xzBG/wDFb9GrZuF3zjK8WeeMnA+nzrrTos606NukcZ9ffGT5+FXkTRR1PR0gtXu1n4XaVldem4DH60vq8vGVk4Qp5htw3cfCnDXb1EsYoTGjS3BaVmYAiNepx342FJpDSTEoOZySTgAbbk9KOELZLIsMcCHgwHHERknc+GeVV2mIAwW4R0PL4Vu9lUyY9VuEYLDP3odLNnYez5c6NIFsmmuXkY8DKA3UDhz7qsWesXdkpVG7SL9SuSceXdQ5ZVGzj1e4Hl5VjAD2TlTyNEkgGz0/RtatdWiJiJWRQeKM8x+9X2IwfOvKLSaa3kWe2kKyIc7cwO/xFP2ha3HqkDKAEuUX8yM9fEd4rdAm5G9ZvOuM1zK2JWB55rjjoAiN5WY8KKCO81z+HlkIBk59AOdWtNtpLluGJCzsdgKaLXS4rGF5JAryKpyTyHgKXVJDUmxMvLUYYOCH2O5zg1Vl9VO6TGSAeffVzVrgxyOzqc5z+1Ae0le4WVt+JsYzit9o1NjNp0DTQo7EEYIyDgjG32z7qKy2Ihs2VMOysdz3EbfOotKzbaXGjf6y9pkd/Mj6/OrUkzdk3bMVUesdvdilP2MF2/hM0ccgAL8OHA29YbfPBqutgyRGNtuyKyDvB2/vvpkgsVUBQuViLYDcjj+cVc0bRXu5z2h2clpGxyHT7/KudaR0xsk9DrFJczcABO3hinWO34TjFc2NnFaBYYo1VByxVzBzUdvbLZWloq3p7OEAdflXmOuu95qUsaD1geFQOn93r0jWmCW7k5GB076SreGGC5lu5wC+5wcfCmYV9FZX8IeFNNtIY2wrSnfwCj7bfOoNNiYRzSDbtzlVOwUd5929c3Ev/k7wlEKpw4YkYB64HcBt/RVTWr5YITbwleNhh8DAjQdPf1qj6Tv0BdXm/H37GPi7I4jjB6IvU/EmhMUERcm5uUihGcE7k+Q99SvMwhkmVgAcqCftQu5m7aUY2UD4+NPlcENmrySIyFbcsYhyL8zVYmsbngcq1RgezdbVsDHfXINbrjDCcGpba4ktp0mhcpIp9UiojWq7Zw36dqqXxPHgT9R3+Iq4JMjrSRG5Ugq3Cw5EHGKJLrlzwjKQk43O+9do49s0SzgtbGIxIOKRcsx5mq2uO0NvOUrKyoV/0V/BH1JA9uZZPXZWwOLzx96paNZQXkDXM6kumygHAGBtW6yqX6AGi2VXZAyjBY7e7P2qnJPItyq5yGbJB643rKyljUGFX8+GAEhCqk472GSfiaeLG3itoFSJccQ3PU1qsqTI+j49FiUYQEcxUp9gmt1lAhjAHpBKyWUzrjiEZYHxFIdxK5sxvu2Mnqc1lZVGL0JyG7aNYXiRBtKvE2TzwD+1LevSN2Bbq8xVj3jY/esrKfPsnoWZpXOEz6uOVQDmfI/St1lUEzIx9q2aysrjEcit1qsrjTDWVlZXGGda1xmsrK04/9k=",
+      socialMedia: {
+        platform: "twitter",
+        link: "https://twitter.com/sara_ahmadi",
+      },
+    },
+    content:
+      "تجربه خرید از پالس گیم عالی بود. پشتیبانی سریع و قیمت‌ها مناسب هستن 👍",
+    timestamp: "5 ساعت پیش",
+    likes: 89,
+  },
+  {
+    id: 3,
+    user: {
+      name: "محمد رضایی",
+      avatar:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPJwOljInckSbYWgVMarbPfLlFBaZDzQIarw&s",
+      socialMedia: {
+        platform: "telegram",
+        link: "https://t.me/mohammad_rezaei",
+      },
+    },
+    content:
+      "پالس گیم بهترین انتخاب برای گیمرهای ایرانی. کیفیت و تنوع محصولاتش واقعاً قابل قبوله 🎮",
+    timestamp: "1 روز پیش",
+    likes: 156,
+  },
+];
