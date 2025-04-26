@@ -11,7 +11,7 @@ function Home() {
       <HomeSwiper />
       <GameCategories />
       <Offers />
-      {/* <Creators /> */}
+      <Creators />
       <Categories />
       <ProductsSection />
     </>

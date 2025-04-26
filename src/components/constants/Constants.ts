@@ -58,54 +58,104 @@ export const gameCategories = [
 ];
 
 export const categories = [
-  {name:"game", img:"https://ts1.mm.bing.net/th?id=OIP.6AinckB-MnmfgeMufrDrSgHaEK&pid=15.1"},
-  {name:"keyboard", img:"https://ts3.mm.bing.net/th?id=OIP.ZYYL_Ueah5uwbIY5yMoq3gHaHa&pid=15.1"},
-  {name:"headset", img:"https://ts4.mm.bing.net/th?id=OIP.6DC4y1TNRFJg7fqKXpx1iAHaHa&pid=15.1"},
-  {name:"monitor", img:"https://ts1.mm.bing.net/th?id=OIP.xCby3g0KbOhJsl2HxtvFGgHaHa&pid=15.1"},
-  {name:"console", img:"https://ts3.mm.bing.net/th?id=OIP.fiWjGlPQAX_JhpzRII93tAHaIW&pid=15.1"},
-  {name:"mouse", img:"https://ts3.mm.bing.net/th?id=OIP.peSJwTo7YYQtOtvkHaSQyAHaHa&pid=15.1"},
+  {
+    name: "game",
+    img: "https://ts1.mm.bing.net/th?id=OIP.6AinckB-MnmfgeMufrDrSgHaEK&pid=15.1",
+  },
+  {
+    name: "keyboard",
+    img: "https://ts3.mm.bing.net/th?id=OIP.ZYYL_Ueah5uwbIY5yMoq3gHaHa&pid=15.1",
+  },
+  {
+    name: "headset",
+    img: "https://ts4.mm.bing.net/th?id=OIP.6DC4y1TNRFJg7fqKXpx1iAHaHa&pid=15.1",
+  },
+  {
+    name: "monitor",
+    img: "https://ts1.mm.bing.net/th?id=OIP.xCby3g0KbOhJsl2HxtvFGgHaHa&pid=15.1",
+  },
+  {
+    name: "console",
+    img: "https://ts3.mm.bing.net/th?id=OIP.fiWjGlPQAX_JhpzRII93tAHaIW&pid=15.1",
+  },
+  {
+    name: "mouse",
+    img: "https://ts3.mm.bing.net/th?id=OIP.peSJwTo7YYQtOtvkHaSQyAHaHa&pid=15.1",
+  },
 ];
 
 export const creators = [
   {
-    name: "rockstar",
+    name: "Rockstar Games",
     img: "https://ts4.mm.bing.net/th?id=OIP.NiIFLh_smEzgd2RTz9f0iwHaFj&pid=15.1",
+    description: "خالق بازی‌های ماندگار مانند GTA و Red Dead Redemption",
+    socialLinks: {
+      twitter: "https://twitter.com/RockstarGames",
+      instagram: "https://instagram.com/rockstargames",
+    },
   },
   {
-    name: "activision",
+    name: "Activision",
     img: "https://ts2.mm.bing.net/th?id=OIP.bwWZP-EullX0OeXr0LIpdAHaEK&pid=15.1",
+    description: "ناشر بازی‌های محبوب Call of Duty و World of Warcraft",
+    socialLinks: {
+      twitter: "https://twitter.com/Activision",
+      instagram: "https://instagram.com/activision",
+    },
   },
   {
-    name: "eaSports",
+    name: "EA Sports",
     img: "https://ts3.mm.bing.net/th?id=OIP.pGnhxYpsnYUMy9VP-J9uiAHaEK&pid=15.1",
+    description: "تولیدکننده بازی‌های ورزشی مانند FIFA و Madden NFL",
+    socialLinks: {
+      twitter: "https://twitter.com/EASPORTS",
+      instagram: "https://instagram.com/easports",
+    },
   },
   {
-    name: "ea",
+    name: "Electronic Arts",
     img: "https://ts2.mm.bing.net/th?id=OIP.IIWn1WBxSiWyEDHT4mVUlgHaHZ&pid=15.1",
+    description: "یکی از بزرگترین شرکت‌های تولیدکننده بازی‌های ویدیویی",
+    socialLinks: {
+      twitter: "https://twitter.com/EA",
+      instagram: "https://instagram.com/ea",
+    },
   },
   {
-    name: "ubisoft",
+    name: "Ubisoft",
     img: "https://ts2.mm.bing.net/th?id=OIP.8Ty2RnWUMGQxchDQi0HuLAHaFY&pid=15.1",
+    description: "خالق سری‌های Assassin's Creed و Far Cry",
+    socialLinks: {
+      twitter: "https://twitter.com/Ubisoft",
+      instagram: "https://instagram.com/ubisoft",
+    },
   },
   {
-    name: "naughtyDog",
+    name: "Naughty Dog",
     img: "https://ts2.mm.bing.net/th?id=OIP.uFJRew8OoCUdYJTKp3YrhwHaE8&pid=15.1",
+    description: "استودیوی سازنده The Last of Us و Uncharted",
+    socialLinks: {
+      twitter: "https://twitter.com/Naughty_Dog",
+      instagram: "https://instagram.com/naughty_dog_inc",
+    },
   },
   {
-    name: "razer",
+    name: "Razer",
     img: "https://ts2.mm.bing.net/th?id=OIP.0jZWoMZJVYWk0KRrYzEVcAHaEK&pid=15.1",
+    description: "تولیدکننده تجهیزات گیمینگ با کیفیت بالا",
+    socialLinks: {
+      twitter: "https://twitter.com/Razer",
+      instagram: "https://instagram.com/razer",
+    },
   },
   {
-    name: "logitech",
+    name: "Logitech",
     img: "https://ts4.mm.bing.net/th?id=OIP.q64N02wakLZAMXN6l1VpHQHaEK&pid=15.1",
-  },
-  {
-    name: "asus",
-    img: "https://ts3.mm.bing.net/th?id=OIP.jo5IbrDN_V02hDGLLRyjygHaEK&pid=15.1",
-  },
-  {
-    name: "hyperx",
-    img: "https://ts4.mm.bing.net/th?id=OIP.9aPfpNOWNcPgm8vevkx4wAHaEK&pid=15.1",
+    description: "تولیدکننده لوازم جانبی کامپیوتر و گیمینگ",
+    socialLinks: {
+      twitter: "https://twitter.com/Logitech",
+      instagram: "https://instagram.com/logitech",
+    },
   },
 ];
 

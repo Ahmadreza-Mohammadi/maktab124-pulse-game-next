@@ -6,10 +6,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Loading from "../loading/Loading";
 
-
 function Offers() {
   const [products, setProducts] = useState<any[]>([]);
-  const maxTitleLength = 18; // حداکثر تعداد کاراکتر قابل نمایش
+  const maxTitleLength = 18;
 
   useEffect(() => {
     async function getProducts() {
@@ -34,57 +33,63 @@ function Offers() {
   });
 
   return (
-    <div className="mt-12 flex flex-col items-center bg-gray-900 ">
-      <h1 className="text-3xl font-bold text-gray-100 mb-6">
-        جشنواره تخفیف پالس گیم
-      </h1>
-      <div className="w-full overflow-x-auto hide-scrollbar">
-        <div className="flex justify-center gap-8 p-8 snap-x mr-61">
-          {products.length === 0 && (
-          
-             <div className="py-16">
-              <Loading />
-             </div>
-          
-          )}
-          {sortedProducts.map((product: any, index: number) => (
-            <div
-              key={product.title}
-              className="snap-center flex-none p-4 w-64 h-112 bg-gray-800 shadow-lg rounded-xl flex flex-col justify-between transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <img
-                className="h-68 w-full object-cover rounded-lg transition-transform duration-300 hover:scale-110"
-                src={product.img}
-                alt={product.title}
-              />
-              <div className="flex flex-col gap-4 items-center mt-4">
-                <div className="flex flex-col ">
-                  <span className="font-bold text-xl text-gray-100 text-center">
-                    {product.category === "game" && "بازی"}
-                    {product.category === "console" && "کنسول"}
-                    {product.category === "keyboard" && "کیبورد"}
-                    {product.category === "mouse" && "ماوس"}
-                    {product.category === "monitor" && "مانیتور"}
-                    {product.category === "headset" && "هدست"}
-                    {product.category === "chair" && "صندلی"}
-                  </span>
-                  <span className="font-bold text-lg text-gray-100 text-center">
-                    {truncateEnd(product.title, maxTitleLength)}
-                  </span>
-                </div>
-                <span className="text-red-400 font-semibold">
-                  {digitsEnToFa(product.discount)}٪ تخفیف
-                </span>
-                <button className="bg-blue-500 text-white w-1/2 p-2 rounded-lg font-semibold cursor-pointer hover:bg-blue-600 transition-colors duration-200">
-                  مشاهده محصول
-                </button>
+    <section
+      className="py-12 bg-gradient-to-b from-blue-950 to-blue-800"
+      dir="rtl"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-extrabold text-center text-blue-200 mb-8 animate-fade-in">
+          جشنواره تخفیف پالس گیم
+        </h2>
+        <div className="w-full overflow-x-auto hide-scrollbar">
+          <div className="flex justify-center gap-8 p-8 snap-x">
+            {products.length === 0 && (
+              <div className="py-16 mr-56">
+                <Loading />
               </div>
-            </div>
-          ))}
+            )}
+            {sortedProducts.map((product: any, index: number) => (
+              <div
+                key={product.title}
+                className="snap-center flex-none p-4 w-64 h-112 bg-blue-900 rounded-3xl overflow-hidden border border-blue-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:-translate-y-2 animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative h-68 w-full overflow-hidden">
+                  <img
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3"
+                    src={product.img}
+                    alt={product.title}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
+                </div>
+                <div className="flex flex-col gap-4 items-center mt-4">
+                  <div className="flex flex-col">
+                    <span className="font-bold text-xl text-blue-200 text-center">
+                      {product.category === "game" && "بازی"}
+                      {product.category === "console" && "کنسول"}
+                      {product.category === "keyboard" && "کیبورد"}
+                      {product.category === "mouse" && "ماوس"}
+                      {product.category === "monitor" && "مانیتور"}
+                      {product.category === "headset" && "هدست"}
+                      {product.category === "chair" && "صندلی"}
+                    </span>
+                    <span className="font-bold text-lg text-blue-200 text-center">
+                      {truncateEnd(product.title, maxTitleLength)}
+                    </span>
+                  </div>
+                  <span className="text-red-400 font-semibold">
+                    {digitsEnToFa(product.discount)}٪ تخفیف
+                  </span>
+                  <button className="bg-blue-500 text-white w-1/2 p-2 rounded-lg font-semibold cursor-pointer hover:bg-blue-600 transition-colors duration-200">
+                    مشاهده محصول
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
