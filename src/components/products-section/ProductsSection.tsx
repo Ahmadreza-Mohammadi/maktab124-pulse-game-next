@@ -65,7 +65,7 @@ function ProductsSection() {
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3"
                   src={product.img}
-                  alt={ product.title || "Product Image"}
+                  alt={product.title || "Product Image"}
                 />
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
@@ -140,7 +140,7 @@ function ProductsSection() {
                     e.stopPropagation();
                     getSingleProduct(product.id);
                   }}
-                  className="mt-auto bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-200"
+                  className="mt-auto bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-200 cursor-pointer"
                 >
                   مشاهده جزئیات
                 </button>
@@ -148,6 +148,14 @@ function ProductsSection() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="flex justify-center mt-8">
+        <button
+          onClick={() => router.push("/products")}
+          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:-translate-y-1 cursor-pointer"
+        >
+          مشاهده همه محصولات
+        </button>
       </div>
     </section>
   );
