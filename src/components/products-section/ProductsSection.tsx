@@ -65,7 +65,7 @@ function ProductsSection() {
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3"
                   src={product.img}
-                  alt={product.name || product.title || "Product Image"}
+                  alt={ product.title || "Product Image"}
                 />
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>

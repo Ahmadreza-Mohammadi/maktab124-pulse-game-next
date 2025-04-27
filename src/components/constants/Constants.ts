@@ -205,7 +205,55 @@ export const comments: Comment[] = [
     likes: 89,
   },
   {
-    id: 3,
+    id: 4,
+    user: {
+      name: "محمد رضایی",
+      avatar:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPJwOljInckSbYWgVMarbPfLlFBaZDzQIarw&s",
+      socialMedia: {
+        platform: "telegram",
+        link: "https://t.me/mohammad_rezaei",
+      },
+    },
+    content:
+      "پالس گیم بهترین انتخاب برای گیمرهای ایرانی. کیفیت و تنوع محصولاتش واقعاً قابل قبوله 🎮",
+    timestamp: "1 روز پیش",
+    likes: 156,
+  },
+  {
+    id: 5,
+    user: {
+      name: "محمد رضایی",
+      avatar:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPJwOljInckSbYWgVMarbPfLlFBaZDzQIarw&s",
+      socialMedia: {
+        platform: "telegram",
+        link: "https://t.me/mohammad_rezaei",
+      },
+    },
+    content:
+      "پالس گیم بهترین انتخاب برای گیمرهای ایرانی. کیفیت و تنوع محصولاتش واقعاً قابل قبوله 🎮",
+    timestamp: "1 روز پیش",
+    likes: 156,
+  },
+  {
+    id: 6,
+    user: {
+      name: "محمد رضایی",
+      avatar:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPJwOljInckSbYWgVMarbPfLlFBaZDzQIarw&s",
+      socialMedia: {
+        platform: "telegram",
+        link: "https://t.me/mohammad_rezaei",
+      },
+    },
+    content:
+      "پالس گیم بهترین انتخاب برای گیمرهای ایرانی. کیفیت و تنوع محصولاتش واقعاً قابل قبوله 🎮",
+    timestamp: "1 روز پیش",
+    likes: 156,
+  },
+  {
+    id: 7,
     user: {
       name: "محمد رضایی",
       avatar:
