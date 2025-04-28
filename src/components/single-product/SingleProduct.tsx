@@ -32,7 +32,6 @@ function SingleProduct({ id }: SingleProductProps) {
           },
         });
         setProduct(res.data);
-        // Set the first platform as selected by default if platforms exist
         if (
           res.data.platforms &&
           Array.isArray(res.data.platforms) &&
