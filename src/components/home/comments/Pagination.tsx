@@ -5,22 +5,10 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Comment } from "@/components/interfaces/interface";
 
 interface CommentsPaginationProps {
-  comments: Array<{
-    id: string;
-    user: {
-      name: string;
-      avatar: string;
-      socialMedia: {
-        platform: string;
-        link: string;
-      };
-    };
-    content: string;
-    timestamp: string;
-    likes: number;
-  }>;
+  comments: Comment[];
 }
 
 export default function CommentsPagination({

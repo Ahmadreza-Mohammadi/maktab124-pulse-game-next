@@ -4,7 +4,7 @@ import { API_KEY, BASE_URL } from "@/api/API";
 import { digitsEnToFa, truncateEnd, formatPrice } from "@/utils/helper";
 import axios from "axios";
 import { useState, useEffect, useRef } from "react";
-import Loading from "../loading/Loading";
+import Loading from "../../loading/Loading";
 import { useRouter } from "next/navigation";
 
 function Offers() {

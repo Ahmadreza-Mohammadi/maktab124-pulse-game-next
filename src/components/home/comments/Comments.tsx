@@ -1,4 +1,5 @@
-import { comments } from "../constants/Constants";
+
+import { comments } from "@/components/constants/Constants";
 import CommentsPagination from "./Pagination";
 
 function Comments() {

@@ -5,13 +5,15 @@ import { useModal } from "@/context/ModalContext";
 
 function LogOutModal() {
   const router = useRouter();
-  const { setShowLogoutModal } = useModal();
+  const { showLogoutModal, setShowLogoutModal } = useModal();
 
   const logOutHandler = () => {
     setShowLogoutModal(false);
     localStorage.removeItem("accessToken");
     router.push("/login");
   };
+
+  if (!showLogoutModal) return null;
 
   return (
     <div className="fixed inset-0 z-50 h-screen">
@@ -37,13 +39,13 @@ function LogOutModal() {
           <div className="flex gap-4">
             <button
               onClick={logOutHandler}
-              className="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg transition-colors"
+              className="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg transition-colors cursor-pointer"
             >
               خروج
             </button>
             <button
               onClick={() => setShowLogoutModal(false)}
-              className="flex-1 bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-lg transition-colors"
+              className="flex-1 bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-lg transition-colors cursor-pointer"
             >
               انصراف
             </button>

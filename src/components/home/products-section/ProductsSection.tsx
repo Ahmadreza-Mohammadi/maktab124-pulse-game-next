@@ -1,12 +1,12 @@
 "use client";
 
 import { API_KEY, BASE_URL } from "@/api/API";
-import { digitsEnToFa, formatPrice, truncateEnd } from "@/utils/helper";
+import { formatPrice, truncateEnd } from "@/utils/helper";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { categoryTranslations } from "../constants/Constants";
-import Loading from "../loading/Loading";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { categoryTranslations } from "@/components/constants/Constants";
+import Loading from "@/components/loading/Loading";
 
 function ProductsSection() {
   const [products, setProducts] = useState([]);

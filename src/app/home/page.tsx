@@ -1,10 +1,11 @@
-import Creators from "@/components/creators/Creators";
-import Offers from "@/components/offers/Offers";
+import Categories from "@/components/home/categories/Categories";
+import Comments from "@/components/home/comments/Comments";
+import Creators from "@/components/home/creators/Creators";
+import GameCategories from "@/components/home/game-categories/GameCategories";
+import Offers from "@/components/home/offers/Offers";
+import ProductsSection from "@/components/home/products-section/ProductsSection";
 import HomeSwiper from "@/components/swiper/HomeSwiper";
-import GameCategories from "@/components/game-categories/GameCategories";
-import Categories from "@/components/categories/Categories";
-import ProductsSection from "@/components/products-section/ProductsSection";
-import Comments from "@/components/comments/Comments";
+
 
 function Home() {
   return (

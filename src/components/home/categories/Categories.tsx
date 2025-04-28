@@ -1,19 +1,8 @@
 "use client";
 
-import { gameCategories } from "../constants/Constants";
+import { categories, categoryTranslations } from "../../constants/Constants";
 
-function GameCategories() {
-  // Category translations
-  const categoryTranslations: { [key: string]: string } = {
-    action: "اکشن",
-    strategy: "استراتژیک",
-    adventure: "ماجراجویی",
-    rpg: "نقش آفرینی",
-    sport: "ورزشی",
-    simulator: "شبیه ساز",
-    actionAdventure: "اکشن ماجراجویی",
-  };
-
+function Categories() {
   return (
     <section
       className="py-12 bg-gradient-to-b from-blue-950 to-blue-800"
@@ -21,13 +10,13 @@ function GameCategories() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-extrabold text-center text-gray-100 mb-8 animate-fade-in">
-          دسته‌بندی بازی‌ها
+          دسته‌بندی محصولات
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 justify-items-center">
-          {gameCategories.map((category, index) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+          {categories.map((category, index) => (
             <div
               key={category.name}
-              className="relative bg-blue-900 rounded-3xl overflow-hidden border border-blue-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up cursor-pointer w-full max-w-44"
+              className="relative bg-blue-900 rounded-3xl overflow-hidden border border-blue-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:-translate-y-2 animate-slide-up cursor-pointer w-full max-w-44"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image Section */}
@@ -58,4 +47,4 @@ function GameCategories() {
   );
 }
 
-export default GameCategories;
+export default Categories;

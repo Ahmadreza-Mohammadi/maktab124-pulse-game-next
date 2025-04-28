@@ -1,6 +1,6 @@
 "use client";
 
-import { creators } from "../constants/Constants";
+import { creators } from "@/components/constants/Constants";
 
 function Creators() {
   return (
