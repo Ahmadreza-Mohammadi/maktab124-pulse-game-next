@@ -96,14 +96,15 @@ function Offers() {
           >
             <div className="flex gap-6 p-4">
               {products.length === 0 && (
-                <div className="py-16 mr-56">
+                <div className="py-16 mr-128">
                   <Loading />
                 </div>
               )}
               {sortedProducts.map((product: any, index: number) => (
                 <div
                   key={product.title}
-                  className="flex-none w-80 bg-blue-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-blue-600/30 hover:border-blue-400/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:-translate-y-2 animate-slide-up group"
+                  className="flex-none w-80 bg-blue-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-blue-600/30 hover:border-blue-400/50 transition-all cursor-pointer duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:-translate-y-2 animate-slide-up group"
+                  onClick={() => getSingleProduct(product.id)}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="relative h-56 w-full overflow-hidden">

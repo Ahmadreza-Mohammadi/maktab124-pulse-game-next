@@ -149,10 +149,10 @@ function ProductsSection() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-12">
         <button
           onClick={() => router.push("/products")}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:-translate-y-1 cursor-pointer"
+          className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:from-blue-600 hover:to-blue-700 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:-translate-y-1 cursor-pointer"
         >
           مشاهده همه محصولات
         </button>

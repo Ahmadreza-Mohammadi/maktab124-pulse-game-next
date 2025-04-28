@@ -166,7 +166,7 @@ function SingleProduct({ id }: SingleProductProps) {
                         <button
                           key={platform}
                           onClick={() => setSelectedPlatform(platform)}
-                          className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                          className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
                             selectedPlatform === platform
                               ? "bg-blue-600 text-white"
                               : "bg-gray-600 text-gray-300 hover:bg-gray-500"
@@ -214,7 +214,7 @@ function SingleProduct({ id }: SingleProductProps) {
               )}
               {/* Add to Cart Button - Only shown when there are platforms */}
               {hasPlatforms && (
-                <button className="mt-auto bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
+                <button className="mt-auto bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 cursor-pointer">
                   افزودن به سبد خرید
                 </button>
               )}
