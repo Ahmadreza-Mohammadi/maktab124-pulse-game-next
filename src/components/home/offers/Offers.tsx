@@ -103,13 +103,13 @@ function Offers() {
               {sortedProducts.map((product: any, index: number) => (
                 <div
                   key={product.title}
-                  className="flex-none w-80 bg-blue-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-blue-600/30 hover:border-blue-400/50 transition-all cursor-pointer duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:-translate-y-2 animate-slide-up group"
+                  className="flex-none w-80 bg-blue-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border-2 border-blue-600/50 hover:border-blue-400 transition-all cursor-pointer duration-300 animate-slide-up"
                   onClick={() => getSingleProduct(product.id)}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="relative h-56 w-full overflow-hidden">
                     <img
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full object-cover"
                       src={product.img}
                       alt={product.title}
                     />
@@ -149,7 +149,7 @@ function Offers() {
                     </div>
                     <button
                       onClick={() => getSingleProduct(product.id)}
-                      className="mt-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2.5 rounded-xl font-semibold cursor-pointer hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                      className="mt-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2.5 rounded-xl font-semibold cursor-pointer transition-all duration-300 shadow-md shadow-blue-500/30"
                     >
                       مشاهده محصول
                     </button>

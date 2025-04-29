@@ -1,4 +1,3 @@
-
 import { creators } from "@/components/constants/Constants";
 
 function Creators() {
@@ -20,13 +19,13 @@ function Creators() {
           {creators.map((creator, index) => (
             <div
               key={index}
-              className="relative bg-blue-900 rounded-3xl overflow-hidden border border-blue-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:-translate-y-2 animate-slide-up cursor-pointer"
+              className="relative bg-blue-900 rounded-3xl overflow-hidden border-2 border-blue-600/50 hover:border-blue-400 transition-all duration-300 animate-slide-up cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image Section */}
               <div className="relative h-48 w-full overflow-hidden">
                 <img
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-125"
                   src={creator.img}
                   alt={creator.name}
                 />
