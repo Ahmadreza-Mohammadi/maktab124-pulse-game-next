@@ -9,13 +9,12 @@ import { formatPrice, truncateEnd } from "@/utils/helper";
 import Loading from "@/components/loading/Loading";
 import ScrollToTop from "../scroll-to-top/ScrollToTop";
 import BackButton from "../shared/BackButton";
+
 interface FilteredProductsProps {
-  gameCategory: string;
+  value: string;
 }
 
-export default function FilteredProducts({
-  gameCategory,
-}: FilteredProductsProps) {
+export default function FilteredProducts({ value }: FilteredProductsProps) {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,7 +22,6 @@ export default function FilteredProducts({
   const maxTitleLength = 24;
   const productsPerPage = 9;
 
-  // Scroll to top when page changes
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -34,10 +32,18 @@ export default function FilteredProducts({
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(
-          `${BASE_URL}/api/records/products?filterKey=gameCategory&filterValue=${gameCategory}`,
+        let response = await axios.get(
+          `${BASE_URL}/api/records/products?filterKey=category&filterValue=${value}`,
           { headers: { api_key: API_KEY } }
         );
+
+        if (!response.data.records || response.data.records.length === 0) {
+          response = await axios.get(
+            `${BASE_URL}/api/records/products?filterKey=gameCategory&filterValue=${value}`,
+            { headers: { api_key: API_KEY } }
+          );
+        }
+
         setProducts(response.data.records);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -47,7 +53,7 @@ export default function FilteredProducts({
     };
 
     fetchProducts();
-  }, [gameCategory]);
+  }, [value]);
 
   function getSingleProduct(id: number) {
     router.push(`/single-product/${id}`);
@@ -59,10 +65,10 @@ export default function FilteredProducts({
   const endIndex = startIndex + productsPerPage;
   const currentProducts = products.slice(startIndex, endIndex);
 
-  // Reset to first page when category changes
+  // Reset to first page when value changes
   useEffect(() => {
     setCurrentPage(1);
-  }, [gameCategory]);
+  }, [value]);
 
   if (loading) {
     return (
@@ -84,7 +90,7 @@ export default function FilteredProducts({
             محصولی در این دسته‌بندی یافت نشد
           </h2>
           <p className="text-center text-gray-400">
-            دسته‌بندی: {categoryTranslations[gameCategory] || gameCategory}
+            دسته‌بندی: {categoryTranslations[value] || value}
           </p>
         </div>
       </section>
@@ -101,7 +107,7 @@ export default function FilteredProducts({
         <div className="flex items-center justify-between my-8">
           <BackButton />
           <h2 className="text-4xl font-extrabold text-blue-200 animate-fade-in">
-            {categoryTranslations[gameCategory]}
+            {categoryTranslations[value]}
           </h2>
           <div className="w-24"></div> {/* Empty div for balance */}
         </div>

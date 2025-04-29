@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { categories, categoryTranslations } from "../../constants/Constants";
 
 function Categories() {
@@ -12,7 +13,8 @@ function Categories() {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
           {categories.map((category, index) => (
-            <div
+            <Link
+              href={`/filtered/${category.name}`}
               key={category.name}
               className="relative bg-blue-900 rounded-3xl overflow-hidden border border-blue-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:-translate-y-2 animate-slide-up cursor-pointer w-full max-w-44"
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -37,7 +39,7 @@ function Categories() {
                   {categoryTranslations[category.name] || category.name}
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

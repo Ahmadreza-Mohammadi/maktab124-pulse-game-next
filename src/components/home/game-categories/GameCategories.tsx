@@ -2,10 +2,8 @@
 
 import { gameCategories } from "@/components/constants/Constants";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 function GameCategories() {
-  const Router = useRouter();
 
   // Category translations
   const categoryTranslations: { [key: string]: string } = {
@@ -18,9 +16,7 @@ function GameCategories() {
     actionAdventure: "اکشن ماجراجویی",
   };
 
-  function getFilteredCategory(gameCategory: string) {
-    Router.push(`/filtered/${gameCategory}`);
-  }
+  
 
   return (
     <section
