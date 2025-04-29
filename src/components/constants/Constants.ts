@@ -48,7 +48,7 @@ export const gameCategories = [
     img: "https://bazishopiran.ir/wp-content/uploads/icongame-10-100x100.png",
   },
   {
-    name: "sport",
+    name: "sports",
     img: "https://bazishopiran.ir/wp-content/uploads/icongame-32-100x100.png",
   },
   {
@@ -167,6 +167,13 @@ export const categoryTranslations: { [key: string]: string } = {
   headset: "هدست",
   monitor: "مانیتور",
   chair: "صندلی",
+  adventure: "ماجراجویی",
+  actionAdventure: "اکشن ماجراجویی",
+  action: "اکشن",
+  strategy: "استراتژیک",
+  simulatort: "شبیه ساز",
+  sports: "ورزشی",
+  rpg: "نقش آفرینی",
 };
 
 import { Comment } from "../interfaces/interface";

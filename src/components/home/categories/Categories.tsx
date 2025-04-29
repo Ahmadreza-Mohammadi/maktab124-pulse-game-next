@@ -1,5 +1,3 @@
-"use client";
-
 import { categories, categoryTranslations } from "../../constants/Constants";
 
 function Categories() {

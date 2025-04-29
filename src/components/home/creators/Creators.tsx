@@ -1,4 +1,3 @@
-"use client";
 
 import { creators } from "@/components/constants/Constants";
 
