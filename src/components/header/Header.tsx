@@ -1,97 +1,241 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { pages } from "../constants/Pages";
+import { useEffect, useState } from "react";
+import { useModal } from "@/context/ModalContext";
+import { IoHomeOutline } from "react-icons/io5";
+import { BsCart3, BsPerson, BsBoxSeam } from "react-icons/bs";
+import { IoLogOutOutline, IoLogInOutline } from "react-icons/io5";
 
 function Header() {
   const router = useRouter();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { setShowLogoutModal } = useModal();
+  const [isLogin, setIsLogin] = useState(false);
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken");
+    accessToken ? setIsLogin(true) : setIsLogin(false);
+  }, []);
 
   const handleNavigation = (path: string) => {
     router.push(path);
+    setIsMenuOpen(false);
   };
+
   return (
-    <div className="flex flex-col">
-      {/* Top Bar */}
-      <div className="px-5 py-12 bg-gray-900 flex items-center justify-between shadow-lg">
+    <header
+      className="fixed py-8 top-0 left-0 right-0 z-50 bg-gradient-to-b from-gray-900 to-blue-950 shadow-xl backdrop-blur-sm bg-opacity-90"
+      dir="rtl"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo Section */}
-        <div className="flex gap-4 items-center relative">
-          <img
-            className="h-16 cursor-pointer transform hover:scale-110 transition duration-300"
-            src="https://www.svgrepo.com/show/408429/user-person-profile-block-account-circle.svg"
-            alt="Profile Icon"
-          />
-          <div className="relative">
-            <img
-              className="h-16 cursor-pointer transform hover:scale-110 transition duration-300"
-              src="https://www.svgrepo.com/show/441364/cart.svg"
-              alt="Cart Icon"
-            />
-            {/* Quantity Circle */}
-            <span className="absolute -top-2 -right-2 bg-red-600 text-white text-sm rounded-full h-6 w-6 flex items-center justify-center">
-              3
-            </span>
-          </div>
-        </div>
-
-        {/* Search Section */}
-        <div className="flex items-center">
-          <input
-            className="border outline-none w-96 border-gray-600 bg-gray-800 text-white p-2 rounded-r-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            type="text"
-            placeholder="جستجو..."
-          />
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-l-md hover:bg-blue-700 transition duration-300 focus:ring-2 focus:ring-blue-500">
-            جستجو
-          </button>
-        </div>
-
-        {/* Gaming Title Section */}
-        <div className="flex items-center gap-4">
-          <span className="font-bold text-2xl text-blue-400 hover:text-blue-300 transition duration-300">
+        <div
+          className="flex items-center gap-2 cursor-pointer group"
+          onClick={() => handleNavigation("/home")}
+        >
+          <span className="text-2xl font-extrabold text-white group-hover:text-blue-400 transition-colors duration-300">
             پالس گیم
           </span>
           <img
-            className="h-20 transform hover:rotate-12 hover:scale-110 transition duration-300"
-            src="https://www.svgrepo.com/show/283919/game-console.svg"
-            alt="Gaming Icon"
+            className="h-12"
+            src="https://www.svgrepo.com/show/337754/game.svg"
+            alt=""
           />
         </div>
+
+        {/* Navigation Section */}
+        <nav className="hidden lg:flex items-center gap-8">
+          <div
+            className="relative group cursor-pointer flex items-center gap-1"
+            onClick={() => handleNavigation("/home")}
+          >
+            <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+              خانه
+            </span>
+            <IoHomeOutline className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+            <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+          </div>
+
+          <div
+            className="relative group cursor-pointer flex items-center gap-1"
+            onClick={() => handleNavigation("/products")}
+          >
+            <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+              محصولات
+            </span>
+            <BsBoxSeam className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+            <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+          </div>
+
+          <div
+            className="relative group cursor-pointer flex items-center gap-1"
+            onClick={() => handleNavigation("/cart")}
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
+                سبد خرید
+              </span>
+              <div className="relative">
+                <BsCart3 className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+                <span className="absolute -top-2 -left-2 bg-red-500 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center shadow-lg shadow-red-500/20">
+                  3
+                </span>
+              </div>
+            </div>
+            <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+          </div>
+
+          {isLogin && (
+            <>
+              <div
+                className="relative group cursor-pointer flex items-center gap-1"
+                onClick={() => handleNavigation("/profile")}
+              >
+                <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+                  پروفایل
+                </span>
+                <BsPerson className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+                <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+              </div>
+
+              <div
+                className="relative group cursor-pointer flex items-center gap-1"
+                onClick={() => setShowLogoutModal(true)}
+              >
+                <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+                  خروج
+                </span>
+                <IoLogOutOutline className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+                <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+              </div>
+            </>
+          )}
+
+          {!isLogin && (
+            <div
+              className="relative group cursor-pointer flex items-center gap-1"
+              onClick={() => handleNavigation("/login")}
+            >
+              <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+                وارد شوید
+              </span>
+              <IoLogInOutline className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+              <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+            </div>
+          )}
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden text-white focus:outline-none hover:text-blue-400 transition-colors duration-300"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d={
+                isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
+              }
+            />
+          </svg>
+        </button>
       </div>
 
-      {/* Navigation Bar */}
-      <div className="bg-blue-50 flex justify-between items-center px-6 shadow-lg">
-        <ul className="py-6 flex gap-8 text-gray-600 text-xl font-bold">
-          {pages.map((page) => {
-            return (
-              <div
-                className="flex items-center gap-2 group cursor-pointer hover:text-gray-800 transition duration-300 relative"
-                key={page.name}
-                onClick={()=>handleNavigation(page.path)}
-              >
-                <li className="py-4">{page.name}</li>
-                <img
-                  className="h-7 transform group-hover:scale-110 group-hover:rotate-6 transition duration-300"
-                  src={page.img}
-                  alt={page.name}
-                />
-                <span className="absolute left-0 bottom-2 h-[2px] w-0 bg-blue-600 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="lg:hidden bg-gray-900/95 backdrop-blur-sm px-4 py-6 animate-slide-down">
+          <nav className="flex flex-col gap-6">
+            <div
+              className="relative group cursor-pointer flex items-center gap-1"
+              onClick={() => handleNavigation("/home")}
+            >
+              <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+                خانه
+              </span>
+              <IoHomeOutline className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+              <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+            </div>
+
+            <div
+              className="relative group cursor-pointer flex items-center gap-1"
+              onClick={() => handleNavigation("/products")}
+            >
+              <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+                محصولات
+              </span>
+              <BsBoxSeam className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+              <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+            </div>
+
+            <div
+              className="relative group cursor-pointer flex items-center gap-1"
+              onClick={() => handleNavigation("/cart")}
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
+                  سبد خرید
+                </span>
+                <div className="relative">
+                  <BsCart3 className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+                  <span className="absolute -top-2 -left-2 bg-red-500 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center shadow-lg shadow-red-500/20">
+                    3
+                  </span>
+                </div>
               </div>
-            );
-          })}
-        </ul>
-        <div className="flex items-center gap-2">
-          <img
-            className="h-12 cursor-pointer transform hover:scale-110 hover:rotate-6 transition duration-300"
-            src="https://www.svgrepo.com/show/299700/support-call.svg"
-            alt="Support Icon"
-          />
-          <span className="text-gray-800 text-2xl font-bold transition duration-300 cursor-pointer hover:text-blue-500">
-            پشتیبانی
-          </span>
+              <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+            </div>
+
+            {isLogin && (
+              <>
+                <div
+                  className="relative group cursor-pointer flex items-center gap-1"
+                  onClick={() => handleNavigation("/profile")}
+                >
+                  <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+                    پروفایل
+                  </span>
+                  <BsPerson className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+                  <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+                </div>
+
+                <div
+                  className="relative group cursor-pointer flex items-center gap-1"
+                  onClick={() => setShowLogoutModal(true)}
+                >
+                  <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+                    خروج
+                  </span>
+                  <IoLogOutOutline className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+                  <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+                </div>
+              </>
+            )}
+
+            {!isLogin && (
+              <div
+                className="relative group cursor-pointer flex items-center gap-1"
+                onClick={() => handleNavigation("/login")}
+              >
+                <span className="text-lg font-semibold text-white hover:text-blue-400 transition-colors duration-300">
+                  وارد شوید
+                </span>
+                <IoLogInOutline className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
+                <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+              </div>
+            )}
+          </nav>
         </div>
-      </div>
-    </div>
+      )}
+    </header>
   );
 }
-
 export default Header;

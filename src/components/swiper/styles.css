@@ -1,0 +1,110 @@
+
+
+/* General Swiper Container */
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Swiper Slide Styling */
+.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-content {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Image Styling */
+.slide-content img {
+  transition: all 0.7s ease-in-out;
+  filter: brightness(90%);
+}
+
+.slide-content:hover img {
+  filter: brightness(70%) blur(3px);
+  transform: scale(1.1);
+}
+
+/* Overlay Styling */
+.overlay {
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.5s ease-in-out;
+  backdrop-filter: blur(2px);
+}
+
+/* Button Styling */
+.swiper-btn {
+  background: linear-gradient(135deg, #1f2937, #4b5563);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.swiper-btn:hover {
+  background: linear-gradient(135deg, #374151, #6b7280);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 18px;
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffffff;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Animation for Slide Entrance */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.swiper-slide-active .slide-content {
+  animation: slideIn 0.8s ease-out forwards;
+}
