@@ -1,7 +1,12 @@
+"use client";
+
 import { gameCategories } from "@/components/constants/Constants";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 function GameCategories() {
+  const router = useRouter();
+  const [loadingCategory, setLoadingCategory] = useState<string | null>(null);
   const key = "gameCategory";
   // Category translations
   const categoryTranslations: { [key: string]: string } = {
@@ -12,6 +17,11 @@ function GameCategories() {
     sports: "ورزشی",
     simulator: "شبیه ساز",
     actionAdventure: "اکشن ماجراجویی",
+  };
+
+  const handleCategoryClick = (categoryName: string) => {
+    setLoadingCategory(categoryName);
+    router.push(`/filtered/${categoryName}?key=gameCategory`);
   };
 
   return (
@@ -25,11 +35,11 @@ function GameCategories() {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 justify-items-center">
           {gameCategories.map((gameCategory, index) => (
-            <Link
-              href={`/filtered/${gameCategory.name}?key=gameCategory`}
+            <div
               key={gameCategory.name}
               className="relative bg-blue-900 rounded-3xl overflow-hidden border border-blue-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up cursor-pointer w-full max-w-44"
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => handleCategoryClick(gameCategory.name)}
             >
               {/* Image Section */}
               <div className="relative h-40 w-full overflow-hidden">
@@ -51,10 +61,14 @@ function GameCategories() {
                     categoryTranslations[gameCategory.name] || gameCategory.name
                   }
                 >
-                  {categoryTranslations[gameCategory.name] || gameCategory.name}
+                  {loadingCategory === gameCategory.name ? (
+                    <div className="w-5 h-5 border-2 border-blue-200 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                  ) : (
+                    categoryTranslations[gameCategory.name] || gameCategory.name
+                  )}
                 </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

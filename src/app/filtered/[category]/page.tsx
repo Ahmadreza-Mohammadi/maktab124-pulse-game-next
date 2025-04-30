@@ -10,5 +10,10 @@ export default function Page({
   // Get the filter key from URL params, default to 'category' if not provided
   const filterKey = searchParams.key || "category";
 
-  return <FilteredProducts value={params.category} filterKey={filterKey} />;
+  return (
+<>
+<FilteredProducts value={params.category} filterKey={filterKey} />
+</>
+
+  );
 }
