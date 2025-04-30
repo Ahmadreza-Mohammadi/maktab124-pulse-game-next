@@ -22,7 +22,9 @@ function Creators() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {creators.map((creator, index) => (
             <div
-              onClick={() => router.push(`/filtered/${creator.name}`)}
+              onClick={() =>
+                router.push(`/filtered/${creator.name}?key=creator`)
+              }
               key={index}
               className="relative bg-blue-900 rounded-3xl overflow-hidden border-2 border-blue-600/50 hover:border-blue-400 transition-all duration-300 animate-slide-up cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}

@@ -12,9 +12,13 @@ import BackButton from "../shared/BackButton";
 
 interface FilteredProductsProps {
   value: string;
+  filterKey: string;
 }
 
-export default function FilteredProducts({ value }: FilteredProductsProps) {
+export default function FilteredProducts({
+  value,
+  filterKey,
+}: FilteredProductsProps) {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -33,23 +37,9 @@ export default function FilteredProducts({ value }: FilteredProductsProps) {
     const fetchProducts = async () => {
       try {
         let response = await axios.get(
-          `${BASE_URL}/api/records/products?filterKey=category&filterValue=${value}`,
+          `${BASE_URL}/api/records/products?filterKey=${filterKey}&filterValue=${value}`,
           { headers: { api_key: API_KEY } }
         );
-
-        if (!response.data.records || response.data.records.length === 0) {
-          response = await axios.get(
-            `${BASE_URL}/api/records/products?filterKey=gameCategory&filterValue=${value}`,
-            { headers: { api_key: API_KEY } }
-          );
-        }
-
-        if (!response.data.records || response.data.records.length === 0) {
-          response = await axios.get(
-            `${BASE_URL}/api/records/products?filterKey=creator&filterValue=${value}`,
-            { headers: { api_key: API_KEY } }
-          );
-        }
 
         setProducts(response.data.records);
       } catch (error) {
@@ -60,7 +50,7 @@ export default function FilteredProducts({ value }: FilteredProductsProps) {
     };
 
     fetchProducts();
-  }, [value]);
+  }, [value, filterKey]);
 
   function getSingleProduct(id: number) {
     router.push(`/single-product/${id}`);
