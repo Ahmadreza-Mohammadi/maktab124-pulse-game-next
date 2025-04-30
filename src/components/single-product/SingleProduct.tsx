@@ -13,6 +13,7 @@ import Loading from "@/components/loading/Loading";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
 import "./styles.css";
+import BackButton from "../shared/BackButton";
 
 interface SingleProductProps {
   id: string;
@@ -69,9 +70,11 @@ function SingleProduct({ id }: SingleProductProps) {
   const hasPlatforms = product.category === "game" && product.platforms;
 
   return (
-    <div className="min-h-screen bg-gray-900 py-36">
+   <>
+    <div className="min-h-screen bg-gray-900 py-32">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="bg-gray-800 rounded-3xl overflow-hidden border border-gray-700/50">
+   <BackButton />
+        <div className="bg-gray-800 rounded-3xl overflow-hidden border border-gray-700/50 mt-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
             {/* Image Section with Swiper */}
             <div className="space-y-6">
@@ -222,6 +225,7 @@ function SingleProduct({ id }: SingleProductProps) {
         </div>
       </div>
     </div>
+   </>
   );
 }
 
