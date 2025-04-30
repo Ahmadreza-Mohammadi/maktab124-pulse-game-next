@@ -44,6 +44,13 @@ export default function FilteredProducts({ value }: FilteredProductsProps) {
           );
         }
 
+        if (!response.data.records || response.data.records.length === 0) {
+          response = await axios.get(
+            `${BASE_URL}/api/records/products?filterKey=creator&filterValue=${value}`,
+            { headers: { api_key: API_KEY } }
+          );
+        }
+
         setProducts(response.data.records);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -117,13 +124,13 @@ export default function FilteredProducts({ value }: FilteredProductsProps) {
             <div
               onClick={() => getSingleProduct(product.id)}
               key={product.id}
-              className="relative cursor-pointer bg-blue-900 rounded-3xl overflow-hidden flex flex-col border border-blue-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:-translate-y-2 animate-slide-up"
+              className="relative cursor-pointer bg-blue-900 rounded-3xl overflow-hidden flex flex-col border-2 border-blue-600/50 hover:border-blue-400 transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image Section */}
               <div className="relative h-52 w-full overflow-hidden">
                 <img
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
                   src={product.img}
                   alt={product.title || "Product Image"}
                 />
@@ -215,7 +222,7 @@ export default function FilteredProducts({ value }: FilteredProductsProps) {
             <button
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors cursor-pointer"
             >
               قبلی
             </button>
@@ -225,7 +232,7 @@ export default function FilteredProducts({ value }: FilteredProductsProps) {
                   <button
                     key={page}
                     onClick={() => setCurrentPage(page)}
-                    className={`px-4 py-2 rounded-lg transition-colors ${
+                    className={`px-4 py-2 rounded-lg transition-colors cursor-pointer ${
                       currentPage === page
                         ? "bg-blue-500 text-white"
                         : "bg-blue-700 text-blue-200 hover:bg-blue-600"
@@ -241,7 +248,7 @@ export default function FilteredProducts({ value }: FilteredProductsProps) {
                 setCurrentPage((prev) => Math.min(prev + 1, totalPages))
               }
               disabled={currentPage === totalPages}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors cursor-pointer"
             >
               بعدی
             </button>

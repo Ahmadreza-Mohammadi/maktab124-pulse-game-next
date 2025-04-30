@@ -1,6 +1,10 @@
+"use client";
+
 import { creators } from "@/components/constants/Constants";
+import { useRouter } from "next/navigation";
 
 function Creators() {
+  const router = useRouter();
   return (
     <section
       className="py-12 bg-gradient-to-b from-blue-950 to-blue-800"
@@ -18,6 +22,7 @@ function Creators() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {creators.map((creator, index) => (
             <div
+              onClick={() => router.push(`/filtered/${creator.name}`)}
               key={index}
               className="relative bg-blue-900 rounded-3xl overflow-hidden border-2 border-blue-600/50 hover:border-blue-400 transition-all duration-300 animate-slide-up cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
