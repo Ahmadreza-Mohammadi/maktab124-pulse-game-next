@@ -13,10 +13,10 @@ function Home() {
       <HomeSwiper />
       <GameCategories />
       <Offers />
-      <Creators />
-      <Comments />
       <Categories />
       <ProductsSection />
+      <Creators />
+      <Comments />
     </>
   );
 }

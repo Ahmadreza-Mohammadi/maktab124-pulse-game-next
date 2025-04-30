@@ -1,8 +1,5 @@
-"use client";
-
 import { gameCategories } from "@/components/constants/Constants";
 import Link from "next/link";
-import { useState } from "react";
 
 function GameCategories() {
   const key = "gameCategory";
