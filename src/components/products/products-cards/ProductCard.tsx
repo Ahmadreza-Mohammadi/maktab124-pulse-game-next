@@ -92,7 +92,7 @@ function ProductCard({product, index, getSingleProduct}: {product: any, index: n
         }}
         className="mt-auto bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors duration-200 cursor-pointer"
       >
-        مشاهده جزئیات
+        افزودن به سبد خرید
       </button>
     </div>
   </div>
