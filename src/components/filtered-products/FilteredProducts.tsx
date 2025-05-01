@@ -145,6 +145,15 @@ export default function FilteredProducts({
                   <option value="simulator">شبیه ساز</option>
                 </>
               )}
+
+              {filterKey === "creator" && (
+                <>
+                  <option value="Logitech">لاجیتک</option>
+                  <option value="Razer">ریزر</option>
+                  <option value="Ubisoft">یوبیسافت</option>
+                  <option value="RockstarGames">راک استار گیمز</option>                  
+                    </>
+              )}
             </select>
           </div>
         </div>

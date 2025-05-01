@@ -29,23 +29,8 @@ function Header() {
       dir="rtl"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo Section */}
-        <div
-          className="flex items-center gap-2 cursor-pointer group"
-          onClick={() => handleNavigation("/home")}
-        >
-          <span className="text-2xl font-extrabold text-white group-hover:text-blue-400 transition-colors duration-300">
-            پالس گیم
-          </span>
-          <img
-            className="h-12"
-            src="https://www.svgrepo.com/show/337754/game.svg"
-            alt=""
-          />
-        </div>
-
-        {/* Navigation Section */}
-        <nav className="hidden lg:flex items-center gap-8">
+  {/* Navigation Section */}
+  <nav className="hidden lg:flex items-center gap-8">
           <div
             className="relative group cursor-pointer flex items-center gap-1"
             onClick={() => handleNavigation("/home")}
@@ -125,6 +110,23 @@ function Header() {
             </div>
           )}
         </nav>
+
+        {/* Logo Section */}
+        <div
+          className="flex items-center gap-2 cursor-pointer group"
+          onClick={() => handleNavigation("/home")}
+        >
+          <span className="text-2xl font-extrabold text-white group-hover:text-blue-400 transition-colors duration-300">
+            پالس گیم
+          </span>
+          <img
+            className="h-12"
+            src="https://www.svgrepo.com/show/337754/game.svg"
+            alt=""
+          />
+        </div>
+
+      
 
         {/* Mobile Menu Button */}
         <button
