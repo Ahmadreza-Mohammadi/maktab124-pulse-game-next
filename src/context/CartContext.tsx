@@ -8,6 +8,8 @@ interface CartItem {
   price: number;
   image: string;
   quantity: number;
+  limitQuantity: number;
+  selectedQuantity: number;
   platform?: string;
 }
 
@@ -41,9 +43,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setCart((prevCart) => {
       const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
       if (existingItem) {
+        // If item exists, update its quantity if within limits
+        const newQuantity = Math.min(
+          existingItem.limitQuantity,
+          existingItem.selectedQuantity + item.selectedQuantity
+        );
         return prevCart.map((cartItem) =>
           cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
+            ? { ...cartItem, selectedQuantity: newQuantity }
             : cartItem
         );
       }
@@ -57,9 +64,16 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const updateQuantity = (id: string, quantity: number) => {
     setCart((prevCart) =>
-      prevCart.map((item) =>
-        item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
-      )
+      prevCart.map((item) => {
+        if (item.id === id) {
+          const newQuantity = Math.min(
+            item.limitQuantity,
+            Math.max(1, quantity)
+          );
+          return { ...item, selectedQuantity: newQuantity };
+        }
+        return item;
+      })
     );
   };
 

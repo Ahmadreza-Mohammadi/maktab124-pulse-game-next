@@ -46,7 +46,9 @@ function SingleProduct({ id }: SingleProductProps) {
       name: product.title,
       price: product.price,
       image: Array.isArray(product.img) ? product.img[0] : product.img,
-      quantity: quantity,
+      quantity: product.quantity,
+      limitQuantity: product.quantity,
+      selectedQuantity: quantity,
       platform: selectedPlatform,
     });
   }

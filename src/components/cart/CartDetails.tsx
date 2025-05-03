@@ -17,11 +17,9 @@ function CartDetails() {
     const product = cart.find((item) => item.id === id);
     if (!product) return;
 
-    // Get the product's available quantity
-    const maxQuantity = product.quantity || 10; // Fallback to 10 if quantity is not available
-    const newQuantity = Math.max(
-      1,
-      Math.min(maxQuantity, currentQuantity + change)
+    const newQuantity = Math.min(
+      product.limitQuantity,
+      Math.max(1, currentQuantity + change)
     );
 
     if (newQuantity !== currentQuantity) {
@@ -105,7 +103,7 @@ function CartDetails() {
                           onClick={() =>
                             handleQuantityChange(
                               product.id,
-                              product.quantity,
+                              product.selectedQuantity,
                               -1
                             )
                           }
@@ -114,13 +112,13 @@ function CartDetails() {
                           <BsDash />
                         </button>
                         <span className="px-4 py-2 text-white">
-                          {product.quantity}
+                          {product.selectedQuantity}
                         </span>
                         <button
                           onClick={() =>
                             handleQuantityChange(
                               product.id,
-                              product.quantity,
+                              product.selectedQuantity,
                               1
                             )
                           }
