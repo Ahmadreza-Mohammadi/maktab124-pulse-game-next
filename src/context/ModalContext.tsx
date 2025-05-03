@@ -7,6 +7,8 @@ interface ModalContextType {
   content: React.ReactNode | null;
   openModal: (content: React.ReactNode) => void;
   closeModal: () => void;
+  showLogoutModal: boolean;
+  setShowLogoutModal: (show: boolean) => void;
 }
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
@@ -14,6 +16,7 @@ const ModalContext = createContext<ModalContextType | undefined>(undefined);
 export function ModalProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [content, setContent] = useState<React.ReactNode | null>(null);
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const openModal = (content: React.ReactNode) => {
     setContent(content);
@@ -26,7 +29,16 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <ModalContext.Provider value={{ isOpen, content, openModal, closeModal }}>
+    <ModalContext.Provider
+      value={{
+        isOpen,
+        content,
+        openModal,
+        closeModal,
+        showLogoutModal,
+        setShowLogoutModal,
+      }}
+    >
       {children}
       {isOpen && content}
     </ModalContext.Provider>

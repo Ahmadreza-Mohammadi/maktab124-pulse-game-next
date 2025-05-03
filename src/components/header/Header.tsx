@@ -10,7 +10,7 @@ import { IoLogOutOutline, IoLogInOutline } from "react-icons/io5";
 function Header() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { setShowLogoutModal } = useModal();
+  const { openModal, setShowLogoutModal } = useModal();
   const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {
@@ -29,8 +29,8 @@ function Header() {
       dir="rtl"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-  {/* Navigation Section */}
-  <nav className="hidden lg:flex items-center gap-8">
+        {/* Navigation Section */}
+        <nav className="hidden lg:flex items-center gap-8">
           <div
             className="relative group cursor-pointer flex items-center gap-1"
             onClick={() => handleNavigation("/home")}
@@ -125,8 +125,6 @@ function Header() {
             alt=""
           />
         </div>
-
-      
 
         {/* Mobile Menu Button */}
         <button
