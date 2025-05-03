@@ -7,11 +7,9 @@ export default function LoginLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
-      <body>
-        <ScrollToTop />
-        <div className="bg-gray-900">{children}</div>
-      </body>
-    </html>
+    <>
+      <ScrollToTop />
+      <div className="bg-gray-900">{children}</div>
+    </>
   );
-} 
+}

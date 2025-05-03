@@ -5,6 +5,8 @@ import HeaderWrapper from "@/components/header/HeaderWrapper";
 import FooterWrapper from "@/components/footer/FooterWrapper";
 import LogOutModal from "@/components/modal/LogOutModal";
 import { CartProvider } from "@/context/CartContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function RootLayout({
   children,
@@ -23,6 +25,18 @@ export default function RootLayout({
               <FooterWrapper />
             </div>
             <LogOutModal />
+            <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop
+              closeOnClick
+              rtl
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
           </ModalProvider>
         </CartProvider>
       </body>

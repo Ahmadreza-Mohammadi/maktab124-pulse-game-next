@@ -2,6 +2,7 @@
 
 import { useModal } from "@/context/ModalContext";
 import { useCart } from "@/context/CartContext";
+import { toast } from "react-toastify";
 
 interface DeleteCartItemModalProps {
   itemId: string;
@@ -18,6 +19,17 @@ export default function DeleteCartItemModal({
   const handleDelete = () => {
     removeFromCart(itemId);
     closeModal();
+    toast.error("محصول با موفقیت از سبد خرید حذف شد", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      rtl: true,
+    });
   };
 
   return (

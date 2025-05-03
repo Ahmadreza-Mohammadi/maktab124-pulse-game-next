@@ -4,6 +4,7 @@ import { API_KEY, BASE_URL } from "@/api/API";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 function Login() {
   const router = useRouter();
@@ -34,6 +35,17 @@ function Login() {
         }
       );
       localStorage.setItem("accessToken", JSON.stringify(res.data.accessToken));
+      toast.success("ورود با موفقیت انجام شد", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        rtl: true,
+      });
       router.push("home");
     } catch (error) {
       console.error("Login failed:", error);

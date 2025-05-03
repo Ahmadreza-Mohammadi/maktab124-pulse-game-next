@@ -12,11 +12,13 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { openModal, setShowLogoutModal } = useModal();
   const [isLogin, setIsLogin] = useState(false);
+  const cartLength = JSON.parse(localStorage.getItem("cart") || "[]").length;
+  console.log(cartLength);
 
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
     accessToken ? setIsLogin(true) : setIsLogin(false);
-  }, []);
+  }, [cartLength]);
 
   const handleNavigation = (path: string) => {
     router.push(path);
@@ -29,6 +31,20 @@ function Header() {
       dir="rtl"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+         {/* Logo Section */}
+         <div
+          className="flex items-center gap-2 cursor-pointer group"
+          onClick={() => handleNavigation("/home")}
+        >
+          <span className="text-2xl font-extrabold text-white group-hover:text-blue-400 transition-colors duration-300">
+            پالس گیم
+          </span>
+          <img
+            className="h-12"
+            src="https://www.svgrepo.com/show/337754/game.svg"
+            alt=""
+          />
+        </div>
         {/* Navigation Section */}
         <nav className="hidden lg:flex items-center gap-8">
           <div
@@ -64,7 +80,7 @@ function Header() {
               <div className="relative">
                 <BsCart3 className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
                 <span className="absolute -top-2 -left-2 bg-red-500 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center shadow-lg shadow-red-500/20">
-                  3
+                  {cartLength}
                 </span>
               </div>
             </div>
@@ -111,20 +127,7 @@ function Header() {
           )}
         </nav>
 
-        {/* Logo Section */}
-        <div
-          className="flex items-center gap-2 cursor-pointer group"
-          onClick={() => handleNavigation("/home")}
-        >
-          <span className="text-2xl font-extrabold text-white group-hover:text-blue-400 transition-colors duration-300">
-            پالس گیم
-          </span>
-          <img
-            className="h-12"
-            src="https://www.svgrepo.com/show/337754/game.svg"
-            alt=""
-          />
-        </div>
+       
 
         {/* Mobile Menu Button */}
         <button

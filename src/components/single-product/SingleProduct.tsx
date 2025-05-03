@@ -16,6 +16,7 @@ import "./styles.css";
 import BackButton from "../shared/BackButton";
 import { BsDash, BsPlus } from "react-icons/bs";
 import { useCart } from "@/context/CartContext";
+import { toast } from "react-toastify";
 
 interface SingleProductProps {
   id: string;
@@ -50,6 +51,18 @@ function SingleProduct({ id }: SingleProductProps) {
       limitQuantity: product.quantity,
       selectedQuantity: quantity,
       platform: selectedPlatform,
+    });
+
+    toast.success("محصول با موفقیت به سبد خرید اضافه شد", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      rtl: true,
     });
   }
 
