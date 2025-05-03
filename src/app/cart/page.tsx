@@ -1,8 +1,7 @@
+"use client";
 
-function Cart() {
-  return (
-    <>Cart</>
-  )
+import CartDetails from "@/components/cart/CartDetails";
+
+export default function CartPage() {
+  return <CartDetails />;
 }
-
-export default Cart

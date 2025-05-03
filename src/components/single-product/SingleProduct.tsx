@@ -14,15 +14,42 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
 import "./styles.css";
 import BackButton from "../shared/BackButton";
+import { BsDash, BsPlus } from "react-icons/bs";
+import { useCart } from "@/context/CartContext";
 
 interface SingleProductProps {
   id: string;
 }
 
 function SingleProduct({ id }: SingleProductProps) {
+  const { addToCart } = useCart();
   const [product, setProduct] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [selectedPlatform, setSelectedPlatform] = useState<string>("");
+  const [quantity, setQuantity] = useState<number>(1);
+  const [platform, setPlatform] = useState<string>("");
+
+  const handleQuantityChange = (change: number) => {
+    if (!product) return;
+    const newQuantity = Math.max(
+      1,
+      Math.min(product.quantity, quantity + change)
+    );
+    setQuantity(newQuantity);
+  };
+
+  function handleAddToCart() {
+    if (!product) return;
+
+    addToCart({
+      id: product.id,
+      name: product.title,
+      price: product.price,
+      image: Array.isArray(product.img) ? product.img[0] : product.img,
+      quantity: quantity,
+      platform: selectedPlatform,
+    });
+  }
 
   useEffect(() => {
     async function getProduct() {
@@ -234,9 +261,29 @@ function SingleProduct({ id }: SingleProductProps) {
                 )}
 
                 {/* Add to Cart Button */}
-                <button className="mt-auto bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300">
-                  افزودن به سبد خرید
-                </button>
+                <div className="flex items-center gap-4 mt-6">
+                  <div className="flex items-center border border-gray-700 rounded-lg">
+                    <button
+                      onClick={() => handleQuantityChange(-1)}
+                      className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                    >
+                      <BsDash />
+                    </button>
+                    <span className="px-4 py-2 text-white">{quantity}</span>
+                    <button
+                      onClick={() => handleQuantityChange(1)}
+                      className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                    >
+                      <BsPlus />
+                    </button>
+                  </div>
+                  <button
+                    onClick={handleAddToCart}
+                    className="flex-1 bg-gradient-to-r cursor-pointer from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300"
+                  >
+                    {product.stock ? "افزودن به سبد خرید" : "ناموجود"}
+                  </button>
+                </div>
               </div>
             </div>
           </div>

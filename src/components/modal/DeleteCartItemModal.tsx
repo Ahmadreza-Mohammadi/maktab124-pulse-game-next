@@ -1,0 +1,47 @@
+"use client";
+
+import { useModal } from "@/context/ModalContext";
+import { useCart } from "@/context/CartContext";
+
+interface DeleteCartItemModalProps {
+  itemId: string;
+  itemName: string;
+}
+
+export default function DeleteCartItemModal({
+  itemId,
+  itemName,
+}: DeleteCartItemModalProps) {
+  const { closeModal } = useModal();
+  const { removeFromCart } = useCart();
+
+  const handleDelete = () => {
+    removeFromCart(itemId);
+    closeModal();
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+      <div className="bg-gray-800 p-6 rounded-xl w-[90%] max-w-md">
+        <h2 className="text-xl font-bold text-white mb-4">حذف از سبد خرید</h2>
+        <p className="text-gray-300 mb-6">
+          آیا مطمئن هستید که می‌خواهید {itemName} را از سبد خرید حذف کنید؟
+        </p>
+        <div className="flex gap-4">
+          <button
+            onClick={closeModal}
+            className="flex-1 bg-gray-700 text-white py-3 rounded-lg hover:bg-gray-600 transition-colors"
+          >
+            انصراف
+          </button>
+          <button
+            onClick={handleDelete}
+            className="flex-1 bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors"
+          >
+            حذف
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
