@@ -42,13 +42,13 @@ export default function DeleteCartItemModal({
         <div className="flex gap-4">
           <button
             onClick={closeModal}
-            className="flex-1 bg-gray-700 text-white py-3 rounded-lg hover:bg-gray-600 transition-colors"
+            className="flex-1 bg-gray-700 text-white py-3 rounded-lg hover:bg-gray-600 transition-colors cursor-pointer"
           >
             انصراف
           </button>
           <button
             onClick={handleDelete}
-            className="flex-1 bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors"
+            className="flex-1 bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors cursor-pointer"
           >
             حذف
           </button>

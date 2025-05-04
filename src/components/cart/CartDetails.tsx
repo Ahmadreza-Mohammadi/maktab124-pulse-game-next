@@ -49,8 +49,8 @@ function CartDetails() {
             هنوز هیچ محصولی به سبد خرید اضافه نکرده‌اید.
           </p>
           <button
-            onClick={() => (window.location.href = "/")}
-            className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300"
+            onClick={() => (window.location.href = "/products")}
+            className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 cursor-pointer"
           >
             ادامه خرید
           </button>
@@ -107,7 +107,7 @@ function CartDetails() {
                               -1
                             )
                           }
-                          className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                          className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors cursor-pointer"
                         >
                           <BsDash />
                         </button>
@@ -122,7 +122,7 @@ function CartDetails() {
                               1
                             )
                           }
-                          className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                          className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors cursor-pointer"
                         >
                           <BsPlus />
                         </button>
@@ -131,7 +131,7 @@ function CartDetails() {
                         onClick={() =>
                           handleDeleteClick(product.id, product.name)
                         }
-                        className="text-red-500 hover:text-red-600 p-2"
+                        className="text-red-500 hover:text-red-600 p-2 cursor-pointer"
                       >
                         <BsTrash />
                       </button>
@@ -161,7 +161,7 @@ function CartDetails() {
                 <span>{total} تومان</span>
               </div>
             </div>
-            <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 mt-6">
+            <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 mt-6 cursor-pointer">
               پرداخت
             </button>
           </div>
