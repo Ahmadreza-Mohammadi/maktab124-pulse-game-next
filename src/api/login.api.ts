@@ -1,9 +1,8 @@
-import { ACCESS_TOKEN } from "./API";
+import { getAccessToken } from "./API";
 
-export const isLogin = () => {
-    if (ACCESS_TOKEN) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+export const checkAuth = () => {
+  if (getAccessToken()) {
+    return true;
+  }
+  return false;
+};

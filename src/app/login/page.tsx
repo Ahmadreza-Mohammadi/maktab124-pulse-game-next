@@ -4,6 +4,7 @@ import { API_KEY, BASE_URL } from "@/api/API";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 function Login() {
   const router = useRouter();
@@ -34,6 +35,17 @@ function Login() {
         }
       );
       localStorage.setItem("accessToken", JSON.stringify(res.data.accessToken));
+      toast.success("ورود با موفقیت انجام شد", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        rtl: true,
+      });
       router.push("home");
     } catch (error) {
       console.error("Login failed:", error);
@@ -89,7 +101,7 @@ function Login() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center cursor-pointer"
             >
               {isLoading ? (
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>

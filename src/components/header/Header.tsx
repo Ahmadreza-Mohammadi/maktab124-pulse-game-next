@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useModal } from "@/context/ModalContext";
+import { useCart } from "@/context/CartContext";
 import { IoHomeOutline } from "react-icons/io5";
 import { BsCart3, BsPerson, BsBoxSeam } from "react-icons/bs";
 import { IoLogOutOutline, IoLogInOutline } from "react-icons/io5";
@@ -10,12 +11,13 @@ import { IoLogOutOutline, IoLogInOutline } from "react-icons/io5";
 function Header() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { setShowLogoutModal } = useModal();
+  const { openModal, setShowLogoutModal } = useModal();
   const [isLogin, setIsLogin] = useState(false);
+  const { cart } = useCart();
 
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
-    accessToken ? setIsLogin(true) : setIsLogin(false);
+    setIsLogin(!!accessToken);
   }, []);
 
   const handleNavigation = (path: string) => {
@@ -43,7 +45,6 @@ function Header() {
             alt=""
           />
         </div>
-
         {/* Navigation Section */}
         <nav className="hidden lg:flex items-center gap-8">
           <div
@@ -78,9 +79,11 @@ function Header() {
               </span>
               <div className="relative">
                 <BsCart3 className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
-                <span className="absolute -top-2 -left-2 bg-red-500 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center shadow-lg shadow-red-500/20">
-                  3
-                </span>
+                {cart.length > 0 && (
+                  <span className="absolute -top-2 -left-2 bg-red-500 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center shadow-lg shadow-red-500/20">
+                    {cart.length}
+                  </span>
+                )}
               </div>
             </div>
             <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>
@@ -186,9 +189,11 @@ function Header() {
                 </span>
                 <div className="relative">
                   <BsCart3 className="text-xl text-white group-hover:text-blue-400 transition-colors duration-300" />
-                  <span className="absolute -top-2 -left-2 bg-red-500 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center shadow-lg shadow-red-500/20">
-                    3
-                  </span>
+                  {cart.length > 0 && (
+                    <span className="absolute -top-2 -left-2 bg-red-500 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center shadow-lg shadow-red-500/20">
+                      {cart.length}
+                    </span>
+                  )}
                 </div>
               </div>
               <span className="absolute right-0 bottom-0 h-[2px] w-0 bg-blue-500 group-hover:w-full transition-all duration-500 ease-in-out"></span>

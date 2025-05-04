@@ -12,15 +12,26 @@ import BackButton from "../shared/BackButton";
 
 interface FilteredProductsProps {
   value: string;
+  filterKey: string;
 }
 
-export default function FilteredProducts({ value }: FilteredProductsProps) {
+export default function FilteredProducts({
+  value,
+  filterKey,
+}: FilteredProductsProps) {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const router = useRouter();
   const maxTitleLength = 24;
   const productsPerPage = 9;
+
+  const changeFilter = (e: any) => {
+    const newValue = e.target.value;
+    if (newValue) {
+      router.push(`/filtered/${newValue}?key=${filterKey}`);
+    }
+  };
 
   useEffect(() => {
     window.scrollTo({
@@ -33,23 +44,9 @@ export default function FilteredProducts({ value }: FilteredProductsProps) {
     const fetchProducts = async () => {
       try {
         let response = await axios.get(
-          `${BASE_URL}/api/records/products?filterKey=category&filterValue=${value}`,
+          `${BASE_URL}/api/records/products?filterKey=${filterKey}&filterValue=${value}`,
           { headers: { api_key: API_KEY } }
         );
-
-        if (!response.data.records || response.data.records.length === 0) {
-          response = await axios.get(
-            `${BASE_URL}/api/records/products?filterKey=gameCategory&filterValue=${value}`,
-            { headers: { api_key: API_KEY } }
-          );
-        }
-
-        if (!response.data.records || response.data.records.length === 0) {
-          response = await axios.get(
-            `${BASE_URL}/api/records/products?filterKey=creator&filterValue=${value}`,
-            { headers: { api_key: API_KEY } }
-          );
-        }
 
         setProducts(response.data.records);
       } catch (error) {
@@ -60,7 +57,7 @@ export default function FilteredProducts({ value }: FilteredProductsProps) {
     };
 
     fetchProducts();
-  }, [value]);
+  }, [value, filterKey]);
 
   function getSingleProduct(id: number) {
     router.push(`/single-product/${id}`);
@@ -111,14 +108,57 @@ export default function FilteredProducts({ value }: FilteredProductsProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Row */}
-        <div className="flex items-center justify-between my-8">
+        <div className="flex items-center justify-between my-8 px-4">
           <BackButton />
           <h2 className="text-4xl font-extrabold text-blue-200 animate-fade-in">
             {categoryTranslations[value]}
           </h2>
-          <div className="w-24"></div> {/* Empty div for balance */}
+          <div className="w-28">
+            <select
+              name="filter"
+              id="filter"
+              className="bg-blue-900 text-blue-200 px-3 py-2 rounded-lg border border-blue-600/50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={value}
+              onChange={(e) => {
+                changeFilter(e);
+              }}
+            >
+              {filterKey === "category" && (
+                <>
+                  <option value="game">بازی</option>
+                  <option value="console">کنسول</option>
+                  <option value="monitor">مانیتور</option>
+                  <option value="keyboard">کیبورد</option>
+                  <option value="mouse">ماوس</option>
+                  <option value="chair">صندلی</option>
+                </>
+              )}
+
+              {filterKey === "gameCategory" && (
+                <>
+                  <option value="rpg">نقش آفرینی</option>
+                  <option value="action">اکشن</option>
+                  <option value="actionAdventure">اکشن ماجراجویی</option>
+                  <option value="adventure">ماجراجویی</option>
+                  <option value="strategy">استراتژیک</option>
+                  <option value="sports">ورزشی</option>
+                  <option value="simulator">شبیه ساز</option>
+                </>
+              )}
+
+              {filterKey === "creator" && (
+                <>
+                  <option value="Logitech">لاجیتک</option>
+                  <option value="Razer">ریزر</option>
+                  <option value="Ubisoft">یوبیسافت</option>
+                  <option value="RockstarGames">راک استار گیمز</option>                  
+                    </>
+              )}
+            </select>
+          </div>
         </div>
 
+        {/* card section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {currentProducts.map((product: any, index: number) => (
             <div
