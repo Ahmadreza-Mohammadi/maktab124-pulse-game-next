@@ -109,6 +109,8 @@ function ProductsFilterBar({
           <option value="mouse">ماوس</option>
           <option value="headset">هدست</option>
           <option value="chair">صندلی</option>
+          <option value="monitor">مانیتور</option>
+          <option value="game">بازی</option>
         </select>
       </div>
     </div>
