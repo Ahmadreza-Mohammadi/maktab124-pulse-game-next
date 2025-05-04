@@ -61,3 +61,18 @@ export interface ApiError {
   message: string;
   errors?: ValidationError[];
 } 
+
+
+export interface FormErrors {
+  name: string;
+  phone: string;
+  address: string;
+  postalCode: string;
+}
+
+export interface FormData {
+  name: string;
+  phone: string;
+  address: string;
+  postalCode: string;
+}
