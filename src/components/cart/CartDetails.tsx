@@ -4,6 +4,8 @@ import { useCart } from "@/context/CartContext";
 import { useModal } from "@/context/ModalContext";
 import { BsDash, BsPlus, BsTrash } from "react-icons/bs";
 import DeleteCartItemModal from "../modal/DeleteCartItemModal";
+import Link from "next/link";
+import { formatPrice } from "@/utils/helper";
 
 function CartDetails() {
   const { cart, updateQuantity, removeFromCart } = useCart();
@@ -32,7 +34,7 @@ function CartDetails() {
   };
 
   const subtotal = cart.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+    (sum, item) => sum + item.price * item.selectedQuantity,
     0
   );
   const shipping = 0; // Free shipping
@@ -87,7 +89,7 @@ function CartDetails() {
                         {product.name}
                       </span>
                       <span className="text-blue-400 font-medium">
-                        {product.price} تومان
+                        {formatPrice(product.price)} تومان
                       </span>
                       {product.platform && (
                         <span className="text-gray-400">
@@ -149,7 +151,7 @@ function CartDetails() {
           <div className="space-y-4">
             <div className="flex justify-between text-gray-400">
               <span>قیمت کل</span>
-              <span>{subtotal} تومان</span>
+              <span>{formatPrice(subtotal)} تومان</span>
             </div>
             <div className="flex justify-between text-gray-400">
               <span>هزینه ارسال</span>
@@ -158,12 +160,15 @@ function CartDetails() {
             <div className="border-t border-gray-700/50 pt-4">
               <div className="flex justify-between font-bold text-white">
                 <span>مبلغ قابل پرداخت</span>
-                <span>{total} تومان</span>
+                <span>{formatPrice(total)} تومان</span>
               </div>
             </div>
-            <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 mt-6 cursor-pointer">
-              پرداخت
-            </button>
+            <Link
+              href="/checkout"
+              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 mt-6 cursor-pointer flex items-center justify-center"
+            >
+              نهایی کردن سفارش
+            </Link>
           </div>
         </div>
       </div>
