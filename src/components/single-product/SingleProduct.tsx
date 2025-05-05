@@ -283,14 +283,14 @@ function SingleProduct({ id }: SingleProductProps) {
                   <div className="flex items-center border border-gray-700 rounded-lg">
                     <button
                       onClick={() => handleQuantityChange(-1)}
-                      className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                      className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors cursor-pointer"
                     >
                       <BsDash />
                     </button>
                     <span className="px-4 py-2 text-white">{quantity}</span>
                     <button
                       onClick={() => handleQuantityChange(1)}
-                      className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                      className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors cursor-pointer"
                     >
                       <BsPlus />
                     </button>
@@ -307,7 +307,7 @@ function SingleProduct({ id }: SingleProductProps) {
                     {product.stock ? (
                       "افزودن به سبد خرید"
                     ) : (
-                      <span className="flex items-center justify-center gap-2">
+                      <span className="flex items-center justify-center gap-2 curpi">
                         <svg
                           className="w-5 h-5"
                           fill="none"

@@ -1,5 +1,7 @@
 "use client";
 
+import { API_KEY, BASE_URL } from "@/api/API";
+import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -15,6 +17,7 @@ function Payment() {
   const router = useRouter();
   const [isProcessing, setIsProcessing] = useState(false);
   const [showOTP, setShowOTP] = useState(false);
+  const [id, setId] = useState<string>("");
   const [formData, setFormData] = useState({
     cardNumber: "",
     expiry: "",
@@ -29,6 +32,14 @@ function Payment() {
     otp: "",
     email: "",
   });
+
+  const getOrderId = async () => {
+    const res = await axios.get(`${BASE_URL}/api/records/orders`, {
+      headers: { api_key: API_KEY },
+    });
+    setId(res.data.records[0].id);
+  };
+  getOrderId();
 
   const validateForm = () => {
     let isValid = true;
@@ -102,16 +113,36 @@ function Payment() {
     }
   };
 
-  const handlePayment = () => {
+  const handlePayment = async (id: string) => {
     if (!validateForm()) {
       return;
     }
 
-    setIsProcessing(true);
-    // Simulate payment processing
-    setTimeout(() => {
-      router.push("/success");
-    }, 3000);
+    try {
+      setIsProcessing(true);
+      const res = await axios.put(
+        `${BASE_URL}/api/records/orders/${id}`,
+        {
+          payment: "paid",
+        },
+        {
+          headers: {
+            api_key: API_KEY,
+          },
+        }
+      );
+
+      if (res.status === 200) {
+        // Successful payment
+        setTimeout(() => {
+          router.push("/payment-log");
+        }, 2000);
+      }
+    } catch (error) {
+      console.error("Payment error:", error);
+      setIsProcessing(false);
+      // You might want to show an error message to the user here
+    }
   };
 
   return (
@@ -295,7 +326,7 @@ function Payment() {
 
             {/* Payment Button */}
             <button
-              onClick={handlePayment}
+              onClick={() => handlePayment(id)}
               disabled={isProcessing}
               className={`w-full py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
                 isProcessing
@@ -311,6 +342,13 @@ function Payment() {
               ) : (
                 <span className="text-white">پرداخت</span>
               )}
+            </button>
+
+            <button
+              onClick={() => router.push("/payment-log")}
+              className="w-full py-4 rounded-xl font-semibold text-lg text-white transition-all duration-300 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 cursor-pointer"
+            >
+              انصراف
             </button>
 
             {/* Security Info */}

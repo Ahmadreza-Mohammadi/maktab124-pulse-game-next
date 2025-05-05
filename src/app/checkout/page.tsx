@@ -75,7 +75,6 @@ function Checkout() {
         ...ordersData,
         payment: "pending",
         userId: localStorage.getItem("userId") || "",
-        status: "pending",
       };
 
       const res = await axios.post(
