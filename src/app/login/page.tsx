@@ -62,7 +62,7 @@ function Login() {
           {/* Logo and Title */}
           <div className="text-center space-y-2">
             <h1 className="text-3xl font-bold text-white">پالس گیم</h1>
-            <p className="text-gray-400">به پنل کاربری خود خوش آمدید</p>
+            <p className="text-gray-400 text-lg">لطفا وارد شوید!</p>
           </div>
 
           {/* Error Message */}
