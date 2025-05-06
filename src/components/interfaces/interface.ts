@@ -76,3 +76,18 @@ export interface FormData {
   address: string;
   postalCode: string;
 }
+
+export interface FormErrors {
+  cardNumber: string;
+  expiry: string;
+  cvv: string;
+  otp: string;
+  email: string;
+}
+
+export interface Order {
+  id: string;
+  payment: string;
+  createdAt: string;
+  totalAmount: number;
+}

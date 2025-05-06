@@ -23,15 +23,24 @@ interface SingleProductProps {
 }
 
 function SingleProduct({ id }: SingleProductProps) {
-  const { addToCart } = useCart();
+  const { addToCart, cart, removeFromCart } = useCart();
   const [product, setProduct] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [selectedPlatform, setSelectedPlatform] = useState<string>("");
   const [quantity, setQuantity] = useState<number>(1);
   const [platform, setPlatform] = useState<string>("");
 
+  // Check if product is in cart
+  const isInCart = cart.some((item) => item.id === id);
+
   const handleQuantityChange = (change: number) => {
     if (!product) return;
+
+    if (quantity === 1 && change === -1) {
+      removeFromCart(id);
+      return;
+    }
+
     const newQuantity = Math.max(
       1,
       Math.min(product.quantity, quantity + change)
@@ -280,21 +289,23 @@ function SingleProduct({ id }: SingleProductProps) {
 
                 {/* Add to Cart Button */}
                 <div className="flex items-center gap-4 mt-6">
-                  <div className="flex items-center border border-gray-700 rounded-lg">
-                    <button
-                      onClick={() => handleQuantityChange(-1)}
-                      className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors cursor-pointer"
-                    >
-                      <BsDash />
-                    </button>
-                    <span className="px-4 py-2 text-white">{quantity}</span>
-                    <button
-                      onClick={() => handleQuantityChange(1)}
-                      className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors cursor-pointer"
-                    >
-                      <BsPlus />
-                    </button>
-                  </div>
+                  {isInCart && (
+                    <div className="flex items-center border border-gray-700 rounded-lg">
+                      <button
+                        onClick={() => handleQuantityChange(-1)}
+                        className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors cursor-pointer"
+                      >
+                        <BsDash />
+                      </button>
+                      <span className="px-4 py-2 text-white">{quantity}</span>
+                      <button
+                        onClick={() => handleQuantityChange(1)}
+                        className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors cursor-pointer"
+                      >
+                        <BsPlus />
+                      </button>
+                    </div>
+                  )}
                   <button
                     onClick={handleAddToCart}
                     className={`flex-1 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${

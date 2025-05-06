@@ -74,6 +74,7 @@ function Checkout() {
       const orderPayload = {
         ...ordersData,
         payment: "pending",
+        deliveryStatus: "در حال آماده سازی",
         userId: localStorage.getItem("userId") || "",
       };
 
