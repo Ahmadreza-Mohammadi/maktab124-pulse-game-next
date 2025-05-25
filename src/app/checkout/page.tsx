@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { FormErrors, FormData } from "@/components/interfaces/interface";
 import axios from "axios";
 import { API_KEY, BASE_URL } from "@/api/API";
+import { digitsEnToFa, formatPrice } from "@/utils/helper";
 
 function Checkout() {
   const router = useRouter();
@@ -17,12 +18,22 @@ function Checkout() {
     phone: "",
     address: "",
     postalCode: "",
+    cardNumber: "",
+    expiry: "",
+    cvv: "",
+    otp: "",
+    email: ""
   });
   const [errors, setErrors] = useState<FormErrors>({
     name: "",
     phone: "",
     address: "",
     postalCode: "",
+    cardNumber: "",
+    expiry: "", 
+    cvv: "",
+    otp: "",
+    email: ""
   });
 
   const [ordersData, setOrdersData] = useState<{
@@ -74,7 +85,7 @@ function Checkout() {
       const orderPayload = {
         ...ordersData,
         payment: "pending",
-        deliveryStatus: "در حال آماده سازی",
+        deliveryStatus: "processing",
         userId: localStorage.getItem("userId") || "",
       };
 
@@ -325,12 +336,12 @@ function Checkout() {
                             {item.name}
                           </h3>
                           <p className="text-gray-400 text-sm">
-                            {item.selectedQuantity} عدد
+                            {digitsEnToFa(item.selectedQuantity)} عدد
                           </p>
                         </div>
                       </div>
                       <span className="text-blue-400 font-semibold">
-                        {item.price * item.selectedQuantity} تومان
+                        {formatPrice(item.price * item.selectedQuantity)} تومان
                       </span>
                     </div>
                   ))}
@@ -339,12 +350,13 @@ function Checkout() {
                     <div className="flex justify-between text-gray-300">
                       <span>قیمت کل</span>
                       <span>
-                        {cart.reduce(
-                          (sum, item) =>
-                            sum + item.price * item.selectedQuantity,
-                          0
-                        )}{" "}
-                        تومان
+                        {formatPrice(
+                          cart.reduce(
+                            (sum, item) =>
+                              sum + item.price * item.selectedQuantity,
+                            0
+                          )
+                        )}
                       </span>
                     </div>
                     <div className="flex justify-between text-gray-300">
@@ -354,12 +366,13 @@ function Checkout() {
                     <div className="flex justify-between text-white font-bold text-lg pt-2 border-t border-gray-700/50">
                       <span>مبلغ قابل پرداخت</span>
                       <span>
-                        {cart.reduce(
-                          (sum, item) =>
-                            sum + item.price * item.selectedQuantity,
-                          0
-                        )}{" "}
-                        تومان
+                        {formatPrice(
+                          cart.reduce(
+                            (sum, item) =>
+                              sum + item.price * item.selectedQuantity,
+                            0
+                          )
+                        )}
                       </span>
                     </div>
                   </div>

@@ -3,15 +3,15 @@
 import { API_KEY, BASE_URL } from "@/api/API";
 import { FormErrors, Order } from "@/components/interfaces/interface";
 import PaymentContent from "@/components/payment/PaymentContent";
+import { useCart } from "@/context/CartContext";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 
-
-
 function Payment() {
   const router = useRouter();
+  const { clearCart } = useCart();
   const [isProcessing, setIsProcessing] = useState(false);
   const [showOTP, setShowOTP] = useState(false);
   const [id, setId] = useState<string>("");
@@ -26,14 +26,14 @@ function Payment() {
   });
   const [errors, setErrors] = useState<FormErrors>({
     cardNumber: "",
-    expiry: "", 
+    expiry: "",
     cvv: "",
     otp: "",
     email: "",
     name: "",
     phone: "",
     address: "",
-    postalCode: ""
+    postalCode: "",
   });
 
   useEffect(() => {
@@ -45,7 +45,6 @@ function Payment() {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
         });
-        // پیدا کردن همه سفارش‌های پرداخت نشده و مرتب کردن بر اساس تاریخ
         const allPendingOrders = res.data.records
           .filter((order: Order) => order.payment === "pending")
           .sort(
@@ -56,7 +55,6 @@ function Payment() {
         setPendingOrders(allPendingOrders);
 
         if (allPendingOrders.length > 0) {
-          // آخرین سفارش رو به صورت پیش‌فرض انتخاب می‌کنیم
           setId(allPendingOrders[0].id);
         } else {
           toast.error("سفارش در انتظار پرداختی یافت نشد", {
@@ -94,7 +92,6 @@ function Payment() {
     let isValid = true;
     const newErrors = { ...errors };
 
-    // Card Number validation
     if (!formData.cardNumber.trim()) {
       newErrors.cardNumber = "شماره کارت الزامی است";
       isValid = false;
@@ -206,7 +203,6 @@ function Payment() {
       );
 
       if (res.status === 200) {
-        localStorage.removeItem("cart");
         toast.success("پرداخت با موفقیت انجام شد", {
           position: "top-right",
           autoClose: 3000,

@@ -75,6 +75,11 @@ export interface FormData {
   phone: string;
   address: string;
   postalCode: string;
+  cardNumber: string;
+  expiry: string;
+  cvv: string;
+  otp: string;
+  email: string;
 }
 
 export interface FormErrors {
@@ -90,4 +95,13 @@ export interface Order {
   payment: string;
   createdAt: string;
   totalAmount: number;
+}
+
+export interface DesktopMenuProps {
+  handleNavigation: (path: string) => void;
+  isLogin: boolean;
+  cart: any[];
+  setShowLogoutModal: (show: boolean) => void;
+  isMenuOpen: boolean;
+  setIsMenuOpen: (isOpen: boolean) => void;
 }

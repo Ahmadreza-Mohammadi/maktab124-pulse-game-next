@@ -7,6 +7,13 @@ import LogOutModal from "@/components/modal/LogOutModal";
 import { CartProvider } from "@/context/CartContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Vazirmatn } from "next/font/google";
+
+const vazir = Vazirmatn({
+  subsets: ["arabic"],
+  display: "swap",
+  variable: "--font-vazir",
+});
 
 export default function RootLayout({
   children,
@@ -14,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
-      <body>
+    <html lang="fa" dir="rtl" className={vazir.variable}>
+      <body className="font-vazir">
         <CartProvider>
           <ModalProvider>
             <ScrollToTop />
